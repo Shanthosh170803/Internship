@@ -20,67 +20,17 @@ b87fd1b2-cf1a-437e-8b25-31c8197f6d33	1937669315		Adrienne Pham		9819293716		Stev
 
 
 
-package com.example1;
+"C:\Program Files\Microsoft\jdk-17.0.12.7-hotspot\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.3.2.2\lib\idea_rt.jar=55515:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.3.2.2\bin" -Dfile.encoding=UTF-8 -classpath C:\Users\shanthosh.s\IdeaProjects\BankTransactionIngestor\target\classes;C:\Users\shanthosh.s\.m2\repository\org\mongodb\mongodb-driver-sync\4.11.0\mongodb-driver-sync-4.11.0.jar;C:\Users\shanthosh.s\.m2\repository\org\mongodb\bson\4.11.0\bson-4.11.0.jar;C:\Users\shanthosh.s\.m2\repository\org\mongodb\mongodb-driver-core\4.11.0\mongodb-driver-core-4.11.0.jar;C:\Users\shanthosh.s\.m2\repository\org\mongodb\bson-record-codec\4.11.0\bson-record-codec-4.11.0.jar com.example1.Main
+java.io.FileNotFoundException: sample1.txt (The system cannot find the file specified)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:111)
+	at java.base/java.io.FileReader.<init>(FileReader.java:60)
+	at com.example1.Main.main(Main.java:14)
+May 07, 2025 5:51:30 PM com.mongodb.internal.diagnostics.logging.Loggers shouldUseSLF4J
+WARNING: SLF4J not found on the classpath.  Logging is disabled for the 'org.mongodb.driver' component
+Transaction inserted successfully into MongoDB.....!
 
-import com.example1.model.*;
-import java.io.*;
-import java.util.*;
+Process finished with exit code 0
 
-public class Main {
-
-    public static void main(String[] args) {
-        List<Transaction> transactions = new ArrayList<>();
-
-        try (BufferedReader br = new BufferedReader(new FileReader("sample1.txt"))) {
-            String line;
-
-            while ((line = br.readLine()) != null) {
-                String[] parts = line.split("\\|");
-
-                if (parts.length != 8) {
-                    System.out.println("Skipping malformed line: " + line);
-                    continue;
-                }
-
-                // Trim each part to remove extra spaces
-                for (int i = 0; i < parts.length; i++) {
-                    parts[i] = parts[i].trim();
-                }
-
-                // Build objects
-                Customer sender = new Customer(parts[2]);
-                Account senderAccount = new Account();
-                senderAccount.setAccountNumber(parts[1]);
-                senderAccount.setCustomer(sender);
-
-                Customer receiver = new Customer(parts[4]);
-                Account receiverAccount = new Account();
-                receiverAccount.setAccountNumber(parts[3]);
-                receiverAccount.setCustomer(receiver);
-
-                Transaction txn = new Transaction();
-                txn.setTransactionId(parts[0]);
-                txn.setSenderAccount(senderAccount);
-                txn.setReceiverAccount(receiverAccount);
-                txn.setDateTime(parts[5]);
-                txn.setTransactionType(parts[6]);
-                txn.setAmount(Double.parseDouble(parts[7]));
-
-                transactions.add(txn);
-            }
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        // Print to verify
-        for (Transaction t : transactions) {
-            System.out.println("Transaction ID: " + t.getTransactionId() +
-                    ", From: " + t.getSenderAccount().getCustomer().getName() +
-                    ", To: " + t.getReceiverAccount().getCustomer().getName() +
-                    ", Amount: " + t.getAmount());
-        }
-
-        // Next: pass this list to MongoIngestor
-    }
-}
