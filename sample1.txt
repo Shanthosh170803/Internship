@@ -14,3 +14,73 @@ d440e327-e081-4d25-9a78-6d73da6ba8c1	2297539854		Jorge Hurley		3144081862		Amber
 521da6d2-b819-4572-afe6-299b5aaefd99	2953440195		Priscilla Foster	1360124224		Louis Hendricks		2025-05-01 02:43:36	Deposit			94692.04
 b87fd1b2-cf1a-437e-8b25-31c8197f6d33	1937669315		Adrienne Pham		9819293716		Steven Dougherty	2025-05-01 09:47:25	Transfer		84593.37
 4698cfa6-45a0-44d6-b071-9776c381c7cf	6161826159		John Brown		1976977592		Haley Bridges		2025-05-01 19:18:26	Withdrawal		32664.97
+
+
+
+
+
+
+package com.example1;
+
+import com.example1.model.*;
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+        List<Transaction> transactions = new ArrayList<>();
+
+        try (BufferedReader br = new BufferedReader(new FileReader("sample1.txt"))) {
+            String line;
+
+            while ((line = br.readLine()) != null) {
+                String[] parts = line.split("\\|");
+
+                if (parts.length != 8) {
+                    System.out.println("Skipping malformed line: " + line);
+                    continue;
+                }
+
+                // Trim each part to remove extra spaces
+                for (int i = 0; i < parts.length; i++) {
+                    parts[i] = parts[i].trim();
+                }
+
+                // Build objects
+                Customer sender = new Customer(parts[2]);
+                Account senderAccount = new Account();
+                senderAccount.setAccountNumber(parts[1]);
+                senderAccount.setCustomer(sender);
+
+                Customer receiver = new Customer(parts[4]);
+                Account receiverAccount = new Account();
+                receiverAccount.setAccountNumber(parts[3]);
+                receiverAccount.setCustomer(receiver);
+
+                Transaction txn = new Transaction();
+                txn.setTransactionId(parts[0]);
+                txn.setSenderAccount(senderAccount);
+                txn.setReceiverAccount(receiverAccount);
+                txn.setDateTime(parts[5]);
+                txn.setTransactionType(parts[6]);
+                txn.setAmount(Double.parseDouble(parts[7]));
+
+                transactions.add(txn);
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        // Print to verify
+        for (Transaction t : transactions) {
+            System.out.println("Transaction ID: " + t.getTransactionId() +
+                    ", From: " + t.getSenderAccount().getCustomer().getName() +
+                    ", To: " + t.getReceiverAccount().getCustomer().getName() +
+                    ", Amount: " + t.getAmount());
+        }
+
+        // Next: pass this list to MongoIngestor
+    }
+}
