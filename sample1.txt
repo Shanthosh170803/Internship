@@ -50,3 +50,54 @@ HDR|CustomerDetails|20250515|Start
 10048Patrick Walker      Female16-02-19866735204766patrickwalker@gmail.com       Door No. 382, Cole Route, East
 10049Kimberly Dougherty  Male  20-03-19626528409651kimberlydougherty@gmail.com   Flat No. 465, Darlene Park, Wi
 TRL|CustomerDetails|50|End
+
+Invalid Line 2: Line too short for field: residentialAddress
+Valid Line 3: 10001, Sarah Adams
+Invalid Line 4: Line too short for field: residentialAddress
+Valid Line 5: 10003, Jacqueline Cooper
+Invalid Line 6: Line too short for field: residentialAddress
+Valid Line 7: 10005, Brandon Rivera
+Valid Line 8: 10006, Ian Clark
+Valid Line 9: 10007, Brianna Ramirez
+Valid Line 10: 10008, Sara Shepherd
+Invalid Line 11: Line too short for field: residentialAddress
+Valid Line 12: 10010, David Conway
+Valid Line 13: 10011, Nathan Chase
+Invalid Line 14: Line too short for field: residentialAddress
+Valid Line 15: 10013, Christopher Walls
+Valid Line 16: 10014, Kevin Brown
+Invalid Line 17: Line too short for field: residentialAddress
+Valid Line 18: 10016, Lisa Rodriguez MD
+Valid Line 19: 10017, Christopher Cross
+Invalid Line 20: Line too short for field: residentialAddress
+Valid Line 21: 10019, Ryan Mcdonald
+Valid Line 22: 10020, Gregory Sanchez
+Valid Line 23: 10021, Sarah Jackson
+Valid Line 24: 10022, Barbara Dixon
+Valid Line 25: 10023, Fernando Griffith
+Valid Line 26: 10024, Renee Baker
+Valid Line 27: 10025, Devon Green
+Valid Line 28: 10026, Marc Williams
+Valid Line 29: 10027, Lori Wallace
+Valid Line 30: 10028, Bryan Graham
+Valid Line 31: 10029, Michael Edwards
+Valid Line 32: 10030, Shawn Coleman
+Valid Line 33: 10031, Dustin Collins
+Valid Line 34: 10032, Patricia Stanley MD
+Valid Line 35: 10033, Anne Ortiz
+Valid Line 36: 10034, Alexandra Flowers
+Valid Line 37: 10035, Claire Bruce
+Valid Line 38: 10036, Mark Morton
+Valid Line 39: 10037, Joseph Clark
+Valid Line 40: 10038, Patrick Diaz
+Valid Line 41: 10039, Gregory Burch
+Invalid Line 42: Line too short for field: residentialAddress
+Valid Line 43: 10041, Angela Powell
+Valid Line 44: 10042, Daniel Long
+Invalid Line 45: Line too short for field: residentialAddress
+Valid Line 46: 10044, Victoria Sanchez
+Valid Line 47: 10045, Paul Jackson
+Invalid Line 48: Line too short for field: residentialAddress
+Valid Line 49: 10047, Bradley Franklin
+Valid Line 50: 10048, Patrick Walker
+Valid Line 51: 10049, Kimberly Dougherty
