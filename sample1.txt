@@ -43,4 +43,92 @@ Transaction inserted successfully into MongoDB.....!
 
 Process finished with exit code 0
 
+package parser;
 
+import annotations.FixedField;
+import java.lang.reflect.Field;
+
+public class FixedWidthParser {
+
+    public static <T> T parseLine(String line, Class<T> clazz) throws Exception {
+        T instance = clazz.getDeclaredConstructor().newInstance();
+        int currentIndex = 0;
+
+        for (Field field : clazz.getDeclaredFields()) {
+            FixedField annotation = field.getAnnotation(FixedField.class);
+            if (annotation != null) {
+                int length = annotation.length();
+                if (currentIndex + length > line.length()) {
+                    throw new Exception("Line too short for field: " + field.getName());
+                }
+
+                String value = line.substring(currentIndex, currentIndex + length).trim();
+                currentIndex += length;
+
+                if (annotation.required() && value.isEmpty()) {
+                    throw new Exception("Missing required field: " + field.getName());
+                }
+
+                if (!annotation.allowedValues().isEmpty()) {
+                    String[] allowed = annotation.allowedValues().split(",");
+                    boolean match = false;
+                    for (String a : allowed) {
+                        if (a.equalsIgnoreCase(value)) {
+                            match = true;
+                            break;
+                        }
+                    }
+                    if (!match) {
+                        throw new Exception("Invalid value for field '" + field.getName() + "': " + value);
+                    }
+                }
+
+                if (!annotation.format().isEmpty()) {
+                    if (!value.matches(annotation.format())) {
+                        throw new Exception("Invalid format for field '" + field.getName() + "': " + value);
+                    }
+                }
+
+                field.setAccessible(true);
+                field.set(instance, value);
+            }
+        }
+
+        return instance;
+    }
+}
+
+
+
+package runner;
+
+import model.CustomerDetails;
+import parser.FixedWidthParser;
+
+import java.io.*;
+
+public class CustomerDetailsValidator {
+    public static void main(String[] args) {
+        File file = new File("data/ControlMay15/CustomerDetails.txt");
+
+        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
+            String line;
+            int lineNum = 0;
+
+            while ((line = reader.readLine()) != null) {
+                lineNum++;
+                if (line.startsWith("HDR|") || line.startsWith("TRL|")) continue;
+
+                try {
+                    CustomerDetails customer = FixedWidthParser.parseLine(line, CustomerDetails.class);
+                    System.out.println("Valid Line " + lineNum + ": " + customer.customerId + ", " + customer.customerName);
+                } catch (Exception e) {
+                    System.out.println("Invalid Line " + lineNum + ": " + e.getMessage());
+                }
+            }
+
+        } catch (IOException e) {
+            System.err.println("Error reading file: " + e.getMessage());
+        }
+    }
+}
