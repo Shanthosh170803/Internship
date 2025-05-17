@@ -1,31 +1,23 @@
-package annotations;
-import java.lang.annotation.*;
-@Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.FIELD)
-public @interface FixedField {
-    int length();
-    boolean required() default true;
-    String allowedValues() default "";
-    String format() default "";
-}
+File readControl = new File(controlDir);
+        for(File subFolder : readControl.listFiles()){
+            for(File files : subFolder.listFiles((d, name) -> name.endsWith(".txt"))){
+                //here i want take the files and send to below code
+            }
+        }
 
+        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
+            String line;
+            int lineNum = 0;
+            while ((line = reader.readLine()) != null) {
+                lineNum++;
+                if (line.startsWith("HDR|") || line.startsWith("TRL|")) continue;
+                try {
+                    // Here i want to receive the file from the above loop and send it to fixedwidthparser  
+                } catch (Exception e) {
+                    System.out.println("Invalid Line " + lineNum + ": " + e.getMessage());
+                }
+            }
 
-package model;
-
-import annotations.FixedField;
-public class CustomerDetails {
-    @FixedField(length = 5,format = "\\d{5}")
-    public String customerId;
-    @FixedField(length = 20 )
-    public String customerName;
-    @FixedField(length = 6,allowedValues = "Male,Female,Others")
-    public String gender;
-    @FixedField(length = 10,format = "\\d{2}-\\d{2}-\\d{4}")
-    public String dateOfBirth;
-    @FixedField(length = 10,format = "\\d{10}")
-    public String contactNumber;
-    @FixedField(length = 30,format = ".+@.+\\..+")
-    public String email;
-    @FixedField(length = 30)
-    public String residentialAddress;
-}
+        } catch (IOException e) {
+            System.err.println("Error reading file: " + e.getMessage());
+        }
