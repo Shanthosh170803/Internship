@@ -1,18 +1,68 @@
-File readControl = new File(controlDir);
+package com.example1;
+import java.io.*;
+import java.nio.file.*;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.*;
+import model.AccountDetails;
+import model.CustomerDetails;
+import model.LoanDetails;
+import model.TransactionDetails;
+import parser.FixedWidthParser;
+import java.io.*;
+
+public class Main {
+
+    public static void main(String[] args) throws IOException {
+        String baseDir = "Bank";
+        String controlDir = baseDir + "/Control";
+        Map<String, List<File>> dateToFileMap = new TreeMap<>();
+        File bankDir = new File(baseDir);
+        for (File subFolder : bankDir.listFiles()) {
+            if (subFolder.isDirectory() && !subFolder.getName().equals("Control")) {
+                for (File file : subFolder.listFiles((d, name) -> name.endsWith(".txt"))) {
+                    String header = Files.lines(file.toPath()).findFirst().orElse(null);
+                    if (header != null && header.startsWith("HDR|")) {
+                        String[] parts = header.split("\\|");
+                        if (parts.length >= 3) {
+                            String dateStr = parts[2];
+                            dateToFileMap.computeIfAbsent(dateStr, k -> new ArrayList<>()).add(file);
+                        }
+                    }
+                }
+            }
+        }
+        // Create folders and copy files
+        for (String dateStr : dateToFileMap.keySet()) {
+            LocalDate date = LocalDate.parse(dateStr, DateTimeFormatter.ofPattern("yyyyMMdd"));
+            String folderName = "Control" + date.getMonth().name().substring(0, 1).toUpperCase()+
+                    date.getMonth().name().substring(1).toLowerCase() + date.getDayOfMonth();
+            Path targetDir = Paths.get(controlDir, folderName);
+            Files.createDirectories(targetDir);
+            for (File file : dateToFileMap.get(dateStr)) {
+                Path targetFile = targetDir.resolve(file.getName());
+                Files.copy(file.toPath(), targetFile, StandardCopyOption.REPLACE_EXISTING);
+            }
+        }
+        System.out.println("Files copied and organized by header dates.");
+
+        File readControl = new File(controlDir);
         for(File subFolder : readControl.listFiles()){
             for(File files : subFolder.listFiles((d, name) -> name.endsWith(".txt"))){
-                //here i want take the files and send to below code
+               //Here i want take the files send to below try catch code
             }
         }
 
         try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
             String line;
             int lineNum = 0;
+
             while ((line = reader.readLine()) != null) {
                 lineNum++;
                 if (line.startsWith("HDR|") || line.startsWith("TRL|")) continue;
+
                 try {
-                    // Here i want to receive the file from the above loop and send it to fixedwidthparser  
+                        // Here i want to receive the files from the above loop and send it to FixedWidthParser
                 } catch (Exception e) {
                     System.out.println("Invalid Line " + lineNum + ": " + e.getMessage());
                 }
@@ -21,3 +71,5 @@ File readControl = new File(controlDir);
         } catch (IOException e) {
             System.err.println("Error reading file: " + e.getMessage());
         }
+    }
+}
