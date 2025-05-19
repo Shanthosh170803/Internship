@@ -1,6 +1,118 @@
-        File readControl = new File(Control);
-        for(File subFolder : readControl.listFiles()){
-            for(File files : subFolder.listFiles((d, name) -> name.endsWith(".txt"))){
-               //Here i can able to get all the .txt files from the subfolders,so i want sent those files to FixedWidthParser.java
+package com.example1;
+import java.io.*;
+import java.nio.file.*;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.*;
+import parser.FixedWidthParser;
+
+public class Main {
+
+    public static void main(String[] args) throws IOException {
+        String bankDirPath = "Bank";
+        File bankDir = new File(bankDirPath);
+
+        Map<String, List<File>> dateToFileMap = new TreeMap<>();
+
+                for (File file : bankDir.listFiles((dir, name) -> name.endsWith(".txt"))) {
+                    String header = Files.lines(file.toPath()).findFirst().orElse(null);
+                    if (header != null && header.startsWith("HDR|")) {
+                        String[] parts = header.split("\\|");
+                        if (parts.length >= 3) {
+                            String dateStr = parts[2];
+                            dateToFileMap.computeIfAbsent(dateStr, k -> new ArrayList<>()).add(file);
+                        }
+                    }
+                }
+        Path basePath = Paths.get("Control");
+        for (String dateStr : dateToFileMap.keySet()) {
+            LocalDate date = LocalDate.parse(dateStr, DateTimeFormatter.ofPattern("yyyyMMdd"));
+            String folderName = "Control" + date.getMonth().name().substring(0, 1).toUpperCase() +
+                    date.getMonth().name().substring(1).toLowerCase() + date.getDayOfMonth();
+
+            Path targetDir = basePath.resolve(folderName);
+            Files.createDirectories(targetDir);
+
+            for (File file : dateToFileMap.get(dateStr)) {
+                Path targetFile = targetDir.resolve(file.getName());
+                Files.copy(file.toPath(), targetFile, StandardCopyOption.REPLACE_EXISTING);
             }
         }
+
+        System.out.println("Files copied and organized by header dates.");
+
+        File readControl = new File("Control");
+        for(File subFolder : readControl.listFiles()) {
+            for (File files : subFolder.listFiles((d, name) -> name.endsWith(".txt"))) {
+                BufferedReader br = new BufferedReader(new FileReader(files));
+                String header = br.readLine();
+                String[] parts = header.split("\\|");
+                String fileName = parts[1];
+                System.out.println(fileName);
+                String line;
+                int lineNum = 0;
+                while ((line = br.readLine()) != null) {
+                    lineNum++;
+                    if (line.startsWith("HDR|") || line.startsWith("TRL|")) continue;
+                    try {
+                        FixedWidthParser.parseLine(line, fileName.getClass());
+                    } catch (Exception e) {
+                        System.out.println("Invalid Line " + lineNum + ": " + e.getMessage());
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+package parser;
+
+import annotations.FixedFieldAnnotations;
+import java.lang.reflect.Field;
+
+public class FixedWidthParser {
+
+    public static <T> T parseLine(String line, Class<T> clazz) throws Exception {
+        T instance = clazz.getDeclaredConstructor().newInstance();
+        int currentIndex = 0;
+        for (Field field : clazz.getDeclaredFields()) {
+            FixedFieldAnnotations annotation = field.getAnnotation(FixedFieldAnnotations.class);
+            if (annotation != null) {
+                int length = annotation.length();
+                if (currentIndex + length > line.length()) {
+                    throw new Exception("Line too short for field: " + field.getName());
+                }
+
+                String value = line.substring(currentIndex, currentIndex + length).trim();
+                currentIndex += length;
+
+                if (annotation.required() && value.isEmpty()) {
+                    throw new Exception("Missing required field: " + field.getName());
+                }
+
+                if (!annotation.allowedValues().isEmpty()) {
+                    String[] allowed = annotation.allowedValues().split(",");
+                    boolean match = false;
+                    for (String a : allowed) {
+                        if (a.equalsIgnoreCase(value)) {
+                            match = true;
+                            break;
+                        }
+                    }
+                    if (!match) {
+                        throw new Exception("Invalid value for field '" + field.getName() + "': " + value);
+                    }
+                }
+                if (!annotation.format().isEmpty()) {
+                    if (!value.matches(annotation.format())) {
+                        throw new Exception("Invalid format for field '" + field.getName() + "': " + value);
+                    }
+                }
+                field.setAccessible(true);
+                field.set(instance, value);
+            }
+        }
+        return instance;
+    }
+}
