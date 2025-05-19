@@ -1,7 +1,171 @@
+//This is my Main.java
+
+package com.example1;
+import java.io.*;
+import java.nio.file.*;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.*;
+import parser.FixedWidthParser;
+
+public class Main {
+
+    public static void main(String[] args) throws IOException {
+        String bankDirPath = "Bank";
+        File bankDir = new File(bankDirPath);
+
+        Map<String, List<File>> dateToFileMap = new TreeMap<>();
+
+                for (File file : bankDir.listFiles((dir, name) -> name.endsWith(".txt"))) {
+                    String header = Files.lines(file.toPath()).findFirst().orElse(null);
+                    if (header != null && header.startsWith("HDR|")) {
+                        String[] parts = header.split("\\|");
+                        if (parts.length >= 3) {
+                            String dateStr = parts[2];
+                            dateToFileMap.computeIfAbsent(dateStr, k -> new ArrayList<>()).add(file);
+                        }
+                    }
+                }
+        Path basePath = Paths.get("Control");
+        for (String dateStr : dateToFileMap.keySet()) {
+            LocalDate date = LocalDate.parse(dateStr, DateTimeFormatter.ofPattern("yyyyMMdd"));
+            String folderName = "Control" + date.getMonth().name().substring(0, 1).toUpperCase() +
+                    date.getMonth().name().substring(1).toLowerCase() + date.getDayOfMonth();
+
+            Path targetDir = basePath.resolve(folderName);
+            Files.createDirectories(targetDir);
+
+            for (File file : dateToFileMap.get(dateStr)) {
+                Path targetFile = targetDir.resolve(file.getName());
+                Files.copy(file.toPath(), targetFile, StandardCopyOption.REPLACE_EXISTING);
+            }
+        }
+
+        File readControl = new File("Control");
+        for(File subFolder : readControl.listFiles()) {
+            for (File files : subFolder.listFiles((d, name) -> name.endsWith(".txt"))) {
+                BufferedReader br = new BufferedReader(new FileReader(files));
+                String header = br.readLine();
+                String[] parts = header.split("\\|");
+                String fileName = parts[1];
+                String line;
+                int lineNum = 0;
+                List<Object> details=new ArrayList<>();
+                while ((line = br.readLine()) != null) {
+                    lineNum++;
+                    if (line.startsWith("HDR|") || line.startsWith("TRL|")) continue;
+                    try {
+                       details.add( FixedWidthParser.parseLine(line, fileName.getClass()));
+
+                    } catch (Exception e) {
+                        System.out.println("Invalid Line " + lineNum + ": " + e.getMessage());
+                    }
+                }
+                System.out.println(details);
+            }
+        }
+    }
+}
+
+//This is my FixedFieldAnnotations
+package annotations;
+import java.lang.annotation.*;
+@Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.FIELD)
+public @interface FixedFieldAnnotations {
+    int length();
+    String pattern() default "";
+    boolean required() default true;
+    String allowedValues() default "";
+    String format() default "";
+}
+
+//This is my AccountDetails
+package model;
+import annotations.FixedFieldAnnotations;
+public record AccountDetails (
+    @FixedFieldAnnotations(length = 5,format="\\d{5}")
+     String customerId,
+    @FixedFieldAnnotations(length = 20 , pattern="^[A-Za-z]+$")
+     String customerName,
+    @FixedFieldAnnotations(length = 11,format = "\\d{11}")
+     String accountNumber,
+    @FixedFieldAnnotations(length = 10,allowedValues = "Savings,Current")
+     String accountType,
+    @FixedFieldAnnotations(length = 12,format = "\\d{1,9}.\\d{2}")
+     String currentBalance
+){}
+
+
+//This is my CustomerDetails
+package model;
+
+import annotations.FixedFieldAnnotations;
+public record CustomerDetails(
+    @FixedFieldAnnotations(length = 5,format = "\\d{5}")
+     String customerId,
+    @FixedFieldAnnotations(length = 20 , pattern="^[A-Za-z]+$")
+     String customerName,
+    @FixedFieldAnnotations(length = 6,allowedValues = "Male,Female,Others")
+     String gender,
+    @FixedFieldAnnotations(length = 10,format = "\\d{2}-\\d{2}-\\d{4}")
+     String dateOfBirth,
+    @FixedFieldAnnotations(length = 10,format = "\\d{10}")
+     String contactNumber,
+    @FixedFieldAnnotations(length = 30,format = ".+@.+\\..+")
+     String email,
+    @FixedFieldAnnotations(length = 30)
+     String residentialAddress
+){}
+
+//This is my LoanDetails
+package model;
+import annotations.FixedFieldAnnotations;
+public record LoanDetails (
+    @FixedFieldAnnotations(length = 5,format = "\\d{5}")
+     String customerId,
+    @FixedFieldAnnotations(length = 20, pattern="^[A-Za-z]+$" )
+     String customerName,
+    @FixedFieldAnnotations(length = 6,format = "\\d{6}")
+     String loanId,
+    @FixedFieldAnnotations(length = 12,format = "\\d{1,9}\\.\\d{2}")
+     String loanAmount,
+    @FixedFieldAnnotations(length = 20,allowedValues = "Home Loan,Educational Loan,Business Loan,Personal Loan")
+     String loanType,
+    @FixedFieldAnnotations(length = 10,format = "\\d{2}-\\d{2}-\\d{4}")
+     String approvalDate
+    ){}
+
+//This is my TransactionDetails 
+package model;
+import annotations.FixedFieldAnnotations;
+public record TransactionDetails (
+
+    @FixedFieldAnnotations(length = 5,format = "\\d{5}")
+    String customerId,
+    @FixedFieldAnnotations(length = 20 , pattern="^[A-Za-z]+$")
+    String customerName,
+    @FixedFieldAnnotations(length = 6,format = "\\d{6}")
+    String transactionId,
+    @FixedFieldAnnotations(length = 11,format = "\\d{11}")
+    String accountNumber,
+    @FixedFieldAnnotations(length = 30,allowedValues = "UPI,mobile wallets,digital cards,NEFT,RTGS,IMPS,Cheque,Direct Deposit,ATM Transactions")
+    String transactionType,
+    @FixedFieldAnnotations(length = 12,format = "\\d{1,9}\\.\\d{2}")
+    String transactionAmount,
+    @FixedFieldAnnotations(length = 21,format = "\\d{2}-\\d{2}-\\d{4} & \\d{2}:\\d{2}:\\d{1,2}")
+    String transactionDateTime
+){}
+
+//This is my FixedWidthParser
+
 package parser;
 
 import annotations.FixedFieldAnnotations;
 import java.lang.reflect.Field;
+import java.time.DateTimeException;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class FixedWidthParser {
 
@@ -42,10 +206,21 @@ public class FixedWidthParser {
                     }
                 }
                 field.setAccessible(true);
-                field.set(instance, value);
+                if(field.getType().equals(String.class)){
+                    field.set(instance,value);
+                }else if(field.getType().equals(int.class)){
+                    field.set(instance,Integer.parseInt(value));
+                } else if (field.getType().equals(LocalDate.class)) {
+                    DateTimeFormatter formatter= DateTimeFormatter.ofPattern("yyyyMMdd");
+                    field.set(instance,LocalDate.parse(value,formatter));
+                }
             }
         }
         System.out.println(instance);
         return instance;
     }
 }
+
+i gave all my code to you
+I need to print the details arraylist 
+but i was empty
