@@ -1,7 +1,5 @@
-            else if(targetType== LocalDateTime.class){
-                DateTimeFormatter formatter= DateTimeFormatter.ofPattern("ddMMyyyy");
-                return LocalDateTime.parse(value.trim(),formatter);
-            }else if(targetType == LocalDateTime.class){
-                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("ddMMyyyy HH:mm:ss");
-                return LocalDateTime.parse(value.trim(),formatter);
-            }
+java.lang.NoSuchMethodException: model.LoanDetails.<init>(java.lang.String,java.lang.String,java.lang.String,java.math.BigDecimal,java.lang.String,java.lang.String)
+	at java.base/java.lang.Class.getConstructor0(Class.java:3585)
+	at java.base/java.lang.Class.getDeclaredConstructor(Class.java:2754)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:64)
+	at com.example1.Main.main(Main.java:59)
