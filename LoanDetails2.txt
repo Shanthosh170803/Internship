@@ -1,0 +1,7 @@
+HDR|LoanDetails2|20250516|Start
+10050Sample Name0        587401  30554.63    Personal Loan       24042024
+10051Sample Name1        143149  18073.89    Business Loan       13112021
+10052Sample Name2        306799  65981.96    Home Loan           22112024
+10053Sample Name3        185182  403296.54   Educational Loan    17122025
+10054Sample Name4        349975  100071.34   Personal Loan       22102023
+TRL|LoanDetails2|5|End
