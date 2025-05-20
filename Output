@@ -1,415 +1,930 @@
-"C:\Program Files\Microsoft\jdk-17.0.12.7-hotspot\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.3.2.2\lib\idea_rt.jar=51388:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.3.2.2\bin" -Dfile.encoding=UTF-8 -classpath C:\Users\shanthosh.s\IdeaProjects\BankDBTwo\target\classes com.example1.Main
+"C:\Program Files\Microsoft\jdk-17.0.12.7-hotspot\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.3.2.2\lib\idea_rt.jar=61223:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.3.2.2\bin" -Dfile.encoding=UTF-8 -classpath C:\Users\shanthosh.s\IdeaProjects\BankDBTwo\target\classes com.example1.Main
 
 Processing file: AccountDetails.txt
-Error parsing line: 10000Kristin Williams    81947122496Savings   000046400.43
-Error: model.AccountDetails.<init>()
-Error parsing line: 10001Sarah Adams         53772866808Savings   000030676.97
-Error: model.AccountDetails.<init>()
-Error parsing line: 10002Gabriel Clark       55041390894Savings   000049340.97
-Error: model.AccountDetails.<init>()
-Error parsing line: 10003Jacqueline Cooper   39737861482Savings   000039786.90
-Error: model.AccountDetails.<init>()
-Error parsing line: 10004Taylor Evans        14595971146Savings   000053350.69
-Error: model.AccountDetails.<init>()
-Error parsing line: 10005Brandon Rivera      26457869668Savings   000076175.47
-Error: model.AccountDetails.<init>()
-Error parsing line: 10006Ian Clark           10444616867Savings   000055904.72
-Error: model.AccountDetails.<init>()
-Error parsing line: 10007Brianna Ramirez     76862628421Current   000072700.88
-Error: model.AccountDetails.<init>()
-Error parsing line: 10008Sara Shepherd       40478775594Savings   000013505.42
-Error: model.AccountDetails.<init>()
-Error parsing line: 10009Mark Kelly          34693750336Current   000034746.39
-Error: model.AccountDetails.<init>()
-Error parsing line: 10010David Conway        67417474155Current   000076719.42
-Error: model.AccountDetails.<init>()
-Error parsing line: 10011Nathan Chase        83572444861Current   000008936.29
-Error: model.AccountDetails.<init>()
-Error parsing line: 10012Angel Murillo       88797799925Current   000066793.40
-Error: model.AccountDetails.<init>()
-Error parsing line: 10013Christopher Walls   85981778914Savings   000907152.01
-Error: model.AccountDetails.<init>()
-Error parsing line: 10014Kevin Brown         29309724386Savings   000910135.41
-Error: model.AccountDetails.<init>()
-Error parsing line: 10015Leslie Horn         98704897256Savings   000993028.01
-Error: model.AccountDetails.<init>()
-Error parsing line: 10016Lisa Rodriguez MD   51804958470Current   000160700.03
-Error: model.AccountDetails.<init>()
-Error parsing line: 10017Christopher Cross   37133134843Savings   000082240.06
-Error: model.AccountDetails.<init>()
-Error parsing line: 10018Jeffrey Stein       45779410773Current   000077225.29
-Error: model.AccountDetails.<init>()
-Error parsing line: 10019Ryan Mcdonald       47475534862Current   000029816.56
-Error: model.AccountDetails.<init>()
-Error parsing line: 10020Gregory Sanchez     34674478921Current   000082239.71
-Error: model.AccountDetails.<init>()
-Error parsing line: 10021Sarah Jackson       94925039022Savings   000010512.29
-Error: model.AccountDetails.<init>()
-Error parsing line: 10022Barbara Dixon       89439253316Current   000508381.32
-Error: model.AccountDetails.<init>()
-Error parsing line: 10023Fernando Griffith   84424624935Savings   000710778.70
-Error: model.AccountDetails.<init>()
-Error parsing line: 10024Renee Baker         84435008794Savings   000403075.27
-Error: model.AccountDetails.<init>()
-Error parsing line: 10025Devon Green         33335134681Current   000829106.46
-Error: model.AccountDetails.<init>()
-Error parsing line: 10026Marc Williams       73462174031Current   000707590.93
-Error: model.AccountDetails.<init>()
-Error parsing line: 10027Lori Wallace        84526536589Savings   000041814.77
-Error: model.AccountDetails.<init>()
-Error parsing line: 10028Bryan Graham        91064074641Savings   000034005.98
-Error: model.AccountDetails.<init>()
-Error parsing line: 10029Michael Edwards     48916946370Current   000036059.24
-Error: model.AccountDetails.<init>()
-Error parsing line: 10030Shawn Coleman       95870076175Savings   000005746.30
-Error: model.AccountDetails.<init>()
-Error parsing line: 10031Dustin Collins      51001992974Current   000708505.41
-Error: model.AccountDetails.<init>()
-Error parsing line: 10032Patricia Stanley MD 13793900408Savings   000210824.04
-Error: model.AccountDetails.<init>()
-Error parsing line: 10033Anne Ortiz          84903430088Current   000885049.13
-Error: model.AccountDetails.<init>()
-Error parsing line: 10034Alexandra Flowers   60759000582Savings   000644405.05
-Error: model.AccountDetails.<init>()
-Error parsing line: 10035Claire Bruce        97966490901Current   000171720.16
-Error: model.AccountDetails.<init>()
-Error parsing line: 10036Mark Morton         46937642052Savings   000093855.54
-Error: model.AccountDetails.<init>()
-Error parsing line: 10037Joseph Clark        13520906876Current   000085902.36
-Error: model.AccountDetails.<init>()
-Error parsing line: 10038Patrick Diaz        82842716134Savings   000031956.55
-Error: model.AccountDetails.<init>()
-Error parsing line: 10039Gregory Burch       37073082234Current   000079834.88
-Error: model.AccountDetails.<init>()
-Error parsing line: 10040Jamie Payne         73713546999Savings   000205059.04
-Error: model.AccountDetails.<init>()
-Error parsing line: 10041Angela Powell       25234217490Savings   000790461.23
-Error: model.AccountDetails.<init>()
-Error parsing line: 10042Daniel Long         29669156113Current   000626037.21
-Error: model.AccountDetails.<init>()
-Error parsing line: 10043Denise Mitchell     38824173893Current   000487709.05
-Error: model.AccountDetails.<init>()
-Error parsing line: 10044Victoria Sanchez    41505451320Current   000031500.32
-Error: model.AccountDetails.<init>()
-Error parsing line: 10045Paul Jackson        84520416013Savings   000043172.58
-Error: model.AccountDetails.<init>()
-Error parsing line: 10046Marc Palmer         70812295843Current   000096535.71
-Error: model.AccountDetails.<init>()
-Error parsing line: 10047Bradley Franklin    47793310273Current   000006385.71
-Error: model.AccountDetails.<init>()
-Error parsing line: 10048Patrick Walker      73528029235Current   000086451.01
-Error: model.AccountDetails.<init>()
-Error parsing line: 10049Kimberly Dougherty  84916551143Savings   000504168.25
-Error: model.AccountDetails.<init>()
-Parsed 0 records:
+Successfully parsed: AccountDetails[customerId=10000, customerName=Kristin Williams, accountNumber=81947122496, accountType=Savings, currentBalance=46400.43]
+Successfully parsed: AccountDetails[customerId=10001, customerName=Sarah Adams, accountNumber=53772866808, accountType=Savings, currentBalance=30676.97]
+Successfully parsed: AccountDetails[customerId=10002, customerName=Gabriel Clark, accountNumber=55041390894, accountType=Savings, currentBalance=49340.97]
+Successfully parsed: AccountDetails[customerId=10003, customerName=Jacqueline Cooper, accountNumber=39737861482, accountType=Savings, currentBalance=39786.90]
+Successfully parsed: AccountDetails[customerId=10004, customerName=Taylor Evans, accountNumber=14595971146, accountType=Savings, currentBalance=53350.69]
+Successfully parsed: AccountDetails[customerId=10005, customerName=Brandon Rivera, accountNumber=26457869668, accountType=Savings, currentBalance=76175.47]
+Successfully parsed: AccountDetails[customerId=10006, customerName=Ian Clark, accountNumber=10444616867, accountType=Savings, currentBalance=55904.72]
+Successfully parsed: AccountDetails[customerId=10007, customerName=Brianna Ramirez, accountNumber=76862628421, accountType=Current, currentBalance=72700.88]
+Successfully parsed: AccountDetails[customerId=10008, customerName=Sara Shepherd, accountNumber=40478775594, accountType=Savings, currentBalance=13505.42]
+Successfully parsed: AccountDetails[customerId=10009, customerName=Mark Kelly, accountNumber=34693750336, accountType=Current, currentBalance=34746.39]
+Successfully parsed: AccountDetails[customerId=10010, customerName=David Conway, accountNumber=67417474155, accountType=Current, currentBalance=76719.42]
+Successfully parsed: AccountDetails[customerId=10011, customerName=Nathan Chase, accountNumber=83572444861, accountType=Current, currentBalance=8936.29]
+Successfully parsed: AccountDetails[customerId=10012, customerName=Angel Murillo, accountNumber=88797799925, accountType=Current, currentBalance=66793.40]
+Successfully parsed: AccountDetails[customerId=10013, customerName=Christopher Walls, accountNumber=85981778914, accountType=Savings, currentBalance=907152.01]
+Successfully parsed: AccountDetails[customerId=10014, customerName=Kevin Brown, accountNumber=29309724386, accountType=Savings, currentBalance=910135.41]
+Successfully parsed: AccountDetails[customerId=10015, customerName=Leslie Horn, accountNumber=98704897256, accountType=Savings, currentBalance=993028.01]
+Successfully parsed: AccountDetails[customerId=10016, customerName=Lisa Rodriguez MD, accountNumber=51804958470, accountType=Current, currentBalance=160700.03]
+Successfully parsed: AccountDetails[customerId=10017, customerName=Christopher Cross, accountNumber=37133134843, accountType=Savings, currentBalance=82240.06]
+Successfully parsed: AccountDetails[customerId=10018, customerName=Jeffrey Stein, accountNumber=45779410773, accountType=Current, currentBalance=77225.29]
+Successfully parsed: AccountDetails[customerId=10019, customerName=Ryan Mcdonald, accountNumber=47475534862, accountType=Current, currentBalance=29816.56]
+Successfully parsed: AccountDetails[customerId=10020, customerName=Gregory Sanchez, accountNumber=34674478921, accountType=Current, currentBalance=82239.71]
+Successfully parsed: AccountDetails[customerId=10021, customerName=Sarah Jackson, accountNumber=94925039022, accountType=Savings, currentBalance=10512.29]
+Successfully parsed: AccountDetails[customerId=10022, customerName=Barbara Dixon, accountNumber=89439253316, accountType=Current, currentBalance=508381.32]
+Successfully parsed: AccountDetails[customerId=10023, customerName=Fernando Griffith, accountNumber=84424624935, accountType=Savings, currentBalance=710778.70]
+Successfully parsed: AccountDetails[customerId=10024, customerName=Renee Baker, accountNumber=84435008794, accountType=Savings, currentBalance=403075.27]
+Successfully parsed: AccountDetails[customerId=10025, customerName=Devon Green, accountNumber=33335134681, accountType=Current, currentBalance=829106.46]
+Successfully parsed: AccountDetails[customerId=10026, customerName=Marc Williams, accountNumber=73462174031, accountType=Current, currentBalance=707590.93]
+Successfully parsed: AccountDetails[customerId=10027, customerName=Lori Wallace, accountNumber=84526536589, accountType=Savings, currentBalance=41814.77]
+Successfully parsed: AccountDetails[customerId=10028, customerName=Bryan Graham, accountNumber=91064074641, accountType=Savings, currentBalance=34005.98]
+Successfully parsed: AccountDetails[customerId=10029, customerName=Michael Edwards, accountNumber=48916946370, accountType=Current, currentBalance=36059.24]
+Successfully parsed: AccountDetails[customerId=10030, customerName=Shawn Coleman, accountNumber=95870076175, accountType=Savings, currentBalance=5746.30]
+Successfully parsed: AccountDetails[customerId=10031, customerName=Dustin Collins, accountNumber=51001992974, accountType=Current, currentBalance=708505.41]
+Successfully parsed: AccountDetails[customerId=10032, customerName=Patricia Stanley MD, accountNumber=13793900408, accountType=Savings, currentBalance=210824.04]
+Successfully parsed: AccountDetails[customerId=10033, customerName=Anne Ortiz, accountNumber=84903430088, accountType=Current, currentBalance=885049.13]
+Successfully parsed: AccountDetails[customerId=10034, customerName=Alexandra Flowers, accountNumber=60759000582, accountType=Savings, currentBalance=644405.05]
+Successfully parsed: AccountDetails[customerId=10035, customerName=Claire Bruce, accountNumber=97966490901, accountType=Current, currentBalance=171720.16]
+Successfully parsed: AccountDetails[customerId=10036, customerName=Mark Morton, accountNumber=46937642052, accountType=Savings, currentBalance=93855.54]
+Successfully parsed: AccountDetails[customerId=10037, customerName=Joseph Clark, accountNumber=13520906876, accountType=Current, currentBalance=85902.36]
+Successfully parsed: AccountDetails[customerId=10038, customerName=Patrick Diaz, accountNumber=82842716134, accountType=Savings, currentBalance=31956.55]
+Successfully parsed: AccountDetails[customerId=10039, customerName=Gregory Burch, accountNumber=37073082234, accountType=Current, currentBalance=79834.88]
+Successfully parsed: AccountDetails[customerId=10040, customerName=Jamie Payne, accountNumber=73713546999, accountType=Savings, currentBalance=205059.04]
+Successfully parsed: AccountDetails[customerId=10041, customerName=Angela Powell, accountNumber=25234217490, accountType=Savings, currentBalance=790461.23]
+Successfully parsed: AccountDetails[customerId=10042, customerName=Daniel Long, accountNumber=29669156113, accountType=Current, currentBalance=626037.21]
+Successfully parsed: AccountDetails[customerId=10043, customerName=Denise Mitchell, accountNumber=38824173893, accountType=Current, currentBalance=487709.05]
+Successfully parsed: AccountDetails[customerId=10044, customerName=Victoria Sanchez, accountNumber=41505451320, accountType=Current, currentBalance=31500.32]
+Successfully parsed: AccountDetails[customerId=10045, customerName=Paul Jackson, accountNumber=84520416013, accountType=Savings, currentBalance=43172.58]
+Successfully parsed: AccountDetails[customerId=10046, customerName=Marc Palmer, accountNumber=70812295843, accountType=Current, currentBalance=96535.71]
+Successfully parsed: AccountDetails[customerId=10047, customerName=Bradley Franklin, accountNumber=47793310273, accountType=Current, currentBalance=6385.71]
+Successfully parsed: AccountDetails[customerId=10048, customerName=Patrick Walker, accountNumber=73528029235, accountType=Current, currentBalance=86451.01]
+Successfully parsed: AccountDetails[customerId=10049, customerName=Kimberly Dougherty, accountNumber=84916551143, accountType=Savings, currentBalance=504168.25]
+Parsed 50 records:
+AccountDetails[customerId=10000, customerName=Kristin Williams, accountNumber=81947122496, accountType=Savings, currentBalance=46400.43]
+AccountDetails[customerId=10001, customerName=Sarah Adams, accountNumber=53772866808, accountType=Savings, currentBalance=30676.97]
+AccountDetails[customerId=10002, customerName=Gabriel Clark, accountNumber=55041390894, accountType=Savings, currentBalance=49340.97]
+AccountDetails[customerId=10003, customerName=Jacqueline Cooper, accountNumber=39737861482, accountType=Savings, currentBalance=39786.90]
+AccountDetails[customerId=10004, customerName=Taylor Evans, accountNumber=14595971146, accountType=Savings, currentBalance=53350.69]
+AccountDetails[customerId=10005, customerName=Brandon Rivera, accountNumber=26457869668, accountType=Savings, currentBalance=76175.47]
+AccountDetails[customerId=10006, customerName=Ian Clark, accountNumber=10444616867, accountType=Savings, currentBalance=55904.72]
+AccountDetails[customerId=10007, customerName=Brianna Ramirez, accountNumber=76862628421, accountType=Current, currentBalance=72700.88]
+AccountDetails[customerId=10008, customerName=Sara Shepherd, accountNumber=40478775594, accountType=Savings, currentBalance=13505.42]
+AccountDetails[customerId=10009, customerName=Mark Kelly, accountNumber=34693750336, accountType=Current, currentBalance=34746.39]
+AccountDetails[customerId=10010, customerName=David Conway, accountNumber=67417474155, accountType=Current, currentBalance=76719.42]
+AccountDetails[customerId=10011, customerName=Nathan Chase, accountNumber=83572444861, accountType=Current, currentBalance=8936.29]
+AccountDetails[customerId=10012, customerName=Angel Murillo, accountNumber=88797799925, accountType=Current, currentBalance=66793.40]
+AccountDetails[customerId=10013, customerName=Christopher Walls, accountNumber=85981778914, accountType=Savings, currentBalance=907152.01]
+AccountDetails[customerId=10014, customerName=Kevin Brown, accountNumber=29309724386, accountType=Savings, currentBalance=910135.41]
+AccountDetails[customerId=10015, customerName=Leslie Horn, accountNumber=98704897256, accountType=Savings, currentBalance=993028.01]
+AccountDetails[customerId=10016, customerName=Lisa Rodriguez MD, accountNumber=51804958470, accountType=Current, currentBalance=160700.03]
+AccountDetails[customerId=10017, customerName=Christopher Cross, accountNumber=37133134843, accountType=Savings, currentBalance=82240.06]
+AccountDetails[customerId=10018, customerName=Jeffrey Stein, accountNumber=45779410773, accountType=Current, currentBalance=77225.29]
+AccountDetails[customerId=10019, customerName=Ryan Mcdonald, accountNumber=47475534862, accountType=Current, currentBalance=29816.56]
+AccountDetails[customerId=10020, customerName=Gregory Sanchez, accountNumber=34674478921, accountType=Current, currentBalance=82239.71]
+AccountDetails[customerId=10021, customerName=Sarah Jackson, accountNumber=94925039022, accountType=Savings, currentBalance=10512.29]
+AccountDetails[customerId=10022, customerName=Barbara Dixon, accountNumber=89439253316, accountType=Current, currentBalance=508381.32]
+AccountDetails[customerId=10023, customerName=Fernando Griffith, accountNumber=84424624935, accountType=Savings, currentBalance=710778.70]
+AccountDetails[customerId=10024, customerName=Renee Baker, accountNumber=84435008794, accountType=Savings, currentBalance=403075.27]
+AccountDetails[customerId=10025, customerName=Devon Green, accountNumber=33335134681, accountType=Current, currentBalance=829106.46]
+AccountDetails[customerId=10026, customerName=Marc Williams, accountNumber=73462174031, accountType=Current, currentBalance=707590.93]
+AccountDetails[customerId=10027, customerName=Lori Wallace, accountNumber=84526536589, accountType=Savings, currentBalance=41814.77]
+AccountDetails[customerId=10028, customerName=Bryan Graham, accountNumber=91064074641, accountType=Savings, currentBalance=34005.98]
+AccountDetails[customerId=10029, customerName=Michael Edwards, accountNumber=48916946370, accountType=Current, currentBalance=36059.24]
+AccountDetails[customerId=10030, customerName=Shawn Coleman, accountNumber=95870076175, accountType=Savings, currentBalance=5746.30]
+AccountDetails[customerId=10031, customerName=Dustin Collins, accountNumber=51001992974, accountType=Current, currentBalance=708505.41]
+AccountDetails[customerId=10032, customerName=Patricia Stanley MD, accountNumber=13793900408, accountType=Savings, currentBalance=210824.04]
+AccountDetails[customerId=10033, customerName=Anne Ortiz, accountNumber=84903430088, accountType=Current, currentBalance=885049.13]
+AccountDetails[customerId=10034, customerName=Alexandra Flowers, accountNumber=60759000582, accountType=Savings, currentBalance=644405.05]
+AccountDetails[customerId=10035, customerName=Claire Bruce, accountNumber=97966490901, accountType=Current, currentBalance=171720.16]
+AccountDetails[customerId=10036, customerName=Mark Morton, accountNumber=46937642052, accountType=Savings, currentBalance=93855.54]
+AccountDetails[customerId=10037, customerName=Joseph Clark, accountNumber=13520906876, accountType=Current, currentBalance=85902.36]
+AccountDetails[customerId=10038, customerName=Patrick Diaz, accountNumber=82842716134, accountType=Savings, currentBalance=31956.55]
+AccountDetails[customerId=10039, customerName=Gregory Burch, accountNumber=37073082234, accountType=Current, currentBalance=79834.88]
+AccountDetails[customerId=10040, customerName=Jamie Payne, accountNumber=73713546999, accountType=Savings, currentBalance=205059.04]
+AccountDetails[customerId=10041, customerName=Angela Powell, accountNumber=25234217490, accountType=Savings, currentBalance=790461.23]
+AccountDetails[customerId=10042, customerName=Daniel Long, accountNumber=29669156113, accountType=Current, currentBalance=626037.21]
+AccountDetails[customerId=10043, customerName=Denise Mitchell, accountNumber=38824173893, accountType=Current, currentBalance=487709.05]
+AccountDetails[customerId=10044, customerName=Victoria Sanchez, accountNumber=41505451320, accountType=Current, currentBalance=31500.32]
+AccountDetails[customerId=10045, customerName=Paul Jackson, accountNumber=84520416013, accountType=Savings, currentBalance=43172.58]
+AccountDetails[customerId=10046, customerName=Marc Palmer, accountNumber=70812295843, accountType=Current, currentBalance=96535.71]
+AccountDetails[customerId=10047, customerName=Bradley Franklin, accountNumber=47793310273, accountType=Current, currentBalance=6385.71]
+AccountDetails[customerId=10048, customerName=Patrick Walker, accountNumber=73528029235, accountType=Current, currentBalance=86451.01]
+AccountDetails[customerId=10049, customerName=Kimberly Dougherty, accountNumber=84916551143, accountType=Savings, currentBalance=504168.25]
 
 Processing file: CustomerDetails.txt
-Error parsing line: 10000Kristin Williams    Others14-10-19786226979387kristinwilliams798@gmail.com  Flat No. 196, Angela Estates, 
-Error: model.CustomerDetails.<init>()
-Error parsing line: 10001Sarah Adams         Others03-06-19981597111971sarahadams325@gmail.com       Street No. 215, Martin Hollow,
-Error: model.CustomerDetails.<init>()
-Error parsing line: 10002Gabriel Clark       Female04-03-20010201375965gabrielclark@gmail.com        Door No. 961, Destiny Canyon, 
-Error: model.CustomerDetails.<init>()
-Error parsing line: 10003Jacqueline Cooper   Female03-05-20013719386734jacquelinecooper@gmail.com    Flat No. 269, Leslie Vista, Ro
-Error: model.CustomerDetails.<init>()
-Error parsing line: 10004Taylor Evans        Others21-03-19928207150380taylorevans@gmail.com         Street No. 95, Desiree Plaza, 
-Error: model.CustomerDetails.<init>()
-Error parsing line: 10005Brandon Rivera      Male  18-05-19622163207847brandonrivera@gmail.com       Door No. 574, Joel Cape, Hoffm
-Error: model.CustomerDetails.<init>()
-Error parsing line: 10006Ian Clark           Female30-04-19827054674661ianclark@gmail.com            Flat No. 559, Lowe Court, West
-Error: model.CustomerDetails.<init>()
-Error parsing line: 10007Brianna Ramirez     Others19-04-19641148935452briannaramirez@gmail.com      Flat No. 755, James Street, La
-Error: model.CustomerDetails.<init>()
-Error parsing line: 10008Sara Shepherd       Male  14-02-19901997417592sarashepherd@gmail.com        Flat No. 395, Thomas Light, Wi
-Error: model.CustomerDetails.<init>()
-Error parsing line: 10009Mark Kelly          Female07-05-19873191152802markkelly781@gmail.com        Street No. 430, Rebecca Pike, 
-Error: model.CustomerDetails.<init>()
-Error parsing line: 10010David Conway        Female06-10-19907158599261davidconway@gmail.com         Door No. 33, Maldonado Fort, L
-Error: model.CustomerDetails.<init>()
-Error parsing line: 10011Nathan Chase        Female09-03-19688603185858nathanchase@gmail.com         Flat No. 326, Rodriguez Tunnel
-Error: model.CustomerDetails.<init>()
-Error parsing line: 10012Angel Murillo       Others16-06-19676457090117angelmurillo643@gmail.com     Street No. 523, Sarah Divide, 
-Error: model.CustomerDetails.<init>()
-Error parsing line: 10013Christopher Walls   Others31-12-19791735441857christopherwalls277@gmail.com Flat No. 410, Joel Fall, Kelly
-Error: model.CustomerDetails.<init>()
-Error parsing line: 10014Kevin Brown         Female11-03-19979734659118kevinbrown@gmail.com          Street No. 757, King Flats, Po
-Error: model.CustomerDetails.<init>()
-Error parsing line: 10015Leslie Horn         Male  06-01-19878793193630lesliehorn957@gmail.com       Street No. 239, Hall Prairie, 
-Error: model.CustomerDetails.<init>()
-Error parsing line: 10016Lisa Rodriguez MD   Male  19-04-19621476350576lisarodriguezmd@gmail.com     Street No. 369, Hale Fords, De
-Error: model.CustomerDetails.<init>()
-Error parsing line: 10017Christopher Cross   Female18-02-19808026617149christophercross70@gmail.com  Street No. 845, Bentley Stream
-Error: model.CustomerDetails.<init>()
-Error parsing line: 10018Jeffrey Stein       Female28-06-20035971110945jeffreystein786@gmail.com     Door No. 713, Mary Mountains, 
-Error: model.CustomerDetails.<init>()
-Error parsing line: 10019Ryan Mcdonald       Others11-11-19621814480649ryanmcdonald569@gmail.com     Street No. 828, Jordan Islands
-Error: model.CustomerDetails.<init>()
-Error parsing line: 10020Gregory Sanchez     Male  16-03-19715730939040gregorysanchez@gmail.com      Door No. 527, Bryant Cliffs, W
-Error: model.CustomerDetails.<init>()
-Error parsing line: 10021Sarah Jackson       Female24-09-19849554633418sarahjackson159@gmail.com     Door No. 13, Martin Spring, Me
-Error: model.CustomerDetails.<init>()
-Error parsing line: 10022Barbara Dixon       Others01-02-19833013731690barbaradixon@gmail.com        Door No. 836, Bryan Bridge, So
-Error: model.CustomerDetails.<init>()
-Error parsing line: 10023Fernando Griffith   Female10-06-19784438234179fernandogriffith@gmail.com    Door No. 260, Green Vista, Sou
-Error: model.CustomerDetails.<init>()
-Error parsing line: 10024Renee Baker         Others22-07-19650150112598reneebaker692@gmail.com       Door No. 299, Jeffrey Islands,
-Error: model.CustomerDetails.<init>()
-Error parsing line: 10025Devon Green         Male  19-05-19670012891758devongreen@gmail.com          Street No. 240, Christopher St
-Error: model.CustomerDetails.<init>()
-Error parsing line: 10026Marc Williams       Female12-12-19821866539657marcwilliams@gmail.com        Street No. 819, Levine Lane, E
-Error: model.CustomerDetails.<init>()
-Error parsing line: 10027Lori Wallace        Others18-03-19998970669996loriwallace40@gmail.com       Street No. 90, Webster Loop, W
-Error: model.CustomerDetails.<init>()
-Error parsing line: 10028Bryan Graham        Female30-05-19661743376425bryangraham@gmail.com         Door No. 997, Craig Course, Ch
-Error: model.CustomerDetails.<init>()
-Error parsing line: 10029Michael Edwards     Female02-06-19807251155320michaeledwards71@gmail.com    Flat No. 104, Hardin Summit, J
-Error: model.CustomerDetails.<init>()
-Error parsing line: 10030Shawn Coleman       Female10-11-19757445532474shawncoleman@gmail.com        Door No. 179, Monica Locks, No
-Error: model.CustomerDetails.<init>()
-Error parsing line: 10031Dustin Collins      Female19-09-19661736767735dustincollins759@gmail.com    Door No. 444, Mendoza Flats, P
-Error: model.CustomerDetails.<init>()
-Error parsing line: 10032Patricia Stanley MD Female20-04-19997418162549patriciastanleymd@gmail.com   Door No. 937, Mckee Lodge, Wes
-Error: model.CustomerDetails.<init>()
-Error parsing line: 10033Anne Ortiz          Female18-07-19982038799243anneortiz@gmail.com           Door No. 953, Maria Shores, Ru
-Error: model.CustomerDetails.<init>()
-Error parsing line: 10034Alexandra Flowers   Others22-06-19723607351351alexandraflowers@gmail.com    Door No. 285, Solomon Wells, C
-Error: model.CustomerDetails.<init>()
-Error parsing line: 10035Claire Bruce        Female04-03-19647956475006clairebruce805@gmail.com      Street No. 162, Tina Street, M
-Error: model.CustomerDetails.<init>()
-Error parsing line: 10036Mark Morton         Others27-10-19887802523299markmorton@gmail.com          Flat No. 850, Heather Valleys,
-Error: model.CustomerDetails.<init>()
-Error parsing line: 10037Joseph Clark        Others13-01-19930270058550josephclark@gmail.com         Door No. 989, Mark Forges, Gre
-Error: model.CustomerDetails.<init>()
-Error parsing line: 10038Patrick Diaz        Female27-04-20013181821833patrickdiaz257@gmail.com      Door No. 660, Melinda Village,
-Error: model.CustomerDetails.<init>()
-Error parsing line: 10039Gregory Burch       Male  17-04-19891606777976gregoryburch@gmail.com        Flat No. 714, Sue Oval, East K
-Error: model.CustomerDetails.<init>()
-Error parsing line: 10040Jamie Payne         Others30-10-19762049261502jamiepayne@gmail.com          Door No. 755, Michelle Ville, 
-Error: model.CustomerDetails.<init>()
-Error parsing line: 10041Angela Powell       Male  18-05-19799224332183angelapowell138@gmail.com     Flat No. 549, Martin Walk, Rit
-Error: model.CustomerDetails.<init>()
-Error parsing line: 10042Daniel Long         Female04-12-19746872569647daniellong927@gmail.com       Flat No. 997, Adams Burg, Mich
-Error: model.CustomerDetails.<init>()
-Error parsing line: 10043Denise Mitchell     Female26-05-20035336181407denisemitchell@gmail.com      Street No. 298, Anthony Keys, 
-Error: model.CustomerDetails.<init>()
-Error parsing line: 10044Victoria Sanchez    Male  03-05-19683212062115victoriasanchez@gmail.com     Flat No. 51, Aguirre Park, Por
-Error: model.CustomerDetails.<init>()
-Error parsing line: 10045Paul Jackson        Others14-12-19947582896274pauljackson808@gmail.com      Door No. 592, Deleon Lodge, Me
-Error: model.CustomerDetails.<init>()
-Error parsing line: 10046Marc Palmer         Female19-05-19706061374696marcpalmer@gmail.com          Street No. 20, Mccann Cliffs, 
-Error: model.CustomerDetails.<init>()
-Error parsing line: 10047Bradley Franklin    Others21-08-19752493935904bradleyfranklin316@gmail.com  Street No. 410, Hernandez Cove
-Error: model.CustomerDetails.<init>()
-Error parsing line: 10048Patrick Walker      Female16-02-19866735204766patrickwalker@gmail.com       Door No. 382, Cole Route, East
-Error: model.CustomerDetails.<init>()
-Error parsing line: 10049Kimberly Dougherty  Male  20-03-19626528409651kimberlydougherty@gmail.com   Flat No. 465, Darlene Park, Wi
-Error: model.CustomerDetails.<init>()
-Parsed 0 records:
+Successfully parsed: CustomerDetails[customerId=10000, customerName=Kristin Williams, gender=Others, dateOfBirth=14-10-1978, contactNumber=6226979387, email=kristinwilliams798@gmail.com, residentialAddress=Flat No. 196, Angela Estates,]
+Successfully parsed: CustomerDetails[customerId=10001, customerName=Sarah Adams, gender=Others, dateOfBirth=03-06-1998, contactNumber=1597111971, email=sarahadams325@gmail.com, residentialAddress=Street No. 215, Martin Hollow,]
+Successfully parsed: CustomerDetails[customerId=10002, customerName=Gabriel Clark, gender=Female, dateOfBirth=04-03-2001, contactNumber=0201375965, email=gabrielclark@gmail.com, residentialAddress=Door No. 961, Destiny Canyon,]
+Successfully parsed: CustomerDetails[customerId=10003, customerName=Jacqueline Cooper, gender=Female, dateOfBirth=03-05-2001, contactNumber=3719386734, email=jacquelinecooper@gmail.com, residentialAddress=Flat No. 269, Leslie Vista, Ro]
+Successfully parsed: CustomerDetails[customerId=10004, customerName=Taylor Evans, gender=Others, dateOfBirth=21-03-1992, contactNumber=8207150380, email=taylorevans@gmail.com, residentialAddress=Street No. 95, Desiree Plaza,]
+Successfully parsed: CustomerDetails[customerId=10005, customerName=Brandon Rivera, gender=Male, dateOfBirth=18-05-1962, contactNumber=2163207847, email=brandonrivera@gmail.com, residentialAddress=Door No. 574, Joel Cape, Hoffm]
+Successfully parsed: CustomerDetails[customerId=10006, customerName=Ian Clark, gender=Female, dateOfBirth=30-04-1982, contactNumber=7054674661, email=ianclark@gmail.com, residentialAddress=Flat No. 559, Lowe Court, West]
+Successfully parsed: CustomerDetails[customerId=10007, customerName=Brianna Ramirez, gender=Others, dateOfBirth=19-04-1964, contactNumber=1148935452, email=briannaramirez@gmail.com, residentialAddress=Flat No. 755, James Street, La]
+Successfully parsed: CustomerDetails[customerId=10008, customerName=Sara Shepherd, gender=Male, dateOfBirth=14-02-1990, contactNumber=1997417592, email=sarashepherd@gmail.com, residentialAddress=Flat No. 395, Thomas Light, Wi]
+Successfully parsed: CustomerDetails[customerId=10009, customerName=Mark Kelly, gender=Female, dateOfBirth=07-05-1987, contactNumber=3191152802, email=markkelly781@gmail.com, residentialAddress=Street No. 430, Rebecca Pike,]
+Successfully parsed: CustomerDetails[customerId=10010, customerName=David Conway, gender=Female, dateOfBirth=06-10-1990, contactNumber=7158599261, email=davidconway@gmail.com, residentialAddress=Door No. 33, Maldonado Fort, L]
+Successfully parsed: CustomerDetails[customerId=10011, customerName=Nathan Chase, gender=Female, dateOfBirth=09-03-1968, contactNumber=8603185858, email=nathanchase@gmail.com, residentialAddress=Flat No. 326, Rodriguez Tunnel]
+Successfully parsed: CustomerDetails[customerId=10012, customerName=Angel Murillo, gender=Others, dateOfBirth=16-06-1967, contactNumber=6457090117, email=angelmurillo643@gmail.com, residentialAddress=Street No. 523, Sarah Divide,]
+Successfully parsed: CustomerDetails[customerId=10013, customerName=Christopher Walls, gender=Others, dateOfBirth=31-12-1979, contactNumber=1735441857, email=christopherwalls277@gmail.com, residentialAddress=Flat No. 410, Joel Fall, Kelly]
+Successfully parsed: CustomerDetails[customerId=10014, customerName=Kevin Brown, gender=Female, dateOfBirth=11-03-1997, contactNumber=9734659118, email=kevinbrown@gmail.com, residentialAddress=Street No. 757, King Flats, Po]
+Successfully parsed: CustomerDetails[customerId=10015, customerName=Leslie Horn, gender=Male, dateOfBirth=06-01-1987, contactNumber=8793193630, email=lesliehorn957@gmail.com, residentialAddress=Street No. 239, Hall Prairie,]
+Successfully parsed: CustomerDetails[customerId=10016, customerName=Lisa Rodriguez MD, gender=Male, dateOfBirth=19-04-1962, contactNumber=1476350576, email=lisarodriguezmd@gmail.com, residentialAddress=Street No. 369, Hale Fords, De]
+Successfully parsed: CustomerDetails[customerId=10017, customerName=Christopher Cross, gender=Female, dateOfBirth=18-02-1980, contactNumber=8026617149, email=christophercross70@gmail.com, residentialAddress=Street No. 845, Bentley Stream]
+Successfully parsed: CustomerDetails[customerId=10018, customerName=Jeffrey Stein, gender=Female, dateOfBirth=28-06-2003, contactNumber=5971110945, email=jeffreystein786@gmail.com, residentialAddress=Door No. 713, Mary Mountains,]
+Successfully parsed: CustomerDetails[customerId=10019, customerName=Ryan Mcdonald, gender=Others, dateOfBirth=11-11-1962, contactNumber=1814480649, email=ryanmcdonald569@gmail.com, residentialAddress=Street No. 828, Jordan Islands]
+Successfully parsed: CustomerDetails[customerId=10020, customerName=Gregory Sanchez, gender=Male, dateOfBirth=16-03-1971, contactNumber=5730939040, email=gregorysanchez@gmail.com, residentialAddress=Door No. 527, Bryant Cliffs, W]
+Successfully parsed: CustomerDetails[customerId=10021, customerName=Sarah Jackson, gender=Female, dateOfBirth=24-09-1984, contactNumber=9554633418, email=sarahjackson159@gmail.com, residentialAddress=Door No. 13, Martin Spring, Me]
+Successfully parsed: CustomerDetails[customerId=10022, customerName=Barbara Dixon, gender=Others, dateOfBirth=01-02-1983, contactNumber=3013731690, email=barbaradixon@gmail.com, residentialAddress=Door No. 836, Bryan Bridge, So]
+Successfully parsed: CustomerDetails[customerId=10023, customerName=Fernando Griffith, gender=Female, dateOfBirth=10-06-1978, contactNumber=4438234179, email=fernandogriffith@gmail.com, residentialAddress=Door No. 260, Green Vista, Sou]
+Successfully parsed: CustomerDetails[customerId=10024, customerName=Renee Baker, gender=Others, dateOfBirth=22-07-1965, contactNumber=0150112598, email=reneebaker692@gmail.com, residentialAddress=Door No. 299, Jeffrey Islands,]
+Successfully parsed: CustomerDetails[customerId=10025, customerName=Devon Green, gender=Male, dateOfBirth=19-05-1967, contactNumber=0012891758, email=devongreen@gmail.com, residentialAddress=Street No. 240, Christopher St]
+Successfully parsed: CustomerDetails[customerId=10026, customerName=Marc Williams, gender=Female, dateOfBirth=12-12-1982, contactNumber=1866539657, email=marcwilliams@gmail.com, residentialAddress=Street No. 819, Levine Lane, E]
+Successfully parsed: CustomerDetails[customerId=10027, customerName=Lori Wallace, gender=Others, dateOfBirth=18-03-1999, contactNumber=8970669996, email=loriwallace40@gmail.com, residentialAddress=Street No. 90, Webster Loop, W]
+Successfully parsed: CustomerDetails[customerId=10028, customerName=Bryan Graham, gender=Female, dateOfBirth=30-05-1966, contactNumber=1743376425, email=bryangraham@gmail.com, residentialAddress=Door No. 997, Craig Course, Ch]
+Successfully parsed: CustomerDetails[customerId=10029, customerName=Michael Edwards, gender=Female, dateOfBirth=02-06-1980, contactNumber=7251155320, email=michaeledwards71@gmail.com, residentialAddress=Flat No. 104, Hardin Summit, J]
+Successfully parsed: CustomerDetails[customerId=10030, customerName=Shawn Coleman, gender=Female, dateOfBirth=10-11-1975, contactNumber=7445532474, email=shawncoleman@gmail.com, residentialAddress=Door No. 179, Monica Locks, No]
+Successfully parsed: CustomerDetails[customerId=10031, customerName=Dustin Collins, gender=Female, dateOfBirth=19-09-1966, contactNumber=1736767735, email=dustincollins759@gmail.com, residentialAddress=Door No. 444, Mendoza Flats, P]
+Successfully parsed: CustomerDetails[customerId=10032, customerName=Patricia Stanley MD, gender=Female, dateOfBirth=20-04-1999, contactNumber=7418162549, email=patriciastanleymd@gmail.com, residentialAddress=Door No. 937, Mckee Lodge, Wes]
+Successfully parsed: CustomerDetails[customerId=10033, customerName=Anne Ortiz, gender=Female, dateOfBirth=18-07-1998, contactNumber=2038799243, email=anneortiz@gmail.com, residentialAddress=Door No. 953, Maria Shores, Ru]
+Successfully parsed: CustomerDetails[customerId=10034, customerName=Alexandra Flowers, gender=Others, dateOfBirth=22-06-1972, contactNumber=3607351351, email=alexandraflowers@gmail.com, residentialAddress=Door No. 285, Solomon Wells, C]
+Successfully parsed: CustomerDetails[customerId=10035, customerName=Claire Bruce, gender=Female, dateOfBirth=04-03-1964, contactNumber=7956475006, email=clairebruce805@gmail.com, residentialAddress=Street No. 162, Tina Street, M]
+Successfully parsed: CustomerDetails[customerId=10036, customerName=Mark Morton, gender=Others, dateOfBirth=27-10-1988, contactNumber=7802523299, email=markmorton@gmail.com, residentialAddress=Flat No. 850, Heather Valleys,]
+Successfully parsed: CustomerDetails[customerId=10037, customerName=Joseph Clark, gender=Others, dateOfBirth=13-01-1993, contactNumber=0270058550, email=josephclark@gmail.com, residentialAddress=Door No. 989, Mark Forges, Gre]
+Successfully parsed: CustomerDetails[customerId=10038, customerName=Patrick Diaz, gender=Female, dateOfBirth=27-04-2001, contactNumber=3181821833, email=patrickdiaz257@gmail.com, residentialAddress=Door No. 660, Melinda Village,]
+Successfully parsed: CustomerDetails[customerId=10039, customerName=Gregory Burch, gender=Male, dateOfBirth=17-04-1989, contactNumber=1606777976, email=gregoryburch@gmail.com, residentialAddress=Flat No. 714, Sue Oval, East K]
+Successfully parsed: CustomerDetails[customerId=10040, customerName=Jamie Payne, gender=Others, dateOfBirth=30-10-1976, contactNumber=2049261502, email=jamiepayne@gmail.com, residentialAddress=Door No. 755, Michelle Ville,]
+Successfully parsed: CustomerDetails[customerId=10041, customerName=Angela Powell, gender=Male, dateOfBirth=18-05-1979, contactNumber=9224332183, email=angelapowell138@gmail.com, residentialAddress=Flat No. 549, Martin Walk, Rit]
+Successfully parsed: CustomerDetails[customerId=10042, customerName=Daniel Long, gender=Female, dateOfBirth=04-12-1974, contactNumber=6872569647, email=daniellong927@gmail.com, residentialAddress=Flat No. 997, Adams Burg, Mich]
+Successfully parsed: CustomerDetails[customerId=10043, customerName=Denise Mitchell, gender=Female, dateOfBirth=26-05-2003, contactNumber=5336181407, email=denisemitchell@gmail.com, residentialAddress=Street No. 298, Anthony Keys,]
+Successfully parsed: CustomerDetails[customerId=10044, customerName=Victoria Sanchez, gender=Male, dateOfBirth=03-05-1968, contactNumber=3212062115, email=victoriasanchez@gmail.com, residentialAddress=Flat No. 51, Aguirre Park, Por]
+Successfully parsed: CustomerDetails[customerId=10045, customerName=Paul Jackson, gender=Others, dateOfBirth=14-12-1994, contactNumber=7582896274, email=pauljackson808@gmail.com, residentialAddress=Door No. 592, Deleon Lodge, Me]
+Successfully parsed: CustomerDetails[customerId=10046, customerName=Marc Palmer, gender=Female, dateOfBirth=19-05-1970, contactNumber=6061374696, email=marcpalmer@gmail.com, residentialAddress=Street No. 20, Mccann Cliffs,]
+Successfully parsed: CustomerDetails[customerId=10047, customerName=Bradley Franklin, gender=Others, dateOfBirth=21-08-1975, contactNumber=2493935904, email=bradleyfranklin316@gmail.com, residentialAddress=Street No. 410, Hernandez Cove]
+Successfully parsed: CustomerDetails[customerId=10048, customerName=Patrick Walker, gender=Female, dateOfBirth=16-02-1986, contactNumber=6735204766, email=patrickwalker@gmail.com, residentialAddress=Door No. 382, Cole Route, East]
+Successfully parsed: CustomerDetails[customerId=10049, customerName=Kimberly Dougherty, gender=Male, dateOfBirth=20-03-1962, contactNumber=6528409651, email=kimberlydougherty@gmail.com, residentialAddress=Flat No. 465, Darlene Park, Wi]
+Parsed 50 records:
+CustomerDetails[customerId=10000, customerName=Kristin Williams, gender=Others, dateOfBirth=14-10-1978, contactNumber=6226979387, email=kristinwilliams798@gmail.com, residentialAddress=Flat No. 196, Angela Estates,]
+CustomerDetails[customerId=10001, customerName=Sarah Adams, gender=Others, dateOfBirth=03-06-1998, contactNumber=1597111971, email=sarahadams325@gmail.com, residentialAddress=Street No. 215, Martin Hollow,]
+CustomerDetails[customerId=10002, customerName=Gabriel Clark, gender=Female, dateOfBirth=04-03-2001, contactNumber=0201375965, email=gabrielclark@gmail.com, residentialAddress=Door No. 961, Destiny Canyon,]
+CustomerDetails[customerId=10003, customerName=Jacqueline Cooper, gender=Female, dateOfBirth=03-05-2001, contactNumber=3719386734, email=jacquelinecooper@gmail.com, residentialAddress=Flat No. 269, Leslie Vista, Ro]
+CustomerDetails[customerId=10004, customerName=Taylor Evans, gender=Others, dateOfBirth=21-03-1992, contactNumber=8207150380, email=taylorevans@gmail.com, residentialAddress=Street No. 95, Desiree Plaza,]
+CustomerDetails[customerId=10005, customerName=Brandon Rivera, gender=Male, dateOfBirth=18-05-1962, contactNumber=2163207847, email=brandonrivera@gmail.com, residentialAddress=Door No. 574, Joel Cape, Hoffm]
+CustomerDetails[customerId=10006, customerName=Ian Clark, gender=Female, dateOfBirth=30-04-1982, contactNumber=7054674661, email=ianclark@gmail.com, residentialAddress=Flat No. 559, Lowe Court, West]
+CustomerDetails[customerId=10007, customerName=Brianna Ramirez, gender=Others, dateOfBirth=19-04-1964, contactNumber=1148935452, email=briannaramirez@gmail.com, residentialAddress=Flat No. 755, James Street, La]
+CustomerDetails[customerId=10008, customerName=Sara Shepherd, gender=Male, dateOfBirth=14-02-1990, contactNumber=1997417592, email=sarashepherd@gmail.com, residentialAddress=Flat No. 395, Thomas Light, Wi]
+CustomerDetails[customerId=10009, customerName=Mark Kelly, gender=Female, dateOfBirth=07-05-1987, contactNumber=3191152802, email=markkelly781@gmail.com, residentialAddress=Street No. 430, Rebecca Pike,]
+CustomerDetails[customerId=10010, customerName=David Conway, gender=Female, dateOfBirth=06-10-1990, contactNumber=7158599261, email=davidconway@gmail.com, residentialAddress=Door No. 33, Maldonado Fort, L]
+CustomerDetails[customerId=10011, customerName=Nathan Chase, gender=Female, dateOfBirth=09-03-1968, contactNumber=8603185858, email=nathanchase@gmail.com, residentialAddress=Flat No. 326, Rodriguez Tunnel]
+CustomerDetails[customerId=10012, customerName=Angel Murillo, gender=Others, dateOfBirth=16-06-1967, contactNumber=6457090117, email=angelmurillo643@gmail.com, residentialAddress=Street No. 523, Sarah Divide,]
+CustomerDetails[customerId=10013, customerName=Christopher Walls, gender=Others, dateOfBirth=31-12-1979, contactNumber=1735441857, email=christopherwalls277@gmail.com, residentialAddress=Flat No. 410, Joel Fall, Kelly]
+CustomerDetails[customerId=10014, customerName=Kevin Brown, gender=Female, dateOfBirth=11-03-1997, contactNumber=9734659118, email=kevinbrown@gmail.com, residentialAddress=Street No. 757, King Flats, Po]
+CustomerDetails[customerId=10015, customerName=Leslie Horn, gender=Male, dateOfBirth=06-01-1987, contactNumber=8793193630, email=lesliehorn957@gmail.com, residentialAddress=Street No. 239, Hall Prairie,]
+CustomerDetails[customerId=10016, customerName=Lisa Rodriguez MD, gender=Male, dateOfBirth=19-04-1962, contactNumber=1476350576, email=lisarodriguezmd@gmail.com, residentialAddress=Street No. 369, Hale Fords, De]
+CustomerDetails[customerId=10017, customerName=Christopher Cross, gender=Female, dateOfBirth=18-02-1980, contactNumber=8026617149, email=christophercross70@gmail.com, residentialAddress=Street No. 845, Bentley Stream]
+CustomerDetails[customerId=10018, customerName=Jeffrey Stein, gender=Female, dateOfBirth=28-06-2003, contactNumber=5971110945, email=jeffreystein786@gmail.com, residentialAddress=Door No. 713, Mary Mountains,]
+CustomerDetails[customerId=10019, customerName=Ryan Mcdonald, gender=Others, dateOfBirth=11-11-1962, contactNumber=1814480649, email=ryanmcdonald569@gmail.com, residentialAddress=Street No. 828, Jordan Islands]
+CustomerDetails[customerId=10020, customerName=Gregory Sanchez, gender=Male, dateOfBirth=16-03-1971, contactNumber=5730939040, email=gregorysanchez@gmail.com, residentialAddress=Door No. 527, Bryant Cliffs, W]
+CustomerDetails[customerId=10021, customerName=Sarah Jackson, gender=Female, dateOfBirth=24-09-1984, contactNumber=9554633418, email=sarahjackson159@gmail.com, residentialAddress=Door No. 13, Martin Spring, Me]
+CustomerDetails[customerId=10022, customerName=Barbara Dixon, gender=Others, dateOfBirth=01-02-1983, contactNumber=3013731690, email=barbaradixon@gmail.com, residentialAddress=Door No. 836, Bryan Bridge, So]
+CustomerDetails[customerId=10023, customerName=Fernando Griffith, gender=Female, dateOfBirth=10-06-1978, contactNumber=4438234179, email=fernandogriffith@gmail.com, residentialAddress=Door No. 260, Green Vista, Sou]
+CustomerDetails[customerId=10024, customerName=Renee Baker, gender=Others, dateOfBirth=22-07-1965, contactNumber=0150112598, email=reneebaker692@gmail.com, residentialAddress=Door No. 299, Jeffrey Islands,]
+CustomerDetails[customerId=10025, customerName=Devon Green, gender=Male, dateOfBirth=19-05-1967, contactNumber=0012891758, email=devongreen@gmail.com, residentialAddress=Street No. 240, Christopher St]
+CustomerDetails[customerId=10026, customerName=Marc Williams, gender=Female, dateOfBirth=12-12-1982, contactNumber=1866539657, email=marcwilliams@gmail.com, residentialAddress=Street No. 819, Levine Lane, E]
+CustomerDetails[customerId=10027, customerName=Lori Wallace, gender=Others, dateOfBirth=18-03-1999, contactNumber=8970669996, email=loriwallace40@gmail.com, residentialAddress=Street No. 90, Webster Loop, W]
+CustomerDetails[customerId=10028, customerName=Bryan Graham, gender=Female, dateOfBirth=30-05-1966, contactNumber=1743376425, email=bryangraham@gmail.com, residentialAddress=Door No. 997, Craig Course, Ch]
+CustomerDetails[customerId=10029, customerName=Michael Edwards, gender=Female, dateOfBirth=02-06-1980, contactNumber=7251155320, email=michaeledwards71@gmail.com, residentialAddress=Flat No. 104, Hardin Summit, J]
+CustomerDetails[customerId=10030, customerName=Shawn Coleman, gender=Female, dateOfBirth=10-11-1975, contactNumber=7445532474, email=shawncoleman@gmail.com, residentialAddress=Door No. 179, Monica Locks, No]
+CustomerDetails[customerId=10031, customerName=Dustin Collins, gender=Female, dateOfBirth=19-09-1966, contactNumber=1736767735, email=dustincollins759@gmail.com, residentialAddress=Door No. 444, Mendoza Flats, P]
+CustomerDetails[customerId=10032, customerName=Patricia Stanley MD, gender=Female, dateOfBirth=20-04-1999, contactNumber=7418162549, email=patriciastanleymd@gmail.com, residentialAddress=Door No. 937, Mckee Lodge, Wes]
+CustomerDetails[customerId=10033, customerName=Anne Ortiz, gender=Female, dateOfBirth=18-07-1998, contactNumber=2038799243, email=anneortiz@gmail.com, residentialAddress=Door No. 953, Maria Shores, Ru]
+CustomerDetails[customerId=10034, customerName=Alexandra Flowers, gender=Others, dateOfBirth=22-06-1972, contactNumber=3607351351, email=alexandraflowers@gmail.com, residentialAddress=Door No. 285, Solomon Wells, C]
+CustomerDetails[customerId=10035, customerName=Claire Bruce, gender=Female, dateOfBirth=04-03-1964, contactNumber=7956475006, email=clairebruce805@gmail.com, residentialAddress=Street No. 162, Tina Street, M]
+CustomerDetails[customerId=10036, customerName=Mark Morton, gender=Others, dateOfBirth=27-10-1988, contactNumber=7802523299, email=markmorton@gmail.com, residentialAddress=Flat No. 850, Heather Valleys,]
+CustomerDetails[customerId=10037, customerName=Joseph Clark, gender=Others, dateOfBirth=13-01-1993, contactNumber=0270058550, email=josephclark@gmail.com, residentialAddress=Door No. 989, Mark Forges, Gre]
+CustomerDetails[customerId=10038, customerName=Patrick Diaz, gender=Female, dateOfBirth=27-04-2001, contactNumber=3181821833, email=patrickdiaz257@gmail.com, residentialAddress=Door No. 660, Melinda Village,]
+CustomerDetails[customerId=10039, customerName=Gregory Burch, gender=Male, dateOfBirth=17-04-1989, contactNumber=1606777976, email=gregoryburch@gmail.com, residentialAddress=Flat No. 714, Sue Oval, East K]
+CustomerDetails[customerId=10040, customerName=Jamie Payne, gender=Others, dateOfBirth=30-10-1976, contactNumber=2049261502, email=jamiepayne@gmail.com, residentialAddress=Door No. 755, Michelle Ville,]
+CustomerDetails[customerId=10041, customerName=Angela Powell, gender=Male, dateOfBirth=18-05-1979, contactNumber=9224332183, email=angelapowell138@gmail.com, residentialAddress=Flat No. 549, Martin Walk, Rit]
+CustomerDetails[customerId=10042, customerName=Daniel Long, gender=Female, dateOfBirth=04-12-1974, contactNumber=6872569647, email=daniellong927@gmail.com, residentialAddress=Flat No. 997, Adams Burg, Mich]
+CustomerDetails[customerId=10043, customerName=Denise Mitchell, gender=Female, dateOfBirth=26-05-2003, contactNumber=5336181407, email=denisemitchell@gmail.com, residentialAddress=Street No. 298, Anthony Keys,]
+CustomerDetails[customerId=10044, customerName=Victoria Sanchez, gender=Male, dateOfBirth=03-05-1968, contactNumber=3212062115, email=victoriasanchez@gmail.com, residentialAddress=Flat No. 51, Aguirre Park, Por]
+CustomerDetails[customerId=10045, customerName=Paul Jackson, gender=Others, dateOfBirth=14-12-1994, contactNumber=7582896274, email=pauljackson808@gmail.com, residentialAddress=Door No. 592, Deleon Lodge, Me]
+CustomerDetails[customerId=10046, customerName=Marc Palmer, gender=Female, dateOfBirth=19-05-1970, contactNumber=6061374696, email=marcpalmer@gmail.com, residentialAddress=Street No. 20, Mccann Cliffs,]
+CustomerDetails[customerId=10047, customerName=Bradley Franklin, gender=Others, dateOfBirth=21-08-1975, contactNumber=2493935904, email=bradleyfranklin316@gmail.com, residentialAddress=Street No. 410, Hernandez Cove]
+CustomerDetails[customerId=10048, customerName=Patrick Walker, gender=Female, dateOfBirth=16-02-1986, contactNumber=6735204766, email=patrickwalker@gmail.com, residentialAddress=Door No. 382, Cole Route, East]
+CustomerDetails[customerId=10049, customerName=Kimberly Dougherty, gender=Male, dateOfBirth=20-03-1962, contactNumber=6528409651, email=kimberlydougherty@gmail.com, residentialAddress=Flat No. 465, Darlene Park, Wi]
 
 Processing file: LoanDetails.txt
 Error parsing line: 10001Sarah Adams         624580000276956.48 Home Loan          14-05-2024
-Error: model.LoanDetails.<init>()
+Error: model.LoanDetails.<init>(java.lang.String,java.lang.String,java.lang.String,java.math.BigDecimal,java.lang.String,java.lang.String)
 Error parsing line: 10002Gabriel Clark       411989000236183.27 Home Loan          12-04-2025
-Error: model.LoanDetails.<init>()
+Error: model.LoanDetails.<init>(java.lang.String,java.lang.String,java.lang.String,java.math.BigDecimal,java.lang.String,java.lang.String)
 Error parsing line: 10005Brandon Rivera      491784000160844.91 Educational Loan   20-10-2023
-Error: model.LoanDetails.<init>()
+Error: model.LoanDetails.<init>(java.lang.String,java.lang.String,java.lang.String,java.math.BigDecimal,java.lang.String,java.lang.String)
 Error parsing line: 10008Sara Shepherd       831543000344907.72 Home Loan          19-05-2021
-Error: model.LoanDetails.<init>()
+Error: model.LoanDetails.<init>(java.lang.String,java.lang.String,java.lang.String,java.math.BigDecimal,java.lang.String,java.lang.String)
 Error parsing line: 10010David Conway        742298000379211.69 Personal Loan      07-04-2021
-Error: model.LoanDetails.<init>()
+Error: model.LoanDetails.<init>(java.lang.String,java.lang.String,java.lang.String,java.math.BigDecimal,java.lang.String,java.lang.String)
 Error parsing line: 10012Angel Murillo       414641000164860.35 Home Loan          14-05-2021
-Error: model.LoanDetails.<init>()
+Error: model.LoanDetails.<init>(java.lang.String,java.lang.String,java.lang.String,java.math.BigDecimal,java.lang.String,java.lang.String)
 Error parsing line: 10020Gregory Sanchez     889704000434031.58 Home Loan          02-01-2023
-Error: model.LoanDetails.<init>()
+Error: model.LoanDetails.<init>(java.lang.String,java.lang.String,java.lang.String,java.math.BigDecimal,java.lang.String,java.lang.String)
 Error parsing line: 10022Barbara Dixon       798415000275341.64 Personal Loan      20-05-2020
-Error: model.LoanDetails.<init>()
+Error: model.LoanDetails.<init>(java.lang.String,java.lang.String,java.lang.String,java.math.BigDecimal,java.lang.String,java.lang.String)
 Error parsing line: 10023Fernando Griffith   465326000154715.74 Personal Loan      26-04-2023
-Error: model.LoanDetails.<init>()
+Error: model.LoanDetails.<init>(java.lang.String,java.lang.String,java.lang.String,java.math.BigDecimal,java.lang.String,java.lang.String)
 Error parsing line: 10025Devon Green         316623000229224.36 Educational Loan   06-12-2023
-Error: model.LoanDetails.<init>()
+Error: model.LoanDetails.<init>(java.lang.String,java.lang.String,java.lang.String,java.math.BigDecimal,java.lang.String,java.lang.String)
 Error parsing line: 10026Marc Williams       643372000032775.49 Educational Loan   23-05-2023
-Error: model.LoanDetails.<init>()
+Error: model.LoanDetails.<init>(java.lang.String,java.lang.String,java.lang.String,java.math.BigDecimal,java.lang.String,java.lang.String)
 Error parsing line: 10027Lori Wallace        584081000463257.94 Educational Loan   14-06-2022
-Error: model.LoanDetails.<init>()
+Error: model.LoanDetails.<init>(java.lang.String,java.lang.String,java.lang.String,java.math.BigDecimal,java.lang.String,java.lang.String)
 Error parsing line: 10030Shawn Coleman       984151000079609.69 Business Loan      08-06-2024
-Error: model.LoanDetails.<init>()
+Error: model.LoanDetails.<init>(java.lang.String,java.lang.String,java.lang.String,java.math.BigDecimal,java.lang.String,java.lang.String)
 Error parsing line: 10032Patricia Stanley MD 493535000175599.37 Business Loan      29-11-2023
-Error: model.LoanDetails.<init>()
+Error: model.LoanDetails.<init>(java.lang.String,java.lang.String,java.lang.String,java.math.BigDecimal,java.lang.String,java.lang.String)
 Error parsing line: 10033Anne Ortiz          285183000351703.65 Home Loan          25-09-2021
-Error: model.LoanDetails.<init>()
+Error: model.LoanDetails.<init>(java.lang.String,java.lang.String,java.lang.String,java.math.BigDecimal,java.lang.String,java.lang.String)
 Error parsing line: 10034Alexandra Flowers   365993000423629.41 Educational Loan   24-04-2021
-Error: model.LoanDetails.<init>()
+Error: model.LoanDetails.<init>(java.lang.String,java.lang.String,java.lang.String,java.math.BigDecimal,java.lang.String,java.lang.String)
 Error parsing line: 10037Joseph Clark        387444000444216.66 Business Loan      07-09-2024
-Error: model.LoanDetails.<init>()
+Error: model.LoanDetails.<init>(java.lang.String,java.lang.String,java.lang.String,java.math.BigDecimal,java.lang.String,java.lang.String)
 Error parsing line: 10039Gregory Burch       259131000019358.82 Home Loan          21-01-2023
-Error: model.LoanDetails.<init>()
+Error: model.LoanDetails.<init>(java.lang.String,java.lang.String,java.lang.String,java.math.BigDecimal,java.lang.String,java.lang.String)
 Error parsing line: 10041Angela Powell       230875000337141.82 Home Loan          25-09-2023
-Error: model.LoanDetails.<init>()
+Error: model.LoanDetails.<init>(java.lang.String,java.lang.String,java.lang.String,java.math.BigDecimal,java.lang.String,java.lang.String)
 Error parsing line: 10043Denise Mitchell     539314000101431.56 Business Loan      17-08-2022
-Error: model.LoanDetails.<init>()
+Error: model.LoanDetails.<init>(java.lang.String,java.lang.String,java.lang.String,java.math.BigDecimal,java.lang.String,java.lang.String)
 Error parsing line: 10044Victoria Sanchez    781621000297555.09 Business Loan      25-08-2020
-Error: model.LoanDetails.<init>()
+Error: model.LoanDetails.<init>(java.lang.String,java.lang.String,java.lang.String,java.math.BigDecimal,java.lang.String,java.lang.String)
 Error parsing line: 10047Bradley Franklin    115629000479606.44 Personal Loan      25-01-2022
-Error: model.LoanDetails.<init>()
+Error: model.LoanDetails.<init>(java.lang.String,java.lang.String,java.lang.String,java.math.BigDecimal,java.lang.String,java.lang.String)
+java.lang.NoSuchMethodException: model.LoanDetails.<init>(java.lang.String,java.lang.String,java.lang.String,java.math.BigDecimal,java.lang.String,java.lang.String)
+	at java.base/java.lang.Class.getConstructor0(Class.java:3585)
+	at java.base/java.lang.Class.getDeclaredConstructor(Class.java:2754)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:68)
+	at com.example1.Main.main(Main.java:63)
+java.lang.NoSuchMethodException: model.LoanDetails.<init>(java.lang.String,java.lang.String,java.lang.String,java.math.BigDecimal,java.lang.String,java.lang.String)
+	at java.base/java.lang.Class.getConstructor0(Class.java:3585)
+	at java.base/java.lang.Class.getDeclaredConstructor(Class.java:2754)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:68)
+	at com.example1.Main.main(Main.java:63)
+java.lang.NoSuchMethodException: model.LoanDetails.<init>(java.lang.String,java.lang.String,java.lang.String,java.math.BigDecimal,java.lang.String,java.lang.String)
+	at java.base/java.lang.Class.getConstructor0(Class.java:3585)
+	at java.base/java.lang.Class.getDeclaredConstructor(Class.java:2754)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:68)
+	at com.example1.Main.main(Main.java:63)
+java.lang.NoSuchMethodException: model.LoanDetails.<init>(java.lang.String,java.lang.String,java.lang.String,java.math.BigDecimal,java.lang.String,java.lang.String)
+	at java.base/java.lang.Class.getConstructor0(Class.java:3585)
+	at java.base/java.lang.Class.getDeclaredConstructor(Class.java:2754)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:68)
+	at com.example1.Main.main(Main.java:63)
+java.lang.NoSuchMethodException: model.LoanDetails.<init>(java.lang.String,java.lang.String,java.lang.String,java.math.BigDecimal,java.lang.String,java.lang.String)
+	at java.base/java.lang.Class.getConstructor0(Class.java:3585)
+	at java.base/java.lang.Class.getDeclaredConstructor(Class.java:2754)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:68)
+	at com.example1.Main.main(Main.java:63)
+java.lang.NoSuchMethodException: model.LoanDetails.<init>(java.lang.String,java.lang.String,java.lang.String,java.math.BigDecimal,java.lang.String,java.lang.String)
+	at java.base/java.lang.Class.getConstructor0(Class.java:3585)
+	at java.base/java.lang.Class.getDeclaredConstructor(Class.java:2754)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:68)
+	at com.example1.Main.main(Main.java:63)
+java.lang.NoSuchMethodException: model.LoanDetails.<init>(java.lang.String,java.lang.String,java.lang.String,java.math.BigDecimal,java.lang.String,java.lang.String)
+	at java.base/java.lang.Class.getConstructor0(Class.java:3585)
+	at java.base/java.lang.Class.getDeclaredConstructor(Class.java:2754)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:68)
+	at com.example1.Main.main(Main.java:63)
+java.lang.NoSuchMethodException: model.LoanDetails.<init>(java.lang.String,java.lang.String,java.lang.String,java.math.BigDecimal,java.lang.String,java.lang.String)
+	at java.base/java.lang.Class.getConstructor0(Class.java:3585)
+	at java.base/java.lang.Class.getDeclaredConstructor(Class.java:2754)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:68)
+	at com.example1.Main.main(Main.java:63)
+java.lang.NoSuchMethodException: model.LoanDetails.<init>(java.lang.String,java.lang.String,java.lang.String,java.math.BigDecimal,java.lang.String,java.lang.String)
+	at java.base/java.lang.Class.getConstructor0(Class.java:3585)
+	at java.base/java.lang.Class.getDeclaredConstructor(Class.java:2754)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:68)
+	at com.example1.Main.main(Main.java:63)
+java.lang.NoSuchMethodException: model.LoanDetails.<init>(java.lang.String,java.lang.String,java.lang.String,java.math.BigDecimal,java.lang.String,java.lang.String)
+	at java.base/java.lang.Class.getConstructor0(Class.java:3585)
+	at java.base/java.lang.Class.getDeclaredConstructor(Class.java:2754)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:68)
+	at com.example1.Main.main(Main.java:63)
+java.lang.NoSuchMethodException: model.LoanDetails.<init>(java.lang.String,java.lang.String,java.lang.String,java.math.BigDecimal,java.lang.String,java.lang.String)
+	at java.base/java.lang.Class.getConstructor0(Class.java:3585)
+	at java.base/java.lang.Class.getDeclaredConstructor(Class.java:2754)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:68)
+	at com.example1.Main.main(Main.java:63)
+java.lang.NoSuchMethodException: model.LoanDetails.<init>(java.lang.String,java.lang.String,java.lang.String,java.math.BigDecimal,java.lang.String,java.lang.String)
+	at java.base/java.lang.Class.getConstructor0(Class.java:3585)
+	at java.base/java.lang.Class.getDeclaredConstructor(Class.java:2754)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:68)
+	at com.example1.Main.main(Main.java:63)
+java.lang.NoSuchMethodException: model.LoanDetails.<init>(java.lang.String,java.lang.String,java.lang.String,java.math.BigDecimal,java.lang.String,java.lang.String)
+	at java.base/java.lang.Class.getConstructor0(Class.java:3585)
+	at java.base/java.lang.Class.getDeclaredConstructor(Class.java:2754)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:68)
+	at com.example1.Main.main(Main.java:63)
+java.lang.NoSuchMethodException: model.LoanDetails.<init>(java.lang.String,java.lang.String,java.lang.String,java.math.BigDecimal,java.lang.String,java.lang.String)
+	at java.base/java.lang.Class.getConstructor0(Class.java:3585)
+	at java.base/java.lang.Class.getDeclaredConstructor(Class.java:2754)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:68)
+	at com.example1.Main.main(Main.java:63)
+java.lang.NoSuchMethodException: model.LoanDetails.<init>(java.lang.String,java.lang.String,java.lang.String,java.math.BigDecimal,java.lang.String,java.lang.String)
+	at java.base/java.lang.Class.getConstructor0(Class.java:3585)
+	at java.base/java.lang.Class.getDeclaredConstructor(Class.java:2754)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:68)
+	at com.example1.Main.main(Main.java:63)
+java.lang.NoSuchMethodException: model.LoanDetails.<init>(java.lang.String,java.lang.String,java.lang.String,java.math.BigDecimal,java.lang.String,java.lang.String)
+	at java.base/java.lang.Class.getConstructor0(Class.java:3585)
+	at java.base/java.lang.Class.getDeclaredConstructor(Class.java:2754)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:68)
+	at com.example1.Main.main(Main.java:63)
+java.lang.NoSuchMethodException: model.LoanDetails.<init>(java.lang.String,java.lang.String,java.lang.String,java.math.BigDecimal,java.lang.String,java.lang.String)
+	at java.base/java.lang.Class.getConstructor0(Class.java:3585)
+	at java.base/java.lang.Class.getDeclaredConstructor(Class.java:2754)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:68)
+	at com.example1.Main.main(Main.java:63)
+java.lang.NoSuchMethodException: model.LoanDetails.<init>(java.lang.String,java.lang.String,java.lang.String,java.math.BigDecimal,java.lang.String,java.lang.String)
+	at java.base/java.lang.Class.getConstructor0(Class.java:3585)
+	at java.base/java.lang.Class.getDeclaredConstructor(Class.java:2754)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:68)
+	at com.example1.Main.main(Main.java:63)
+java.lang.NoSuchMethodException: model.LoanDetails.<init>(java.lang.String,java.lang.String,java.lang.String,java.math.BigDecimal,java.lang.String,java.lang.String)
+	at java.base/java.lang.Class.getConstructor0(Class.java:3585)
+	at java.base/java.lang.Class.getDeclaredConstructor(Class.java:2754)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:68)
+	at com.example1.Main.main(Main.java:63)
+java.lang.NoSuchMethodException: model.LoanDetails.<init>(java.lang.String,java.lang.String,java.lang.String,java.math.BigDecimal,java.lang.String,java.lang.String)
+	at java.base/java.lang.Class.getConstructor0(Class.java:3585)
+	at java.base/java.lang.Class.getDeclaredConstructor(Class.java:2754)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:68)
+	at com.example1.Main.main(Main.java:63)
+java.lang.NoSuchMethodException: model.LoanDetails.<init>(java.lang.String,java.lang.String,java.lang.String,java.math.BigDecimal,java.lang.String,java.lang.String)
+	at java.base/java.lang.Class.getConstructor0(Class.java:3585)
+	at java.base/java.lang.Class.getDeclaredConstructor(Class.java:2754)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:68)
+	at com.example1.Main.main(Main.java:63)
+java.lang.NoSuchMethodException: model.LoanDetails.<init>(java.lang.String,java.lang.String,java.lang.String,java.math.BigDecimal,java.lang.String,java.lang.String)
+	at java.base/java.lang.Class.getConstructor0(Class.java:3585)
+	at java.base/java.lang.Class.getDeclaredConstructor(Class.java:2754)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:68)
+	at com.example1.Main.main(Main.java:63)
+java.lang.NoSuchMethodException: model.LoanDetails.<init>(java.lang.String,java.lang.String,java.lang.String,java.math.BigDecimal,java.lang.String,java.lang.String)
+	at java.base/java.lang.Class.getConstructor0(Class.java:3585)
+	at java.base/java.lang.Class.getDeclaredConstructor(Class.java:2754)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:68)
+	at com.example1.Main.main(Main.java:63)
+java.lang.NoSuchMethodException: model.LoanDetails.<init>(java.lang.String,java.lang.String,java.lang.String,java.math.BigDecimal,java.lang.String,java.lang.String)
+	at java.base/java.lang.Class.getConstructor0(Class.java:3585)
+	at java.base/java.lang.Class.getDeclaredConstructor(Class.java:2754)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:68)
+	at com.example1.Main.main(Main.java:63)
+java.time.format.DateTimeParseException: Text '11-10-2023 & 08:16:1' could not be parsed at index 19
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2052)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1954)
+	at java.base/java.time.LocalDateTime.parse(LocalDateTime.java:494)
+	at parser.FixedWidthParser.convertValue(FixedWidthParser.java:88)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:60)
+	at com.example1.Main.main(Main.java:63)
+java.time.format.DateTimeParseException: Text '29-12-2024 & 02:05:3' could not be parsed at index 19
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2052)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1954)
+	at java.base/java.time.LocalDateTime.parse(LocalDateTime.java:494)
+	at parser.FixedWidthParser.convertValue(FixedWidthParser.java:88)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:60)
+	at com.example1.Main.main(Main.java:63)
+java.time.format.DateTimeParseException: Text '18-11-2024 & 23:26:2' could not be parsed at index 19
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2052)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1954)
+	at java.base/java.time.LocalDateTime.parse(LocalDateTime.java:494)
+	at parser.FixedWidthParser.convertValue(FixedWidthParser.java:88)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:60)
+	at com.example1.Main.main(Main.java:63)
+java.time.format.DateTimeParseException: Text '29-09-2024 & 04:22:4' could not be parsed at index 19
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2052)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1954)
+	at java.base/java.time.LocalDateTime.parse(LocalDateTime.java:494)
+	at parser.FixedWidthParser.convertValue(FixedWidthParser.java:88)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:60)
+	at com.example1.Main.main(Main.java:63)
+java.time.format.DateTimeParseException: Text '18-07-2024 & 21:23:1' could not be parsed at index 19
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2052)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1954)
+	at java.base/java.time.LocalDateTime.parse(LocalDateTime.java:494)
+	at parser.FixedWidthParser.convertValue(FixedWidthParser.java:88)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:60)
+	at com.example1.Main.main(Main.java:63)
+java.time.format.DateTimeParseException: Text '02-03-2024 & 01:17:5' could not be parsed at index 19
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2052)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1954)
+	at java.base/java.time.LocalDateTime.parse(LocalDateTime.java:494)
+	at parser.FixedWidthParser.convertValue(FixedWidthParser.java:88)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:60)
+	at com.example1.Main.main(Main.java:63)
+java.time.format.DateTimeParseException: Text '25-06-2023 & 05:49:5' could not be parsed at index 19
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2052)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1954)
+	at java.base/java.time.LocalDateTime.parse(LocalDateTime.java:494)
+	at parser.FixedWidthParser.convertValue(FixedWidthParser.java:88)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:60)
+	at com.example1.Main.main(Main.java:63)
+java.time.format.DateTimeParseException: Text '16-03-2024 & 20:34:5' could not be parsed at index 19
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2052)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1954)
+	at java.base/java.time.LocalDateTime.parse(LocalDateTime.java:494)
+	at parser.FixedWidthParser.convertValue(FixedWidthParser.java:88)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:60)
+	at com.example1.Main.main(Main.java:63)
+java.time.format.DateTimeParseException: Text '05-04-2025 & 00:50:1' could not be parsed at index 19
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2052)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1954)
+	at java.base/java.time.LocalDateTime.parse(LocalDateTime.java:494)
+	at parser.FixedWidthParser.convertValue(FixedWidthParser.java:88)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:60)
+	at com.example1.Main.main(Main.java:63)
+java.time.format.DateTimeParseException: Text '03-06-2024 & 06:22:4' could not be parsed at index 19
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2052)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1954)
+	at java.base/java.time.LocalDateTime.parse(LocalDateTime.java:494)
+	at parser.FixedWidthParser.convertValue(FixedWidthParser.java:88)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:60)
+	at com.example1.Main.main(Main.java:63)
 Error parsing line: 10048Patrick Walker      391863000055181.30 Personal Loan      06-12-2020
-Error: model.LoanDetails.<init>()
+Error: model.LoanDetails.<init>(java.lang.String,java.lang.String,java.lang.String,java.math.BigDecimal,java.lang.String,java.lang.String)
 Error parsing line: 10049Kimberly Dougherty  452925000048048.05 Home Loan          15-06-2022
-Error: model.LoanDetails.<init>()
+Error: model.LoanDetails.<init>(java.lang.String,java.lang.String,java.lang.String,java.math.BigDecimal,java.lang.String,java.lang.String)
 Parsed 0 records:
 
 Processing file: TransactionDetails.txt
 Error parsing line: 10000Kristin Williams    98198381947122496digital cards                 000018519.42 11-10-2023 & 08:16:1
-Error: model.TransactionDetails.<init>()
+Error: Text '11-10-2023 & 08:16:1' could not be parsed at index 19
 Error parsing line: 10001Sarah Adams         78672253772866808RTGS                          000043952.23 29-12-2024 & 02:05:3
-Error: model.TransactionDetails.<init>()
+Error: Text '29-12-2024 & 02:05:3' could not be parsed at index 19
 Error parsing line: 10002Gabriel Clark       64338155041390894mobile wallets                000038327.01 18-11-2024 & 23:26:2
-Error: model.TransactionDetails.<init>()
+Error: Text '18-11-2024 & 23:26:2' could not be parsed at index 19
 Error parsing line: 10003Jacqueline Cooper   49106539737861482NEFT                          000008013.89 29-09-2024 & 04:22:4
-Error: model.TransactionDetails.<init>()
+Error: Text '29-09-2024 & 04:22:4' could not be parsed at index 19
 Error parsing line: 10004Taylor Evans        34619814595971146ATM Transactions              000028325.81 18-07-2024 & 21:23:1
-Error: model.TransactionDetails.<init>()
+Error: Text '18-07-2024 & 21:23:1' could not be parsed at index 19
 Error parsing line: 10005Brandon Rivera      77950326457869668digital cards                 000034742.11 02-03-2024 & 01:17:5
-Error: model.TransactionDetails.<init>()
+Error: Text '02-03-2024 & 01:17:5' could not be parsed at index 19
 Error parsing line: 10006Ian Clark           95212710444616867RTGS                          000011926.22 25-06-2023 & 05:49:5
-Error: model.TransactionDetails.<init>()
+Error: Text '25-06-2023 & 05:49:5' could not be parsed at index 19
 Error parsing line: 10007Brianna Ramirez     69030876862628421IMPS                          000020100.39 16-03-2024 & 20:34:5
-Error: model.TransactionDetails.<init>()
+Error: Text '16-03-2024 & 20:34:5' could not be parsed at index 19
 Error parsing line: 10008Sara Shepherd       53753640478775594IMPS                          000030390.27 05-04-2025 & 00:50:1
-Error: model.TransactionDetails.<init>()
+Error: Text '05-04-2025 & 00:50:1' could not be parsed at index 19
 Error parsing line: 10009Mark Kelly          63223834693750336mobile wallets                000018781.19 03-06-2024 & 06:22:4
-Error: model.TransactionDetails.<init>()
+Error: Text '03-06-2024 & 06:22:4' could not be parsed at index 19
 Error parsing line: 10010David Conway        52379767417474155NEFT                          000021722.72 19-05-2024 & 01:01:1
-Error: model.TransactionDetails.<init>()
+Error: Text '19-05-2024 & 01:01:1' could not be parsed at index 19
 Error parsing line: 10011Nathan Chase        70892083572444861RTGS                          000002299.37 23-05-2024 & 01:22:0
-Error: model.TransactionDetails.<init>()
+Error: Text '23-05-2024 & 01:22:0' could not be parsed at index 19
 Error parsing line: 10012Angel Murillo       22066288797799925digital cards                 000028702.90 19-01-2025 & 15:50:1
-Error: model.TransactionDetails.<init>()
+Error: Text '19-01-2025 & 15:50:1' could not be parsed at index 19
 Error parsing line: 10013Christopher Walls   60405785981778914mobile wallets                000004379.16 05-05-2024 & 06:47:0
-Error: model.TransactionDetails.<init>()
+Error: Text '05-05-2024 & 06:47:0' could not be parsed at index 19
 Error parsing line: 10014Kevin Brown         19149129309724386ATM Transactions              000040935.80 14-11-2024 & 06:30:3
-Error: model.TransactionDetails.<init>()
+Error: Text '14-11-2024 & 06:30:3' could not be parsed at index 19
 Error parsing line: 10015Leslie Horn         52934198704897256mobile wallets                000014257.09 22-08-2024 & 16:54:1
-Error: model.TransactionDetails.<init>()
+Error: Text '22-08-2024 & 16:54:1' could not be parsed at index 19
 Error parsing line: 10016Lisa Rodriguez MD   55313951804958470NEFT                          000048191.80 13-11-2024 & 05:22:3
-Error: model.TransactionDetails.<init>()
+Error: Text '13-11-2024 & 05:22:3' could not be parsed at index 19
 Error parsing line: 10017Christopher Cross   50047737133134843ATM Transactions              000038148.00 30-03-2024 & 14:29:1
-Error: model.TransactionDetails.<init>()
+Error: Text '30-03-2024 & 14:29:1' could not be parsed at index 19
 Error parsing line: 10018Jeffrey Stein       39852645779410773IMPS                          000007566.46 26-12-2024 & 12:48:3
-Error: model.TransactionDetails.<init>()
+Error: Text '26-12-2024 & 12:48:3' could not be parsed at index 19
 Error parsing line: 10019Ryan Mcdonald       32887547475534862UPI                           000008602.87 07-05-2024 & 05:39:4
-Error: model.TransactionDetails.<init>()
+Error: Text '07-05-2024 & 05:39:4' could not be parsed at index 19
 Error parsing line: 10020Gregory Sanchez     77182634674478921ATM Transactions              000014123.05 20-12-2023 & 16:33:3
-Error: model.TransactionDetails.<init>()
+Error: Text '20-12-2023 & 16:33:3' could not be parsed at index 19
 Error parsing line: 10021Sarah Jackson       64358594925039022digital cards                 000029190.25 14-08-2024 & 06:03:3
-Error: model.TransactionDetails.<init>()
+Error: Text '14-08-2024 & 06:03:3' could not be parsed at index 19
 Error parsing line: 10022Barbara Dixon       60216689439253316NEFT                          000017977.01 10-10-2023 & 09:30:4
-Error: model.TransactionDetails.<init>()
+Error: Text '10-10-2023 & 09:30:4' could not be parsed at index 19
 Error parsing line: 10023Fernando Griffith   60445584424624935RTGS                          000041504.38 03-11-2023 & 21:30:3
-Error: model.TransactionDetails.<init>()
+Error: Text '03-11-2023 & 21:30:3' could not be parsed at index 19
 Error parsing line: 10024Renee Baker         92876084435008794Cheque                        000046336.69 31-03-2024 & 04:10:3
-Error: model.TransactionDetails.<init>()
+Error: Text '31-03-2024 & 04:10:3' could not be parsed at index 19
 Error parsing line: 10025Devon Green         31858133335134681ATM Transactions              000026195.93 18-02-2024 & 09:43:4
-Error: model.TransactionDetails.<init>()
+Error: Text '18-02-2024 & 09:43:4' could not be parsed at index 19
 Error parsing line: 10026Marc Williams       62158173462174031mobile wallets                000011936.31 05-02-2024 & 09:10:3
-Error: model.TransactionDetails.<init>()
+Error: Text '05-02-2024 & 09:10:3' could not be parsed at index 19
 Error parsing line: 10027Lori Wallace        86465284526536589Direct Deposit                000011946.04 18-09-2023 & 11:48:4
-Error: model.TransactionDetails.<init>()
+Error: Text '18-09-2023 & 11:48:4' could not be parsed at index 19
 Error parsing line: 10028Bryan Graham        28838591064074641IMPS                          000025351.53 10-12-2024 & 18:04:1
-Error: model.TransactionDetails.<init>()
+Error: Text '10-12-2024 & 18:04:1' could not be parsed at index 19
 Error parsing line: 10029Michael Edwards     84501948916946370IMPS                          000014060.18 27-01-2024 & 15:03:2
-Error: model.TransactionDetails.<init>()
+Error: Text '27-01-2024 & 15:03:2' could not be parsed at index 19
+java.time.format.DateTimeParseException: Text '19-05-2024 & 01:01:1' could not be parsed at index 19
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2052)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1954)
+	at java.base/java.time.LocalDateTime.parse(LocalDateTime.java:494)
+	at parser.FixedWidthParser.convertValue(FixedWidthParser.java:88)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:60)
+	at com.example1.Main.main(Main.java:63)
+java.time.format.DateTimeParseException: Text '23-05-2024 & 01:22:0' could not be parsed at index 19
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2052)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1954)
+	at java.base/java.time.LocalDateTime.parse(LocalDateTime.java:494)
+	at parser.FixedWidthParser.convertValue(FixedWidthParser.java:88)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:60)
+	at com.example1.Main.main(Main.java:63)
+java.time.format.DateTimeParseException: Text '19-01-2025 & 15:50:1' could not be parsed at index 19
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2052)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1954)
+	at java.base/java.time.LocalDateTime.parse(LocalDateTime.java:494)
+	at parser.FixedWidthParser.convertValue(FixedWidthParser.java:88)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:60)
+	at com.example1.Main.main(Main.java:63)
+java.time.format.DateTimeParseException: Text '05-05-2024 & 06:47:0' could not be parsed at index 19
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2052)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1954)
+	at java.base/java.time.LocalDateTime.parse(LocalDateTime.java:494)
+	at parser.FixedWidthParser.convertValue(FixedWidthParser.java:88)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:60)
+	at com.example1.Main.main(Main.java:63)
+java.time.format.DateTimeParseException: Text '14-11-2024 & 06:30:3' could not be parsed at index 19
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2052)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1954)
+	at java.base/java.time.LocalDateTime.parse(LocalDateTime.java:494)
+	at parser.FixedWidthParser.convertValue(FixedWidthParser.java:88)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:60)
+	at com.example1.Main.main(Main.java:63)
+java.time.format.DateTimeParseException: Text '22-08-2024 & 16:54:1' could not be parsed at index 19
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2052)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1954)
+	at java.base/java.time.LocalDateTime.parse(LocalDateTime.java:494)
+	at parser.FixedWidthParser.convertValue(FixedWidthParser.java:88)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:60)
+	at com.example1.Main.main(Main.java:63)
+java.time.format.DateTimeParseException: Text '13-11-2024 & 05:22:3' could not be parsed at index 19
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2052)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1954)
+	at java.base/java.time.LocalDateTime.parse(LocalDateTime.java:494)
+	at parser.FixedWidthParser.convertValue(FixedWidthParser.java:88)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:60)
+	at com.example1.Main.main(Main.java:63)
+java.time.format.DateTimeParseException: Text '30-03-2024 & 14:29:1' could not be parsed at index 19
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2052)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1954)
+	at java.base/java.time.LocalDateTime.parse(LocalDateTime.java:494)
+	at parser.FixedWidthParser.convertValue(FixedWidthParser.java:88)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:60)
+	at com.example1.Main.main(Main.java:63)
+java.time.format.DateTimeParseException: Text '26-12-2024 & 12:48:3' could not be parsed at index 19
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2052)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1954)
+	at java.base/java.time.LocalDateTime.parse(LocalDateTime.java:494)
+	at parser.FixedWidthParser.convertValue(FixedWidthParser.java:88)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:60)
+	at com.example1.Main.main(Main.java:63)
+java.time.format.DateTimeParseException: Text '07-05-2024 & 05:39:4' could not be parsed at index 19
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2052)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1954)
+	at java.base/java.time.LocalDateTime.parse(LocalDateTime.java:494)
+	at parser.FixedWidthParser.convertValue(FixedWidthParser.java:88)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:60)
+	at com.example1.Main.main(Main.java:63)
+java.time.format.DateTimeParseException: Text '20-12-2023 & 16:33:3' could not be parsed at index 19
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2052)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1954)
+	at java.base/java.time.LocalDateTime.parse(LocalDateTime.java:494)
+	at parser.FixedWidthParser.convertValue(FixedWidthParser.java:88)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:60)
+	at com.example1.Main.main(Main.java:63)
+java.time.format.DateTimeParseException: Text '14-08-2024 & 06:03:3' could not be parsed at index 19
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2052)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1954)
+	at java.base/java.time.LocalDateTime.parse(LocalDateTime.java:494)
+	at parser.FixedWidthParser.convertValue(FixedWidthParser.java:88)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:60)
+	at com.example1.Main.main(Main.java:63)
+java.time.format.DateTimeParseException: Text '10-10-2023 & 09:30:4' could not be parsed at index 19
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2052)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1954)
+	at java.base/java.time.LocalDateTime.parse(LocalDateTime.java:494)
+	at parser.FixedWidthParser.convertValue(FixedWidthParser.java:88)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:60)
+	at com.example1.Main.main(Main.java:63)
+java.time.format.DateTimeParseException: Text '03-11-2023 & 21:30:3' could not be parsed at index 19
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2052)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1954)
+	at java.base/java.time.LocalDateTime.parse(LocalDateTime.java:494)
+	at parser.FixedWidthParser.convertValue(FixedWidthParser.java:88)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:60)
+	at com.example1.Main.main(Main.java:63)
+java.time.format.DateTimeParseException: Text '31-03-2024 & 04:10:3' could not be parsed at index 19
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2052)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1954)
+	at java.base/java.time.LocalDateTime.parse(LocalDateTime.java:494)
+	at parser.FixedWidthParser.convertValue(FixedWidthParser.java:88)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:60)
+	at com.example1.Main.main(Main.java:63)
+java.time.format.DateTimeParseException: Text '18-02-2024 & 09:43:4' could not be parsed at index 19
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2052)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1954)
+	at java.base/java.time.LocalDateTime.parse(LocalDateTime.java:494)
+	at parser.FixedWidthParser.convertValue(FixedWidthParser.java:88)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:60)
+	at com.example1.Main.main(Main.java:63)
+java.time.format.DateTimeParseException: Text '05-02-2024 & 09:10:3' could not be parsed at index 19
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2052)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1954)
+	at java.base/java.time.LocalDateTime.parse(LocalDateTime.java:494)
+	at parser.FixedWidthParser.convertValue(FixedWidthParser.java:88)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:60)
+	at com.example1.Main.main(Main.java:63)
+java.time.format.DateTimeParseException: Text '18-09-2023 & 11:48:4' could not be parsed at index 19
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2052)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1954)
+	at java.base/java.time.LocalDateTime.parse(LocalDateTime.java:494)
+	at parser.FixedWidthParser.convertValue(FixedWidthParser.java:88)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:60)
+	at com.example1.Main.main(Main.java:63)
+java.time.format.DateTimeParseException: Text '10-12-2024 & 18:04:1' could not be parsed at index 19
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2052)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1954)
+	at java.base/java.time.LocalDateTime.parse(LocalDateTime.java:494)
+	at parser.FixedWidthParser.convertValue(FixedWidthParser.java:88)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:60)
+	at com.example1.Main.main(Main.java:63)
+java.time.format.DateTimeParseException: Text '27-01-2024 & 15:03:2' could not be parsed at index 19
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2052)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1954)
+	at java.base/java.time.LocalDateTime.parse(LocalDateTime.java:494)
+	at parser.FixedWidthParser.convertValue(FixedWidthParser.java:88)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:60)
+	at com.example1.Main.main(Main.java:63)
+java.time.format.DateTimeParseException: Text '12-10-2024 & 08:17:3' could not be parsed at index 19
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2052)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1954)
+	at java.base/java.time.LocalDateTime.parse(LocalDateTime.java:494)
+	at parser.FixedWidthParser.convertValue(FixedWidthParser.java:88)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:60)
+	at com.example1.Main.main(Main.java:63)
+java.time.format.DateTimeParseException: Text '14-08-2024 & 23:22:2' could not be parsed at index 19
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2052)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1954)
+	at java.base/java.time.LocalDateTime.parse(LocalDateTime.java:494)
+	at parser.FixedWidthParser.convertValue(FixedWidthParser.java:88)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:60)
+	at com.example1.Main.main(Main.java:63)
+java.time.format.DateTimeParseException: Text '21-10-2023 & 04:29:3' could not be parsed at index 19
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2052)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1954)
+	at java.base/java.time.LocalDateTime.parse(LocalDateTime.java:494)
+	at parser.FixedWidthParser.convertValue(FixedWidthParser.java:88)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:60)
+	at com.example1.Main.main(Main.java:63)
+java.time.format.DateTimeParseException: Text '19-12-2024 & 07:59:5' could not be parsed at index 19
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2052)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1954)
+	at java.base/java.time.LocalDateTime.parse(LocalDateTime.java:494)
+	at parser.FixedWidthParser.convertValue(FixedWidthParser.java:88)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:60)
+	at com.example1.Main.main(Main.java:63)
+java.time.format.DateTimeParseException: Text '22-10-2023 & 23:34:5' could not be parsed at index 19
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2052)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1954)
+	at java.base/java.time.LocalDateTime.parse(LocalDateTime.java:494)
+	at parser.FixedWidthParser.convertValue(FixedWidthParser.java:88)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:60)
+	at com.example1.Main.main(Main.java:63)
+java.time.format.DateTimeParseException: Text '12-11-2023 & 17:04:3' could not be parsed at index 19
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2052)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1954)
+	at java.base/java.time.LocalDateTime.parse(LocalDateTime.java:494)
+	at parser.FixedWidthParser.convertValue(FixedWidthParser.java:88)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:60)
+	at com.example1.Main.main(Main.java:63)
+java.time.format.DateTimeParseException: Text '03-02-2024 & 22:27:3' could not be parsed at index 19
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2052)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1954)
+	at java.base/java.time.LocalDateTime.parse(LocalDateTime.java:494)
+	at parser.FixedWidthParser.convertValue(FixedWidthParser.java:88)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:60)
+	at com.example1.Main.main(Main.java:63)
+java.time.format.DateTimeParseException: Text '04-08-2024 & 08:13:4' could not be parsed at index 19
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2052)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1954)
+	at java.base/java.time.LocalDateTime.parse(LocalDateTime.java:494)
+	at parser.FixedWidthParser.convertValue(FixedWidthParser.java:88)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:60)
+	at com.example1.Main.main(Main.java:63)
+java.time.format.DateTimeParseException: Text '03-10-2023 & 23:00:3' could not be parsed at index 19
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2052)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1954)
+	at java.base/java.time.LocalDateTime.parse(LocalDateTime.java:494)
+	at parser.FixedWidthParser.convertValue(FixedWidthParser.java:88)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:60)
+	at com.example1.Main.main(Main.java:63)
+java.time.format.DateTimeParseException: Text '04-06-2024 & 08:15:1' could not be parsed at index 19
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2052)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1954)
+	at java.base/java.time.LocalDateTime.parse(LocalDateTime.java:494)
+	at parser.FixedWidthParser.convertValue(FixedWidthParser.java:88)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:60)
+	at com.example1.Main.main(Main.java:63)
+java.time.format.DateTimeParseException: Text '23-05-2023 & 00:45:4' could not be parsed at index 19
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2052)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1954)
+	at java.base/java.time.LocalDateTime.parse(LocalDateTime.java:494)
+	at parser.FixedWidthParser.convertValue(FixedWidthParser.java:88)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:60)
+	at com.example1.Main.main(Main.java:63)
+java.time.format.DateTimeParseException: Text '28-03-2025 & 14:02:4' could not be parsed at index 19
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2052)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1954)
+	at java.base/java.time.LocalDateTime.parse(LocalDateTime.java:494)
+	at parser.FixedWidthParser.convertValue(FixedWidthParser.java:88)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:60)
+	at com.example1.Main.main(Main.java:63)
+java.time.format.DateTimeParseException: Text '02-06-2023 & 21:42:0' could not be parsed at index 19
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2052)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1954)
+	at java.base/java.time.LocalDateTime.parse(LocalDateTime.java:494)
+	at parser.FixedWidthParser.convertValue(FixedWidthParser.java:88)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:60)
+	at com.example1.Main.main(Main.java:63)
+java.time.format.DateTimeParseException: Text '06-05-2024 & 08:50:0' could not be parsed at index 19
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2052)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1954)
+	at java.base/java.time.LocalDateTime.parse(LocalDateTime.java:494)
+	at parser.FixedWidthParser.convertValue(FixedWidthParser.java:88)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:60)
+	at com.example1.Main.main(Main.java:63)
+java.time.format.DateTimeParseException: Text '04-08-2024 & 21:57:0' could not be parsed at index 19
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2052)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1954)
+	at java.base/java.time.LocalDateTime.parse(LocalDateTime.java:494)
+	at parser.FixedWidthParser.convertValue(FixedWidthParser.java:88)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:60)
+	at com.example1.Main.main(Main.java:63)
+java.time.format.DateTimeParseException: Text '12-10-2023 & 02:18:1' could not be parsed at index 19
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2052)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1954)
+	at java.base/java.time.LocalDateTime.parse(LocalDateTime.java:494)
+	at parser.FixedWidthParser.convertValue(FixedWidthParser.java:88)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:60)
+	at com.example1.Main.main(Main.java:63)
+java.time.format.DateTimeParseException: Text '22-04-2025 & 14:02:2' could not be parsed at index 19
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2052)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1954)
+	at java.base/java.time.LocalDateTime.parse(LocalDateTime.java:494)
+	at parser.FixedWidthParser.convertValue(FixedWidthParser.java:88)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:60)
+	at com.example1.Main.main(Main.java:63)
+java.time.format.DateTimeParseException: Text '16-01-2025 & 08:35:1' could not be parsed at index 19
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2052)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1954)
+	at java.base/java.time.LocalDateTime.parse(LocalDateTime.java:494)
+	at parser.FixedWidthParser.convertValue(FixedWidthParser.java:88)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:60)
+	at com.example1.Main.main(Main.java:63)
+java.time.format.DateTimeParseException: Text '27-07-2023 & 10:10:1' could not be parsed at index 19
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2052)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1954)
+	at java.base/java.time.LocalDateTime.parse(LocalDateTime.java:494)
+	at parser.FixedWidthParser.convertValue(FixedWidthParser.java:88)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:60)
+	at com.example1.Main.main(Main.java:63)
+java.time.format.DateTimeParseException: Text '20-07-2023 & 19:26:1' could not be parsed at index 19
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2052)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1954)
+	at java.base/java.time.LocalDateTime.parse(LocalDateTime.java:494)
+	at parser.FixedWidthParser.convertValue(FixedWidthParser.java:88)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:60)
+	at com.example1.Main.main(Main.java:63)
 Error parsing line: 10030Shawn Coleman       29542795870076175NEFT                          000036384.21 12-10-2024 & 08:17:3
-Error: model.TransactionDetails.<init>()
+Error: Text '12-10-2024 & 08:17:3' could not be parsed at index 19
 Error parsing line: 10031Dustin Collins      30660051001992974IMPS                          000017646.91 14-08-2024 & 23:22:2
-Error: model.TransactionDetails.<init>()
+Error: Text '14-08-2024 & 23:22:2' could not be parsed at index 19
 Error parsing line: 10032Patricia Stanley MD 11678113793900408ATM Transactions              000036443.20 21-10-2023 & 04:29:3
-Error: model.TransactionDetails.<init>()
+Error: Text '21-10-2023 & 04:29:3' could not be parsed at index 19
 Error parsing line: 10033Anne Ortiz          87143484903430088IMPS                          000003055.39 19-12-2024 & 07:59:5
-Error: model.TransactionDetails.<init>()
+Error: Text '19-12-2024 & 07:59:5' could not be parsed at index 19
 Error parsing line: 10034Alexandra Flowers   61375560759000582Direct Deposit                000009578.06 22-10-2023 & 23:34:5
-Error: model.TransactionDetails.<init>()
+Error: Text '22-10-2023 & 23:34:5' could not be parsed at index 19
 Error parsing line: 10035Claire Bruce        98070397966490901UPI                           000004546.51 12-11-2023 & 17:04:3
-Error: model.TransactionDetails.<init>()
+Error: Text '12-11-2023 & 17:04:3' could not be parsed at index 19
 Error parsing line: 10036Mark Morton         20619546937642052RTGS                          000013527.48 03-02-2024 & 22:27:3
-Error: model.TransactionDetails.<init>()
+Error: Text '03-02-2024 & 22:27:3' could not be parsed at index 19
 Error parsing line: 10037Joseph Clark        81792313520906876IMPS                          000049721.36 04-08-2024 & 08:13:4
-Error: model.TransactionDetails.<init>()
+Error: Text '04-08-2024 & 08:13:4' could not be parsed at index 19
 Error parsing line: 10038Patrick Diaz        61326682842716134Cheque                        000020537.95 03-10-2023 & 23:00:3
-Error: model.TransactionDetails.<init>()
+Error: Text '03-10-2023 & 23:00:3' could not be parsed at index 19
 Error parsing line: 10039Gregory Burch       74962037073082234mobile wallets                000037852.35 04-06-2024 & 08:15:1
-Error: model.TransactionDetails.<init>()
+Error: Text '04-06-2024 & 08:15:1' could not be parsed at index 19
 Error parsing line: 10040Jamie Payne         93399873713546999RTGS                          000039784.87 23-05-2023 & 00:45:4
-Error: model.TransactionDetails.<init>()
+Error: Text '23-05-2023 & 00:45:4' could not be parsed at index 19
 Error parsing line: 10041Angela Powell       87363925234217490NEFT                          000048907.71 28-03-2025 & 14:02:4
-Error: model.TransactionDetails.<init>()
+Error: Text '28-03-2025 & 14:02:4' could not be parsed at index 19
 Error parsing line: 10042Daniel Long         99235629669156113mobile wallets                000046941.60 02-06-2023 & 21:42:0
-Error: model.TransactionDetails.<init>()
+Error: Text '02-06-2023 & 21:42:0' could not be parsed at index 19
 Error parsing line: 10043Denise Mitchell     54858438824173893Cheque                        000010717.85 06-05-2024 & 08:50:0
-Error: model.TransactionDetails.<init>()
+Error: Text '06-05-2024 & 08:50:0' could not be parsed at index 19
 Error parsing line: 10044Victoria Sanchez    98238941505451320Direct Deposit                000006976.58 04-08-2024 & 21:57:0
-Error: model.TransactionDetails.<init>()
+Error: Text '04-08-2024 & 21:57:0' could not be parsed at index 19
 Error parsing line: 10045Paul Jackson        88210684520416013IMPS                          000008638.31 12-10-2023 & 02:18:1
-Error: model.TransactionDetails.<init>()
+Error: Text '12-10-2023 & 02:18:1' could not be parsed at index 19
 Error parsing line: 10046Marc Palmer         72604570812295843ATM Transactions              000047163.04 22-04-2025 & 14:02:2
-Error: model.TransactionDetails.<init>()
+Error: Text '22-04-2025 & 14:02:2' could not be parsed at index 19
 Error parsing line: 10047Bradley Franklin    49117147793310273Direct Deposit                000025654.15 16-01-2025 & 08:35:1
-Error: model.TransactionDetails.<init>()
+Error: Text '16-01-2025 & 08:35:1' could not be parsed at index 19
 Error parsing line: 10048Patrick Walker      10596373528029235UPI                           000026671.47 27-07-2023 & 10:10:1
-Error: model.TransactionDetails.<init>()
+Error: Text '27-07-2023 & 10:10:1' could not be parsed at index 19
 Error parsing line: 10049Kimberly Dougherty  67777184916551143digital cards                 000030332.21 20-07-2023 & 19:26:1
-Error: model.TransactionDetails.<init>()
+Error: Text '20-07-2023 & 19:26:1' could not be parsed at index 19
 Parsed 0 records:
 
 Processing file: AccountDetails2.txt
-Error parsing line: 10050Sample Name0        28683134396Current  000366735.96
-Error: model.AccountDetails.<init>()
-Error parsing line: 10051Sample Name1        48111074024Savings  000696885.70
-Error: model.AccountDetails.<init>()
-Error parsing line: 10052Sample Name2        91280386991Savings  000902220.62
-Error: model.AccountDetails.<init>()
-Error parsing line: 10053Sample Name3        86065551593Current  000207423.18
-Error: model.AccountDetails.<init>()
-Error parsing line: 10054Sample Name4        36339024755Current  000390145.03
-Error: model.AccountDetails.<init>()
+Error parsing line: 10050Sample Name         28683134396Current  000366735.96
+Error: Invalid value for field 'accountType': Current  0
+Error parsing line: 10051Sample Name         48111074024Savings  000696885.70
+Error: Invalid value for field 'accountType': Savings  0
+Error parsing line: 10052Sample Name         91280386991Savings  000902220.62
+Error: Invalid value for field 'accountType': Savings  0
+Error parsing line: 10053Sample Name         86065551593Current  000207423.18
+Error: Invalid value for field 'accountType': Current  0
+Error parsing line: 10054Sample Name         36339024755Current  000390145.03
+Error: Invalid value for field 'accountType': Current  0
 Parsed 0 records:
 
 Processing file: CustomerDetails2.txt
-Error parsing line: 10050Sample Name0        Others18-08-19667215908704samplename0@example.com            Flat No. 100, Sample Street, City
-Error: model.CustomerDetails.<init>()
-Error parsing line: 10051Sample Name1        Female03-10-19817344797753samplename1@example.com            Flat No. 101, Sample Street, City
-Error: model.CustomerDetails.<init>()
-Error parsing line: 10052Sample Name2        Male  10-03-20036186090119samplename2@example.com            Flat No. 102, Sample Street, City
-Error: model.CustomerDetails.<init>()
-Error parsing line: 10053Sample Name3        Male  23-03-19686759273060samplename3@example.com            Flat No. 103, Sample Street, City
-Error: model.CustomerDetails.<init>()
-Error parsing line: 10054Sample Name4        Female19-01-19669109814145samplename4@example.com            Flat No. 104, Sample Street, City
-Error: model.CustomerDetails.<init>()
-Parsed 0 records:
+Successfully parsed: CustomerDetails[customerId=10050, customerName=Sample Name0, gender=Others, dateOfBirth=18-08-1966, contactNumber=7215908704, email=samplename0@example.com, residentialAddress=Flat No. 100, Sample Stre]
+Successfully parsed: CustomerDetails[customerId=10051, customerName=Sample Name1, gender=Female, dateOfBirth=03-10-1981, contactNumber=7344797753, email=samplename1@example.com, residentialAddress=Flat No. 101, Sample Stre]
+Successfully parsed: CustomerDetails[customerId=10052, customerName=Sample Name2, gender=Male, dateOfBirth=10-03-2003, contactNumber=6186090119, email=samplename2@example.com, residentialAddress=Flat No. 102, Sample Stre]
+Successfully parsed: CustomerDetails[customerId=10053, customerName=Sample Name3, gender=Male, dateOfBirth=23-03-1968, contactNumber=6759273060, email=samplename3@example.com, residentialAddress=Flat No. 103, Sample Stre]
+Successfully parsed: CustomerDetails[customerId=10054, customerName=Sample Name4, gender=Female, dateOfBirth=19-01-1966, contactNumber=9109814145, email=samplename4@example.com, residentialAddress=Flat No. 104, Sample Stre]
+Parsed 5 records:
+CustomerDetails[customerId=10050, customerName=Sample Name0, gender=Others, dateOfBirth=18-08-1966, contactNumber=7215908704, email=samplename0@example.com, residentialAddress=Flat No. 100, Sample Stre]
+CustomerDetails[customerId=10051, customerName=Sample Name1, gender=Female, dateOfBirth=03-10-1981, contactNumber=7344797753, email=samplename1@example.com, residentialAddress=Flat No. 101, Sample Stre]
+CustomerDetails[customerId=10052, customerName=Sample Name2, gender=Male, dateOfBirth=10-03-2003, contactNumber=6186090119, email=samplename2@example.com, residentialAddress=Flat No. 102, Sample Stre]
+CustomerDetails[customerId=10053, customerName=Sample Name3, gender=Male, dateOfBirth=23-03-1968, contactNumber=6759273060, email=samplename3@example.com, residentialAddress=Flat No. 103, Sample Stre]
+CustomerDetails[customerId=10054, customerName=Sample Name4, gender=Female, dateOfBirth=19-01-1966, contactNumber=9109814145, email=samplename4@example.com, residentialAddress=Flat No. 104, Sample Stre]
 
 Processing file: LoanDetails2.txt
 Error parsing line: 10050Sample Name0        587401  30554.63    Personal Loan       24-04-2024
-Error: model.LoanDetails.<init>()
+Error: Invalid format for field 'approvalDate': 24-04-20
 Error parsing line: 10051Sample Name1        143149  18073.89    Business Loan       13-11-2021
-Error: model.LoanDetails.<init>()
+Error: Invalid format for field 'approvalDate': 13-11-20
 Error parsing line: 10052Sample Name2        306799  65981.96    Home Loan           22-11-2024
-Error: model.LoanDetails.<init>()
+Error: Invalid format for field 'approvalDate': 22-11-20
 Error parsing line: 10053Sample Name3        185182  403296.54   Educational Loan    17-12-2025
-Error: model.LoanDetails.<init>()
+Error: Invalid format for field 'approvalDate': 17-12-20
 Error parsing line: 10054Sample Name4        349975  100071.34   Personal Loan       22-10-2023
-Error: model.LoanDetails.<init>()
+Error: Invalid format for field 'approvalDate': 22-10-20
 Parsed 0 records:
 
 Processing file: TransactionDetails2.txt
 Error parsing line: 10050Sample Name0        39644956744216668UPI                        65419.45  15-05-2025 & 05:32:13
-Error: model.TransactionDetails.<init>()
+Error: Invalid value for field 'transactionType': UPI                        654
 Error parsing line: 10051Sample Name1        78887537783330283NEFT                       34739.51  15-05-2025 & 05:32:13
-Error: model.TransactionDetails.<init>()
+Error: Invalid value for field 'transactionType': NEFT                       347
 Error parsing line: 10052Sample Name2        20583562675701551RTGS                       29630.14  15-05-2025 & 05:32:13
-Error: model.TransactionDetails.<init>()
+Error: Invalid value for field 'transactionType': RTGS                       296
 Error parsing line: 10053Sample Name3        16196174461901794digital cards              44629.21  15-05-2025 & 05:32:13
-Error: model.TransactionDetails.<init>()
+Error: Invalid value for field 'transactionType': digital cards              446
 Error parsing line: 10054Sample Name4        23499463987682586ATM Transactions           72555.96  15-05-2025 & 05:32:13
-Error: model.TransactionDetails.<init>()
+Error: Invalid value for field 'transactionType': ATM Transactions           725
 Parsed 0 records:
+java.lang.Exception: Invalid value for field 'accountType': Current  0
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:52)
+	at com.example1.Main.main(Main.java:63)
+java.lang.Exception: Invalid value for field 'accountType': Savings  0
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:52)
+	at com.example1.Main.main(Main.java:63)
+java.lang.Exception: Invalid value for field 'accountType': Savings  0
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:52)
+	at com.example1.Main.main(Main.java:63)
+java.lang.Exception: Invalid value for field 'accountType': Current  0
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:52)
+	at com.example1.Main.main(Main.java:63)
+java.lang.Exception: Invalid value for field 'accountType': Current  0
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:52)
+	at com.example1.Main.main(Main.java:63)
+java.lang.Exception: Invalid format for field 'approvalDate': 24-04-20
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:57)
+	at com.example1.Main.main(Main.java:63)
+java.lang.Exception: Invalid format for field 'approvalDate': 13-11-20
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:57)
+	at com.example1.Main.main(Main.java:63)
+java.lang.Exception: Invalid format for field 'approvalDate': 22-11-20
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:57)
+	at com.example1.Main.main(Main.java:63)
+java.lang.Exception: Invalid format for field 'approvalDate': 17-12-20
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:57)
+	at com.example1.Main.main(Main.java:63)
+java.lang.Exception: Invalid format for field 'approvalDate': 22-10-20
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:57)
+	at com.example1.Main.main(Main.java:63)
+java.lang.Exception: Invalid value for field 'transactionType': UPI                        654
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:52)
+	at com.example1.Main.main(Main.java:63)
+java.lang.Exception: Invalid value for field 'transactionType': NEFT                       347
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:52)
+	at com.example1.Main.main(Main.java:63)
+java.lang.Exception: Invalid value for field 'transactionType': RTGS                       296
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:52)
+	at com.example1.Main.main(Main.java:63)
+java.lang.Exception: Invalid value for field 'transactionType': digital cards              446
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:52)
+	at com.example1.Main.main(Main.java:63)
+java.lang.Exception: Invalid value for field 'transactionType': ATM Transactions           725
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:52)
+	at com.example1.Main.main(Main.java:63)
 
 Process finished with exit code 0
