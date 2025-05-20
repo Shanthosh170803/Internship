@@ -1,5 +1,4 @@
 //This is my Main.java
-
 package com.example1;
 import java.io.*;
 import java.nio.file.*;
@@ -10,60 +9,71 @@ import parser.FixedWidthParser;
 
 public class Main {
 
+    private static final String MODEL_PACKAGE="model";
     public static void main(String[] args) throws IOException {
+
         String bankDirPath = "Bank";
         File bankDir = new File(bankDirPath);
-
         Map<String, List<File>> dateToFileMap = new TreeMap<>();
 
-                for (File file : bankDir.listFiles((dir, name) -> name.endsWith(".txt"))) {
-                    String header = Files.lines(file.toPath()).findFirst().orElse(null);
-                    if (header != null && header.startsWith("HDR|")) {
-                        String[] parts = header.split("\\|");
-                        if (parts.length >= 3) {
-                            String dateStr = parts[2];
-                            dateToFileMap.computeIfAbsent(dateStr, k -> new ArrayList<>()).add(file);
-                        }
-                    }
+        for (File file : bankDir.listFiles((dir, name) -> name.endsWith(".txt"))) {
+            String header = Files.lines(file.toPath()).findFirst().orElse(null);
+            if (header != null && header.startsWith("HDR|")) {
+                String[] parts = header.split("\\|");
+                if (parts.length >= 3) {
+                    String dateStr = parts[2];
+                    dateToFileMap.computeIfAbsent(dateStr, k -> new ArrayList<>()).add(file);
                 }
-        Path basePath = Paths.get("Control");
-        for (String dateStr : dateToFileMap.keySet()) {
-            LocalDate date = LocalDate.parse(dateStr, DateTimeFormatter.ofPattern("yyyyMMdd"));
-            String folderName = "Control" + date.getMonth().name().substring(0, 1).toUpperCase() +
-                    date.getMonth().name().substring(1).toLowerCase() + date.getDayOfMonth();
+            }
+        }
 
-            Path targetDir = basePath.resolve(folderName);
+        for(Map.Entry<String,List<File>> entry : dateToFileMap.entrySet()){
+            String dateStr = entry.getKey();
+            List<File> files = entry.getValue();
+
+            LocalDate date = LocalDate.parse(dateStr,DateTimeFormatter.ofPattern("yyyyMMdd"));
+            String folderName="Control" + date.getMonth().name().substring(0,1).toUpperCase()+date.getMonth().name().substring(1).toLowerCase()+date.getDayOfMonth();
+            Path targetDir = Paths.get("Control", folderName);
             Files.createDirectories(targetDir);
 
-            for (File file : dateToFileMap.get(dateStr)) {
+            for(File file:files){
                 Path targetFile = targetDir.resolve(file.getName());
-                Files.copy(file.toPath(), targetFile, StandardCopyOption.REPLACE_EXISTING);
+                Files.copy(file.toPath(),targetFile,StandardCopyOption.REPLACE_EXISTING);
             }
-        }
 
-        File readControl = new File("Control");
-        for(File subFolder : readControl.listFiles()) {
-            for (File files : subFolder.listFiles((d, name) -> name.endsWith(".txt"))) {
-                BufferedReader br = new BufferedReader(new FileReader(files));
-                String header = br.readLine();
-                String[] parts = header.split("\\|");
-                String fileName = parts[1];
-                String line;
-                int lineNum = 0;
-                List<Object> details=new ArrayList<>();
-                while ((line = br.readLine()) != null) {
-                    lineNum++;
-                    if (line.startsWith("HDR|") || line.startsWith("TRL|")) continue;
-                    try {
-                       details.add( FixedWidthParser.parseLine(line, fileName.getClass()));
+            for(File file:files){
+                System.out.println("\nProcessing file: "+file.getName());
+                List<String> lines = Files.readAllLines(file.toPath());
 
-                    } catch (Exception e) {
-                        System.out.println("Invalid Line " + lineNum + ": " + e.getMessage());
+                List<String> dataLines = lines.subList(1,lines.size()-1);
+
+                String fileName = lines.get(0).split("\\|")[1];
+                String baseName = fileName.replaceAll("\\d+$","");
+                String className = MODEL_PACKAGE+"."+baseName;
+
+                try {
+                    Class<?> modelClass = Class.forName(className);
+                    List<Object> details = new ArrayList<>();
+
+                    for(String line: dataLines){
+                        try{
+                            Object parsed = FixedWidthParser.parseLine(line,modelClass);
+                            System.out.println(parsed);
+                            details.add(parsed);
+                            //System.out.println("Successfully parsed: "+parsed);
+                        } catch (Exception e) {
+                           // System.out.println("Error parsing line: "+ line);
+                            //System.out.println("Error: "+ e.getMessage());
+                            e.printStackTrace();
+                        }
                     }
+                    System.out.println("Parsed "+ details.size()+" records:");
+                } catch (ClassNotFoundException e) {
+                    System.out.println("No model class found for: "+ className);
                 }
-                System.out.println(details);
             }
         }
+
     }
 }
 
@@ -83,6 +93,9 @@ public @interface FixedFieldAnnotations {
 //This is my AccountDetails
 package model;
 import annotations.FixedFieldAnnotations;
+
+import java.math.BigDecimal;
+
 public record AccountDetails (
     @FixedFieldAnnotations(length = 5,format="\\d{5}")
      String customerId,
@@ -93,9 +106,8 @@ public record AccountDetails (
     @FixedFieldAnnotations(length = 10,allowedValues = "Savings,Current")
      String accountType,
     @FixedFieldAnnotations(length = 12,format = "\\d{1,9}.\\d{2}")
-     String currentBalance
+    BigDecimal currentBalance
 ){}
-
 
 //This is my CustomerDetails
 package model;
@@ -108,7 +120,7 @@ public record CustomerDetails(
      String customerName,
     @FixedFieldAnnotations(length = 6,allowedValues = "Male,Female,Others")
      String gender,
-    @FixedFieldAnnotations(length = 10,format = "\\d{2}-\\d{2}-\\d{4}")
+    @FixedFieldAnnotations(length = 8,format = "\\d{2}\\d{2}\\d{4}")
      String dateOfBirth,
     @FixedFieldAnnotations(length = 10,format = "\\d{10}")
      String contactNumber,
@@ -121,6 +133,10 @@ public record CustomerDetails(
 //This is my LoanDetails
 package model;
 import annotations.FixedFieldAnnotations;
+
+import java.math.BigDecimal;
+import java.time.LocalDate;
+
 public record LoanDetails (
     @FixedFieldAnnotations(length = 5,format = "\\d{5}")
      String customerId,
@@ -129,16 +145,21 @@ public record LoanDetails (
     @FixedFieldAnnotations(length = 6,format = "\\d{6}")
      String loanId,
     @FixedFieldAnnotations(length = 12,format = "\\d{1,9}\\.\\d{2}")
-     String loanAmount,
+    BigDecimal loanAmount,
     @FixedFieldAnnotations(length = 20,allowedValues = "Home Loan,Educational Loan,Business Loan,Personal Loan")
      String loanType,
-    @FixedFieldAnnotations(length = 10,format = "\\d{2}-\\d{2}-\\d{4}")
-     String approvalDate
+    @FixedFieldAnnotations(length = 8,format = "\\d{2}\\d{2}\\d{4}")
+    LocalDate approvalDate
     ){}
 
-//This is my TransactionDetails 
+//This is my TransactionDetails
 package model;
 import annotations.FixedFieldAnnotations;
+
+import java.math.BigDecimal;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
 public record TransactionDetails (
 
     @FixedFieldAnnotations(length = 5,format = "\\d{5}")
@@ -152,27 +173,35 @@ public record TransactionDetails (
     @FixedFieldAnnotations(length = 30,allowedValues = "UPI,mobile wallets,digital cards,NEFT,RTGS,IMPS,Cheque,Direct Deposit,ATM Transactions")
     String transactionType,
     @FixedFieldAnnotations(length = 12,format = "\\d{1,9}\\.\\d{2}")
-    String transactionAmount,
-    @FixedFieldAnnotations(length = 21,format = "\\d{2}-\\d{2}-\\d{4} & \\d{2}:\\d{2}:\\d{1,2}")
-    String transactionDateTime
+    BigDecimal transactionAmount,
+    @FixedFieldAnnotations(length = 18,format = "\\d{2}\\d{2}\\d{4} \\d{2}:\\d{2}:\\d{1,2}")
+    LocalDateTime transactionDateTime
 ){}
 
 //This is my FixedWidthParser
-
 package parser;
 
 import annotations.FixedFieldAnnotations;
+
+import java.lang.module.Configuration;
+import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
+import java.math.BigDecimal;
 import java.time.DateTimeException;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.List;
 
 public class FixedWidthParser {
 
     public static <T> T parseLine(String line, Class<T> clazz) throws Exception {
-        T instance = clazz.getDeclaredConstructor().newInstance();
+        List<Object> fieldValues=new ArrayList<>();
         int currentIndex = 0;
+
         for (Field field : clazz.getDeclaredFields()) {
+
             FixedFieldAnnotations annotation = field.getAnnotation(FixedFieldAnnotations.class);
             if (annotation != null) {
                 int length = annotation.length();
@@ -205,22 +234,42 @@ public class FixedWidthParser {
                         throw new Exception("Invalid format for field '" + field.getName() + "': " + value);
                     }
                 }
-                field.setAccessible(true);
-                if(field.getType().equals(String.class)){
-                    field.set(instance,value);
-                }else if(field.getType().equals(int.class)){
-                    field.set(instance,Integer.parseInt(value));
-                } else if (field.getType().equals(LocalDate.class)) {
-                    DateTimeFormatter formatter= DateTimeFormatter.ofPattern("yyyyMMdd");
-                    field.set(instance,LocalDate.parse(value,formatter));
-                }
+                Object convertedValue = convertValue(value,field.getType());
+                fieldValues.add(convertedValue);
             }
         }
-        System.out.println(instance);
-        return instance;
+        Class<?>[] paramTypes = new Class[fieldValues.size()];
+        for(int i=0;i<fieldValues.size();i++){
+            paramTypes[i]=fieldValues.get(i).getClass();
+        }
+        Constructor<T> constructor = clazz.getDeclaredConstructor(paramTypes);
+        return constructor.newInstance(fieldValues.toArray());
+    }
+
+    private static Object convertValue(String value, Class<?> targetType){
+        if(value==null || value.isEmpty())return null;
+
+        try{
+            if(targetType==String.class){
+                return value;
+            }else if(targetType==Integer.class||targetType==int.class){
+                return Integer.parseInt(value.trim());
+            }else if(targetType==Long.class||targetType==long.class){
+                return Long.parseLong(value.trim());
+            }else if(targetType==Double.class||targetType==double.class){
+                return Double.parseDouble(value.trim());
+            }else if(targetType== BigDecimal.class){
+                return new BigDecimal(value.trim());
+            }else if(targetType== LocalDateTime.class){
+                DateTimeFormatter formatter= DateTimeFormatter.ofPattern("yyyyMMdd");
+                return LocalDateTime.parse(value.trim(),formatter);
+            }
+        } catch (Exception e) {
+            throw new IllegalArgumentException("Failed to convert value '"+ value+"'to type "+ targetType.getSimpleName(),e);
+        }
+
+        return value;
     }
 }
 
-i gave all my code to you
-I need to print the details arraylist 
-but i was empty
+i need to store the data(records) in the .txt files in the arraylist some files show some errors , assist me to clear those errors
