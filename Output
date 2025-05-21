@@ -1,126 +1,114 @@
-package model;
-import annotations.FixedFieldAnnotations;
-import java.math.BigDecimal;
-import java.time.LocalDate;
-public record LoanDetails (
-    @FixedFieldAnnotations(length = 5,format = "\\d{5}")
-     String customerId,
-    @FixedFieldAnnotations(length = 20, pattern="^[A-Za-z]+$" )
-     String customerName,
-    @FixedFieldAnnotations(length = 6,format = "\\d{6}")
-     String loanId,
-    @FixedFieldAnnotations(length = 12,format = "\\d{1,9}\\.\\d{2}")
-    String loanAmount,
-    @FixedFieldAnnotations(length = 20,allowedValues = "Home Loan,Educational Loan,Business Loan,Personal Loan")
-     String loanType,
-    @FixedFieldAnnotations(length = 8,format = "\\d{2}\\d{2}\\d{4}")
-    LocalDate approvalDate
-    ){}
+"C:\Program Files\Microsoft\jdk-17.0.12.7-hotspot\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.3.2.2\lib\idea_rt.jar=50628:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.3.2.2\bin" -Dfile.encoding=UTF-8 -classpath C:\Users\shanthosh.s\IdeaProjects\BankDBTwo\target\classes com.example1.Main
 
-package parser;
+Processing file: AccountDetails.txt
+Parsed 50 records:
 
-import annotations.FixedFieldAnnotations;
+Processing file: CustomerDetails.txt
+Parsed 50 records:
 
-import java.lang.module.Configuration;
-import java.lang.reflect.Constructor;
-import java.lang.reflect.Field;
-import java.math.BigDecimal;
-import java.time.DateTimeException;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.List;
+Processing file: LoanDetails.txt
+java.lang.NoSuchMethodException: No suitable constructor found for model.LoanDetailswith parameters: [10001, Sarah Adams, 624580, 276956.48, Home Loan, Value(DayOfMonth,2)Value(MonthOfYear,2)Value(YearOfEra,4,19,EXCEEDS_PAD)]
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:73)
+	at com.example1.Main.main(Main.java:57)
+java.lang.NoSuchMethodException: No suitable constructor found for model.LoanDetailswith parameters: [10002, Gabriel Clark, 411989, 236183.27, Home Loan, Value(DayOfMonth,2)Value(MonthOfYear,2)Value(YearOfEra,4,19,EXCEEDS_PAD)]
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:73)
+	at com.example1.Main.main(Main.java:57)
+java.lang.NoSuchMethodException: No suitable constructor found for model.LoanDetailswith parameters: [10005, Brandon Rivera, 491784, 160844.91, Educational Loan, Value(DayOfMonth,2)Value(MonthOfYear,2)Value(YearOfEra,4,19,EXCEEDS_PAD)]
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:73)
+	at com.example1.Main.main(Main.java:57)
+java.lang.NoSuchMethodException: No suitable constructor found for model.LoanDetailswith parameters: [10008, Sara Shepherd, 831543, 344907.72, Home Loan, Value(DayOfMonth,2)Value(MonthOfYear,2)Value(YearOfEra,4,19,EXCEEDS_PAD)]
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:73)
+	at com.example1.Main.main(Main.java:57)
+java.lang.NoSuchMethodException: No suitable constructor found for model.LoanDetailswith parameters: [10010, David Conway, 742298, 379211.69, Personal Loan, Value(DayOfMonth,2)Value(MonthOfYear,2)Value(YearOfEra,4,19,EXCEEDS_PAD)]
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:73)
+	at com.example1.Main.main(Main.java:57)
+java.lang.NoSuchMethodException: No suitable constructor found for model.LoanDetailswith parameters: [10012, Angel Murillo, 414641, 164860.35, Home Loan, Value(DayOfMonth,2)Value(MonthOfYear,2)Value(YearOfEra,4,19,EXCEEDS_PAD)]
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:73)
+	at com.example1.Main.main(Main.java:57)
+java.lang.NoSuchMethodException: No suitable constructor found for model.LoanDetailswith parameters: [10020, Gregory Sanchez, 889704, 434031.58, Home Loan, Value(DayOfMonth,2)Value(MonthOfYear,2)Value(YearOfEra,4,19,EXCEEDS_PAD)]
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:73)
+	at com.example1.Main.main(Main.java:57)
+java.lang.NoSuchMethodException: No suitable constructor found for model.LoanDetailswith parameters: [10022, Barbara Dixon, 798415, 275341.64, Personal Loan, Value(DayOfMonth,2)Value(MonthOfYear,2)Value(YearOfEra,4,19,EXCEEDS_PAD)]
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:73)
+	at com.example1.Main.main(Main.java:57)
+java.lang.NoSuchMethodException: No suitable constructor found for model.LoanDetailswith parameters: [10023, Fernando Griffith, 465326, 154715.74, Personal Loan, Value(DayOfMonth,2)Value(MonthOfYear,2)Value(YearOfEra,4,19,EXCEEDS_PAD)]
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:73)
+	at com.example1.Main.main(Main.java:57)
+java.lang.NoSuchMethodException: No suitable constructor found for model.LoanDetailswith parameters: [10025, Devon Green, 316623, 229224.36, Educational Loan, Value(DayOfMonth,2)Value(MonthOfYear,2)Value(YearOfEra,4,19,EXCEEDS_PAD)]
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:73)
+	at com.example1.Main.main(Main.java:57)
+java.lang.NoSuchMethodException: No suitable constructor found for model.LoanDetailswith parameters: [10026, Marc Williams, 643372, 32775.49, Educational Loan, Value(DayOfMonth,2)Value(MonthOfYear,2)Value(YearOfEra,4,19,EXCEEDS_PAD)]
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:73)
+	at com.example1.Main.main(Main.java:57)
+java.lang.NoSuchMethodException: No suitable constructor found for model.LoanDetailswith parameters: [10027, Lori Wallace, 584081, 463257.94, Educational Loan, Value(DayOfMonth,2)Value(MonthOfYear,2)Value(YearOfEra,4,19,EXCEEDS_PAD)]
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:73)
+	at com.example1.Main.main(Main.java:57)
+java.lang.NoSuchMethodException: No suitable constructor found for model.LoanDetailswith parameters: [10030, Shawn Coleman, 984151, 79609.69, Business Loan, Value(DayOfMonth,2)Value(MonthOfYear,2)Value(YearOfEra,4,19,EXCEEDS_PAD)]
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:73)
+	at com.example1.Main.main(Main.java:57)
+java.lang.NoSuchMethodException: No suitable constructor found for model.LoanDetailswith parameters: [10032, Patricia Stanley MD, 493535, 175599.37, Business Loan, Value(DayOfMonth,2)Value(MonthOfYear,2)Value(YearOfEra,4,19,EXCEEDS_PAD)]
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:73)
+	at com.example1.Main.main(Main.java:57)
+java.lang.NoSuchMethodException: No suitable constructor found for model.LoanDetailswith parameters: [10033, Anne Ortiz, 285183, 351703.65, Home Loan, Value(DayOfMonth,2)Value(MonthOfYear,2)Value(YearOfEra,4,19,EXCEEDS_PAD)]
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:73)
+	at com.example1.Main.main(Main.java:57)
+java.lang.NoSuchMethodException: No suitable constructor found for model.LoanDetailswith parameters: [10034, Alexandra Flowers, 365993, 423629.41, Educational Loan, Value(DayOfMonth,2)Value(MonthOfYear,2)Value(YearOfEra,4,19,EXCEEDS_PAD)]
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:73)
+	at com.example1.Main.main(Main.java:57)
+java.lang.NoSuchMethodException: No suitable constructor found for model.LoanDetailswith parameters: [10037, Joseph Clark, 387444, 444216.66, Business Loan, Value(DayOfMonth,2)Value(MonthOfYear,2)Value(YearOfEra,4,19,EXCEEDS_PAD)]
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:73)
+	at com.example1.Main.main(Main.java:57)
+java.lang.NoSuchMethodException: No suitable constructor found for model.LoanDetailswith parameters: [10039, Gregory Burch, 259131, 19358.82, Home Loan, Value(DayOfMonth,2)Value(MonthOfYear,2)Value(YearOfEra,4,19,EXCEEDS_PAD)]
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:73)
+	at com.example1.Main.main(Main.java:57)
+java.lang.NoSuchMethodException: No suitable constructor found for model.LoanDetailswith parameters: [10041, Angela Powell, 230875, 337141.82, Home Loan, Value(DayOfMonth,2)Value(MonthOfYear,2)Value(YearOfEra,4,19,EXCEEDS_PAD)]
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:73)
+	at com.example1.Main.main(Main.java:57)
+java.lang.NoSuchMethodException: No suitable constructor found for model.LoanDetailswith parameters: [10043, Denise Mitchell, 539314, 101431.56, Business Loan, Value(DayOfMonth,2)Value(MonthOfYear,2)Value(YearOfEra,4,19,EXCEEDS_PAD)]
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:73)
+	at com.example1.Main.main(Main.java:57)
+java.lang.NoSuchMethodException: No suitable constructor found for model.LoanDetailswith parameters: [10044, Victoria Sanchez, 781621, 297555.09, Business Loan, Value(DayOfMonth,2)Value(MonthOfYear,2)Value(YearOfEra,4,19,EXCEEDS_PAD)]
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:73)
+	at com.example1.Main.main(Main.java:57)
+java.lang.NoSuchMethodException: No suitable constructor found for model.LoanDetailswith parameters: [10047, Bradley Franklin, 115629, 479606.44, Personal Loan, Value(DayOfMonth,2)Value(MonthOfYear,2)Value(YearOfEra,4,19,EXCEEDS_PAD)]
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:73)
+	at com.example1.Main.main(Main.java:57)
+java.lang.NoSuchMethodException: No suitable constructor found for model.LoanDetailswith parameters: [10048, Patrick Walker, 391863, 55181.30, Personal Loan, Value(DayOfMonth,2)Value(MonthOfYear,2)Value(YearOfEra,4,19,EXCEEDS_PAD)]
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:73)
+	at com.example1.Main.main(Main.java:57)
+java.lang.NoSuchMethodException: No suitable constructor found for model.LoanDetailswith parameters: [10049, Kimberly Dougherty, 452925, 48048.05, Home Loan, Value(DayOfMonth,2)Value(MonthOfYear,2)Value(YearOfEra,4,19,EXCEEDS_PAD)]
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:73)
+	at com.example1.Main.main(Main.java:57)
+Parsed 0 records:
 
-public class FixedWidthParser {
+Processing file: TransactionDetails.txt
+Parsed 50 records:
 
-    public static <T> T parseLine(String line, Class<T> clazz) throws Exception {
-        List<Object> fieldValues=new ArrayList<>();
-        int currentIndex = 0;
+Processing file: AccountDetails2.txt
+Parsed 5 records:
 
-        for (Field field : clazz.getDeclaredFields()) {
+Processing file: CustomerDetails2.txt
+Parsed 5 records:
 
-            FixedFieldAnnotations annotation = field.getAnnotation(FixedFieldAnnotations.class);
-            if (annotation != null) {
-                int length = annotation.length();
-                if (currentIndex + length > line.length()) {
-                    throw new Exception("Line too short for field: " + field.getName());
-                }
+Processing file: LoanDetails2.txt
+Parsed 0 records:
 
-                String value = line.substring(currentIndex, currentIndex + length).trim();
-                currentIndex += length;
+Processing file: TransactionDetails2.txt
+Parsed 5 records:
+java.lang.NoSuchMethodException: No suitable constructor found for model.LoanDetailswith parameters: [10050, Sample Name0, 587401, 3012554.63, Personal Loan, Value(DayOfMonth,2)Value(MonthOfYear,2)Value(YearOfEra,4,19,EXCEEDS_PAD)]
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:73)
+	at com.example1.Main.main(Main.java:57)
+java.lang.NoSuchMethodException: No suitable constructor found for model.LoanDetailswith parameters: [10051, Sample Name1, 143149, 18073.89, Business Loan, Value(DayOfMonth,2)Value(MonthOfYear,2)Value(YearOfEra,4,19,EXCEEDS_PAD)]
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:73)
+	at com.example1.Main.main(Main.java:57)
+java.lang.NoSuchMethodException: No suitable constructor found for model.LoanDetailswith parameters: [10052, Sample Name2, 306799, 65981.96, Home Loan, Value(DayOfMonth,2)Value(MonthOfYear,2)Value(YearOfEra,4,19,EXCEEDS_PAD)]
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:73)
+	at com.example1.Main.main(Main.java:57)
+java.lang.NoSuchMethodException: No suitable constructor found for model.LoanDetailswith parameters: [10053, Sample Name3, 185182, 403296.54, Educational Loan, Value(DayOfMonth,2)Value(MonthOfYear,2)Value(YearOfEra,4,19,EXCEEDS_PAD)]
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:73)
+	at com.example1.Main.main(Main.java:57)
+java.lang.NoSuchMethodException: No suitable constructor found for model.LoanDetailswith parameters: [10054, Sample Name4, 349975, 100071.34, Personal Loan, Value(DayOfMonth,2)Value(MonthOfYear,2)Value(YearOfEra,4,19,EXCEEDS_PAD)]
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:73)
+	at com.example1.Main.main(Main.java:57)
 
-                if (annotation.required() && value.isEmpty()) {
-                    throw new Exception("Missing required field: " + field.getName());
-                }
-
-                if (!annotation.allowedValues().isEmpty()) {
-                    String[] allowed = annotation.allowedValues().split(",");
-                    boolean match = false;
-                    for (String a : allowed) {
-                        if (a.equalsIgnoreCase(value)) {
-                            match = true;
-                            break;
-                        }
-                    }
-                    if (!match) {
-                        throw new Exception("Invalid value for field '" + field.getName() + "': " + value);
-                    }
-                }
-                if (!annotation.format().isEmpty() && !value.isEmpty()) {
-                    if (!value.matches(annotation.format())) {
-                        throw new Exception("Invalid format for field '" + field.getName() + "': " + value);
-                    }
-                }
-                Object convertedValue = convertValue(value,field.getType());
-                fieldValues.add(convertedValue);
-            }
-        }
-        Class<?>[] paramTypes = new Class[fieldValues.size()];
-        for(int i=0;i<fieldValues.size();i++){
-            paramTypes[i]=fieldValues.get(i).getClass();
-        }
-        Constructor<T> constructor = clazz.getDeclaredConstructor(paramTypes);
-        return constructor.newInstance(fieldValues.toArray());
-    }
-
-    private static Object convertValue(String value, Class<?> targetType){
-        if(value==null || value.isEmpty())return null;
-
-        try{
-            if(targetType==String.class){
-                return value;
-            }else if(targetType==Integer.class||targetType==int.class){
-                return Integer.parseInt(value.trim());
-            }else if(targetType==Long.class||targetType==long.class){
-                return Long.parseLong(value.trim());
-            }else if(targetType==Double.class||targetType==double.class){
-                return Double.parseDouble(value.trim());
-            }else if(targetType== BigDecimal.class){
-                return new BigDecimal(value.trim());
-            }else if(targetType== LocalDateTime.class) {
-                String trimmedValue = value.trim();
-                DateTimeFormatter formatter;
-                if (trimmedValue.length() <= 8) {
-                    formatter = DateTimeFormatter.ofPattern("ddMMyyyy");
-                    return formatter;
-                } else {
-//                    formatter = DateTimeFormatter.ofPattern("ddMMyyyy HH:mm:ss");
-//                    return formatter;
-                    return trimmedValue;
-                }
-            }
-        } catch (Exception e) {
-            throw new IllegalArgumentException("Failed to convert value '"+ value+"'to type "+ targetType.getSimpleName(),e);
-        }
-
-        return value;
-    }
-}
-
-
-java.lang.NoSuchMethodException: model.LoanDetails.<init>(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
-	at java.base/java.lang.Class.getConstructor0(Class.java:3585)
-	at java.base/java.lang.Class.getDeclaredConstructor(Class.java:2754)
-	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:64)
-	at com.example1.Main.main(Main.java:59)
+Process finished with exit code 0
