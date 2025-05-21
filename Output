@@ -1,5 +1,5 @@
 Processing file: LoanDetails.txt
-java.lang.NoSuchMethodException: model.LoanDetails.<init>(java.lang.String,java.lang.String,java.lang.String,java.math.BigDecimal,java.lang.String,java.time.format.DateTimeFormatter)
+java.lang.NoSuchMethodException: model.LoanDetails.<init>(java.lang.String,java.lang.String,java.lang.String,java.math.BigDecimal,java.lang.String,java.lang.String)
 	at java.base/java.lang.Class.getConstructor0(Class.java:3585)
 	at java.base/java.lang.Class.getDeclaredConstructor(Class.java:2754)
 	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:64)
