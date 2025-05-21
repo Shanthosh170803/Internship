@@ -1,41 +1,6 @@
 Processing file: LoanDetails.txt
-java.lang.IllegalArgumentException: argument type mismatch
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:86)
+java.lang.NoSuchMethodException: model.LoanDetails.<init>(java.lang.String,java.lang.String,java.lang.String,java.math.BigDecimal,java.lang.String,java.time.format.DateTimeFormatter)
+	at java.base/java.lang.Class.getConstructor0(Class.java:3585)
+	at java.base/java.lang.Class.getDeclaredConstructor(Class.java:2754)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:64)
 	at com.example1.Main.main(Main.java:57)
-java.lang.IllegalArgumentException: java.lang.ClassCastException@58d25a40
-	at jdk.internal.reflect.GeneratedConstructorAccessor4.newInstance(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:86)
-	at com.example1.Main.main(Main.java:57)
-
-1) I uploaded the LoanDetails.txt file to you
-2) JDK17
-3) //This is my LoanDetails.java Records class
-package model;
-import annotations.FixedFieldAnnotations;
-
-import java.math.BigDecimal;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-
-public record LoanDetails (
-    @FixedFieldAnnotations(length = 5,format = "\\d{5}")
-     String customerId,
-    @FixedFieldAnnotations(length = 20, pattern="^[A-Za-z]+$" )
-     String customerName,
-    @FixedFieldAnnotations(length = 6,format = "\\d{6}")
-     String loanId,
-    @FixedFieldAnnotations(length = 12,format = "\\d{1,9}\\.\\d{2}")
-    BigDecimal loanAmount,
-    @FixedFieldAnnotations(length = 20,allowedValues = "Home Loan,Educational Loan,Business Loan,Personal Loan")
-     String loanType,
-    @FixedFieldAnnotations(length = 8,format = "\\d{2}\\d{2}\\d{4}")
-    LocalDate approvalDate
-    ){}
