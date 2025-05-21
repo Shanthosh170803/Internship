@@ -1,8 +1,40 @@
-System.out.println("Value: "+value+" "+"Fields: "+field.getType());
-Object convertedValue = convertValue(value,field.getType());
-fieldValues.add(convertedValue);
+java.lang.NoSuchMethodException: model.BankFundTransfer.<init>(java.lang.String,java.lang.Long,java.lang.Long,java.lang.Double,java.time.LocalDateTime,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+	at java.base/java.lang.Class.getConstructor0(Class.java:3585)
+	at java.base/java.lang.Class.getDeclaredConstructor(Class.java:2754)
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:60)
+	at com.example1.Main.main(Main.java:56)
 
- private static Object convertValue(String value, Class<?> targetType){
+//This is my record class
+package model;
+import annotations.FixedFieldAnnotations;
+
+import java.time.LocalDateTime;
+
+public record BankFundTransfer(
+        @FixedFieldAnnotations(length = 12,format = "\\d{1,12}")
+        String transactionId,
+        @FixedFieldAnnotations(length = 15,format = "\\d{1,15}")
+        long senderAccountNumber,
+        @FixedFieldAnnotations(length = 15,format = "\\d{1,15}")
+        long receiverAccountNumber,
+        @FixedFieldAnnotations(length = 12,format = "\\d{1,9}\\.\\d{2}")
+        double transactionAmount,
+        @FixedFieldAnnotations(length = 19,pattern = "dd-MM-yyyy HH:mm:ss")
+        LocalDateTime transactionDateTime,
+        @FixedFieldAnnotations(length = 3,allowedValues = "USD,INR,EUR,GBP")
+        String currencyCode,
+        @FixedFieldAnnotations(length = 10,allowedValues = "NEFT,RTGS,IMPS,SWIFT")
+        String transactionType,
+        @FixedFieldAnnotations(length = 11)
+        String bankCode,
+        @FixedFieldAnnotations(length = 10,allowedValues = "Success,Pending,Failure")
+        String transactionStatus,
+        @FixedFieldAnnotations(length = 16)
+        String referenceNumber
+) {}
+
+//This is my helper method for parser.java
+private static Object convertValue(String value, Class<?> targetType){
         if(value==null || value.isEmpty())return null;
 
         try{
@@ -17,9 +49,10 @@ fieldValues.add(convertedValue);
             }else if(targetType== BigDecimal.class){
                 return new BigDecimal(value);
             }else if(targetType == LocalDate.class){
-                return DateTimeFormatter.ofPattern("ddMMyyyy");
+                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+                return LocalDate.parse(value,formatter);
             }else if(targetType== LocalDateTime.class) {
-                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("ddMMyyyy HH:mm:ss");
+                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
                 return LocalDateTime.parse(value,formatter);
             }
         } catch (Exception e) {
@@ -28,5 +61,3 @@ fieldValues.add(convertedValue);
 
         return value;
     }
-
-the convertValue will return what..?
