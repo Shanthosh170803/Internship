@@ -29,9 +29,8 @@ public class Main {
         for(Map.Entry<String,List<File>> entry : dateToFileMap.entrySet()){
             String dateStr = entry.getKey();
             List<File> files = entry.getValue();
-
             LocalDate date = LocalDate.parse(dateStr,DateTimeFormatter.ofPattern("yyyyMMdd"));
-            String folderName="Control" + date.getMonth().name().substring(0,1).toUpperCase()+date.getMonth().name().substring(1).toLowerCase()+date.getDayOfMonth();
+            String folderName=date.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
             Path targetDir = Paths.get("Control", folderName);
             Files.createDirectories(targetDir);
 
@@ -56,9 +55,13 @@ public class Main {
                         try{
                             Object parsed = FixedWidthParser.parseLine(line,modelClass);
                             details.add(parsed);
+
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
+                    }
+                    for(Object detail:details){
+                        System.out.println(detail);
                     }
                     System.out.println("Parsed "+ details.size()+" records:");
                 } catch (ClassNotFoundException e) {
