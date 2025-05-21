@@ -1,35 +1,32 @@
-//Code 
-System.out.println("Value: "+value+" "+"Fields: "+field);
-//Output for the code
-Processing file: LoanDetails2.txt
-Value: 10050 Fields: private final java.lang.String model.LoanDetails.customerId
-Value: Sample Name0 Fields: private final java.lang.String model.LoanDetails.customerName
-Value: 587401 Fields: private final java.lang.String model.LoanDetails.loanId
-Value: 003012554.63 Fields: private final java.math.BigDecimal model.LoanDetails.loanAmount
-Value: Personal Loan Fields: private final java.lang.String model.LoanDetails.loanType
-Value: 24042024 Fields: private final java.time.LocalDate model.LoanDetails.approvalDate
+System.out.println("Value: "+value+" "+"Fields: "+field.getType());
+Object convertedValue = convertValue(value,field.getType());
+fieldValues.add(convertedValue);
 
-//This is my java record class
-package model;
-import annotations.FixedFieldAnnotations;
+ private static Object convertValue(String value, Class<?> targetType){
+        if(value==null || value.isEmpty())return null;
 
-import java.math.BigDecimal;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
+        try{
+            if(targetType==String.class){
+                return value;
+            }else if(targetType==Integer.class||targetType==int.class){
+                return Integer.parseInt(value);
+            }else if(targetType==Long.class||targetType==long.class){
+                return Long.parseLong(value);
+            }else if(targetType==Double.class||targetType==double.class){
+                return Double.parseDouble(value);
+            }else if(targetType== BigDecimal.class){
+                return new BigDecimal(value);
+            }else if(targetType == LocalDate.class){
+                return DateTimeFormatter.ofPattern("ddMMyyyy");
+            }else if(targetType== LocalDateTime.class) {
+                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("ddMMyyyy HH:mm:ss");
+                return LocalDateTime.parse(value,formatter);
+            }
+        } catch (Exception e) {
+            throw new IllegalArgumentException("Failed to convert value '"+ value+"'to type "+ targetType.getSimpleName(),e);
+        }
 
-public record LoanDetails (
-    @FixedFieldAnnotations(length = 5,format = "\\d{5}")
-     String customerId,
-    @FixedFieldAnnotations(length = 20, pattern="^[A-Za-z]+$" )
-     String customerName,
-    @FixedFieldAnnotations(length = 6,format = "\\d{6}")
-     String loanId,
-    @FixedFieldAnnotations(length = 12,format = "\\d{1,9}\\.\\d{2}")
-    BigDecimal loanAmount,
-    @FixedFieldAnnotations(length = 20,allowedValues = "Home Loan,Educational Loan,Business Loan,Personal Loan")
-     String loanType,
-    @FixedFieldAnnotations(length = 8,format = "\\d{2}\\d{2}\\d{4}")
-     LocalDate approvalDate
-    ){}
+        return value;
+    }
 
-and i uploaded the LoanDetails2.txt for where the raw data is read and annotations are used
+the convertValue will return what..?
