@@ -1,6 +1,35 @@
-Processing file: LoanDetails.txt
-java.lang.NoSuchMethodException: model.LoanDetails.<init>(java.lang.String,java.lang.String,java.lang.String,java.math.BigDecimal,java.lang.String,java.lang.String)
-	at java.base/java.lang.Class.getConstructor0(Class.java:3585)
-	at java.base/java.lang.Class.getDeclaredConstructor(Class.java:2754)
-	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:64)
-	at com.example1.Main.main(Main.java:57)
+//Code 
+System.out.println("Value: "+value+" "+"Fields: "+field);
+//Output for the code
+Processing file: LoanDetails2.txt
+Value: 10050 Fields: private final java.lang.String model.LoanDetails.customerId
+Value: Sample Name0 Fields: private final java.lang.String model.LoanDetails.customerName
+Value: 587401 Fields: private final java.lang.String model.LoanDetails.loanId
+Value: 003012554.63 Fields: private final java.math.BigDecimal model.LoanDetails.loanAmount
+Value: Personal Loan Fields: private final java.lang.String model.LoanDetails.loanType
+Value: 24042024 Fields: private final java.time.LocalDate model.LoanDetails.approvalDate
+
+//This is my java record class
+package model;
+import annotations.FixedFieldAnnotations;
+
+import java.math.BigDecimal;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
+public record LoanDetails (
+    @FixedFieldAnnotations(length = 5,format = "\\d{5}")
+     String customerId,
+    @FixedFieldAnnotations(length = 20, pattern="^[A-Za-z]+$" )
+     String customerName,
+    @FixedFieldAnnotations(length = 6,format = "\\d{6}")
+     String loanId,
+    @FixedFieldAnnotations(length = 12,format = "\\d{1,9}\\.\\d{2}")
+    BigDecimal loanAmount,
+    @FixedFieldAnnotations(length = 20,allowedValues = "Home Loan,Educational Loan,Business Loan,Personal Loan")
+     String loanType,
+    @FixedFieldAnnotations(length = 8,format = "\\d{2}\\d{2}\\d{4}")
+     LocalDate approvalDate
+    ){}
+
+and i uploaded the LoanDetails2.txt for where the raw data is read and annotations are used
