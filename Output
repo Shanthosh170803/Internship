@@ -1,58 +1,339 @@
+Processing file: InterestRate.txt
+java.lang.Exception: Invalid format for field 'principalAmount': 166021021.58
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 102711222.01
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 181052494.22
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 149622490.11
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 186980386.86
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 156694240.66
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 145027797.49
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 102390012.69
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 134638754.38
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 103701969.44
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 158390549.88
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 162754097.16
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 178352455.28
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 107915907.48
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 153176691.97
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 124143131.01
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 111825661.75
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 147985245.73
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 176245167.07
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 116402908.31
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 163247972.39
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 119369487.33
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 105423097.90
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 163164382.37
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 159193737.50
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 184163999.31
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 193634073.22
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 141777687.16
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 111461811.32
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 149735291.82
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 159130738.52
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 157315701.11
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 136660569.49
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 114714107.76
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 118435614.53
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 191265336.64
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 118706345.21
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 163624465.79
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 191094444.07
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 143903484.34
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 111159066.14
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 140626773.81
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 169562619.95
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 113071776.37
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 163294618.68
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 193389405.33
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 158073031.91
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 193633945.48
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 125198523.41
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 163246474.65
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 198429692.54
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 110005256.93
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 124935077.24
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 193772571.40
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 186315360.05
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 198161139.00
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 199360014.05
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 141328862.41
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 133533521.39
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 102791797.86
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 105284782.47
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 183158166.58
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 179029877.79
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 171794989.51
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 182019743.98
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 141236479.71
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 170008568.67
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 116427839.70
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 124627003.25
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 174780265.55
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 101802380.78
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 179954091.35
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 159965366.97
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 163261053.43
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 159048884.95
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 178730997.95
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 149721786.47
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 181047899.63
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 140247359.15
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 197331856.39
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 139023393.29
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 147074123.16
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 134831466.39
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 109831825.02
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 151151895.86
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 169366438.79
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 190026463.98
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 181748954.34
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 110203220.27
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 104947192.62
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 192766000.25
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 193273139.04
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 148181423.08
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 130894205.12
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 151391174.49
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 166053374.76
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 195998289.18
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 122226824.19
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 137625600.13
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+java.lang.Exception: Invalid format for field 'principalAmount': 117936868.16
+	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:48)
+	at com.example1.Main.main(Main.java:56)
+Parsed 0 records:
+
+Process finished with exit code 0
+
+
+//This is my java record
 package model;
 import annotations.FixedFieldAnnotations;
+import java.math.BigDecimal;
+import java.time.LocalDate;
 
-import java.time.LocalDateTime;
-
-public record BankFundTransfer(
-        @FixedFieldAnnotations(length = 12,format = "\\d{1,12}")
-        String transactionId,
-        @FixedFieldAnnotations(length = 15,format = "\\d{1,15}")
-        Long senderAccountNumber,
-        @FixedFieldAnnotations(length = 15,format = "\\d{1,15}")
-        Long receiverAccountNumber,
-        @FixedFieldAnnotations(length = 12,format = "\\d{1,9}\\.\\d{2}")
-        Double transactionAmount,
-        @FixedFieldAnnotations(length = 19,pattern = "dd-MM-yyyy HH:mm:ss")
-        LocalDateTime transactionDateTime,
-        @FixedFieldAnnotations(length = 3,allowedValues = "USD,INR,EUR,GBP")
+public record InterestRate(
+        @FixedFieldAnnotations(length = 9, format = "\\d{9}")
+        Long customerId,
+        @FixedFieldAnnotations(length=12,format = "\\d{12}")
+        Long accountNumber,
+        @FixedFieldAnnotations(length = 3,allowedValues = "USD,INR,EUR")
         String currencyCode,
-        @FixedFieldAnnotations(length = 10,allowedValues = "NEFT,RTGS,IMPS,SWIFT")
-        String transactionType,
-        @FixedFieldAnnotations(length = 11)
+        @FixedFieldAnnotations(length = 6, format = "\\d{3}\\.\\d{2}")
+        Double interestRate,
+        @FixedFieldAnnotations(length = 10, allowedValues = "FIXED,VARIABLE")
+        String rateType,
+        @FixedFieldAnnotations(length = 6)
         String bankCode,
-        @FixedFieldAnnotations(length = 10,allowedValues = "Success,Pending,Failure")
-        String transactionStatus,
-        @FixedFieldAnnotations(length = 16)
-        String referenceNumber
-) {}
+        @FixedFieldAnnotations(length = 10,allowedValues = "ACTIVE,INACTIVE")
+        String accountStatus,
+        @FixedFieldAnnotations(length = 10,pattern = "dd-MM-yyyy")
+        LocalDate lastUpdate,
+        @FixedFieldAnnotations(length = 12,format = "\\d{9}\\.\\{2}")
+        BigDecimal principalAmount,
+        @FixedFieldAnnotations(length = 12,format = "\\d{9}\\.\\{2}")
+        BigDecimal  balance,
+        @FixedFieldAnnotations(length = 12,format = "\\d{9}\\.\\{2}")
+        BigDecimal  minimumDue
+) {
+}
 
-
-private static Object convertValue(String value, Class<?> targetType){
-        if(value==null || value.isEmpty())return null;
-
-        try{
-            if(targetType==String.class){
-                return value;
-            }else if(targetType==Integer.class||targetType==int.class){
-                return Integer.parseInt(value);
-            }else if(targetType==Long.class||targetType==long.class){
-                return Long.parseLong(value);
-            }else if(targetType==Double.class||targetType==double.class){
-                return Double.parseDouble(value);
-            }else if(targetType== BigDecimal.class){
-                return new BigDecimal(value);
-            }else if(targetType == LocalDate.class){
-                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
-                return LocalDate.parse(value,formatter);
-            }else if(targetType== LocalDateTime.class) {
-                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
-                return LocalDateTime.parse(value,formatter);
-            }
-        } catch (Exception e) {
-            throw new IllegalArgumentException("Failed to convert value '"+ value+"'to type "+ targetType.getSimpleName(),e);
-        }
-
-        return value;
-    }
-
-In my java record class i declared wrapper class like Long and Double for some fields but in my convertValue(Helper method) in parser.java it returns the values in primitive type right..? why .? i cant understand it 
+Assist me to clear my error ,where i need to change ,I will share my parser.java if you need
