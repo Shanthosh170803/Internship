@@ -1,13 +1,5 @@
-//In my record class I change Long customerId to long customerId(Wrapper to primitive)
-public record AccountRecords(
-        @FixedFieldAnnotations(length = 9,format = "\\d{9}")
-        long customerId,
-you said,java will automatically changes it types, but i got this error...
-
-java.lang.NoSuchMethodException: model.AccountRecords.<init>(java.lang.Long,java.lang.Long,java.lang.String,java.lang.String,java.time.LocalDate,java.lang.String,java.lang.String,java.lang.String,java.math.BigDecimal,java.math.BigDecimal,java.math.BigDecimal,java.time.LocalDate,java.lang.Integer,java.lang.String)
-	at java.base/java.lang.Class.getConstructor0(Class.java:3585)
-	at java.base/java.lang.Class.getDeclaredConstructor(Class.java:2754)
-	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:64)
-	at com.example1.Main.main(Main.java:56)
-
-why i got this error, did the autoboxing and unboxing is not working..?
+        Class<?>[] paramTypes = new Class[fieldValues.size()];
+        for(int i=0;i<fieldValues.size();i++){
+            paramTypes[i]=fieldValues.get(i).getClass();
+        }
+my fieldValues has only object type,what will the type(primitive or wrapper class) will store in paramtypes , explain with example
