@@ -1,105 +1,144 @@
-Processing file: BankCustomer.txt
-java.lang.Exception: Line too short for field: customerId
-	at parser.FixedWidthParser.parseLine(FixedWidthParser.java:23)
-	at com.example1.Main.main(Main.java:56)
-BankCustomer[customerId=10000, customerName=Olivia Anderson, gender=Others, dob=1982-01-07, phone=7576777804, email=oliviaanderson138@gmail.com, address=Address[doorNo=101, streetName=Maple Ln, city=New York, State=NY, pincode=9876], nationality=American, occupation=Teacher, maritalStatus=Married, registrationDate=1998-07-19T00:14:34, customerCategory=VIP, incomeLevel=Medium, creditScore=127, bankingService=Loans]
-BankCustomer[customerId=10001, customerName=Michael Anderson, gender=Female, dob=2001-06-11, phone=7479417001, email=michaelanderson82@gmail.com, address=Address[doorNo=202, streetName=Pine Blvd, city=Chicago, State=IL, pincode=67890], nationality=Australian, occupation=Engineer, maritalStatus=Divorced, registrationDate=2013-06-03T12:17:28, customerCategory=Premium, incomeLevel=High, creditScore=217, bankingService=Loans]
-BankCustomer[customerId=10002, customerName=Sophia Williams, gender=Others, dob=2010-02-15, phone=7385417989, email=sophiawilliams449@gmail.com, address=Address[doorNo=404, streetName=Pine Blvd, city=Chicago, State=NY, pincode=11223], nationality=Indian, occupation=Doctor, maritalStatus=Divorced, registrationDate=1990-03-27T20:07:27, customerCategory=VIP, incomeLevel=Low, creditScore=230, bankingService=Loans]
-BankCustomer[customerId=10003, customerName=Sophia Anderson, gender=Others, dob=1994-05-14, phone=7772366856, email=sophiaanderson109@gmail.com, address=Address[doorNo=404, streetName=Birch Rd, city=Phoenix, State=TX, pincode=9876], nationality=British, occupation=Artist, maritalStatus=Married, registrationDate=2019-05-15T11:55:19, customerCategory=Regular, incomeLevel=High, creditScore=114, bankingService=Savings]
-BankCustomer[customerId=10004, customerName=Olivia Williams, gender=Others, dob=2009-06-14, phone=7762151913, email=oliviawilliams955@gmail.com, address=Address[doorNo=101, streetName=Maple Ln, city=Houston, State=NY, pincode=54321], nationality=Australian, occupation=Teacher, maritalStatus=Divorced, registrationDate=2004-04-25T01:19:18, customerCategory=Regular, incomeLevel=Medium, creditScore=352, bankingService=Loans]
-BankCustomer[customerId=10005, customerName=Emily Johnson, gender=Male, dob=1987-06-23, phone=7240121337, email=emilyjohnson538@gmail.com, address=Address[doorNo=505, streetName=Pine Blvd, city=Houston, State=AZ, pincode=12345], nationality=Australian, occupation=Lawyer, maritalStatus=Single, registrationDate=2020-04-22T03:28:16, customerCategory=VIP, incomeLevel=Medium, creditScore=432, bankingService=Savings]
-BankCustomer[customerId=10006, customerName=Michael Taylor, gender=Male, dob=2002-06-01, phone=7628623019, email=michaeltaylor700@gmail.com, address=Address[doorNo=303, streetName=Oak Ave, city=New York, State=TX, pincode=67890], nationality=Indian, occupation=Teacher, maritalStatus=Divorced, registrationDate=2015-09-25T07:54:48, customerCategory=Regular, incomeLevel=Medium, creditScore=374, bankingService=CreditCard]
-BankCustomer[customerId=10007, customerName=James Williams, gender=Male, dob=1996-06-24, phone=7209043217, email=jameswilliams194@gmail.com, address=Address[doorNo=101, streetName=Pine Blvd, city=Phoenix, State=AZ, pincode=11223], nationality=American, occupation=Teacher, maritalStatus=Married, registrationDate=1985-01-15T08:08:09, customerCategory=Regular, incomeLevel=High, creditScore=165, bankingService=CreditCard]
-BankCustomer[customerId=10008, customerName=Daniel Anderson, gender=Others, dob=1981-07-10, phone=7696833226, email=danielanderson408@gmail.com, address=Address[doorNo=303, streetName=Birch Rd, city=New York, State=NY, pincode=11223], nationality=British, occupation=Engineer, maritalStatus=Divorced, registrationDate=2015-01-16T08:06:56, customerCategory=Regular, incomeLevel=Low, creditScore=730, bankingService=Savings]
-BankCustomer[customerId=10009, customerName=Michael Brown, gender=Male, dob=1993-04-15, phone=7582290211, email=michaelbrown670@gmail.com, address=Address[doorNo=101, streetName=Elm St, city=Los Angeles, State=IL, pincode=12345], nationality=Australian, occupation=Engineer, maritalStatus=Married, registrationDate=1976-09-30T11:00:19, customerCategory=Premium, incomeLevel=Medium, creditScore=192, bankingService=Savings]
-BankCustomer[customerId=10010, customerName=Olivia Williams, gender=Male, dob=2015-09-20, phone=7493247241, email=oliviawilliams210@gmail.com, address=Address[doorNo=505, streetName=Elm St, city=Los Angeles, State=TX, pincode=11223], nationality=Indian, occupation=Doctor, maritalStatus=Married, registrationDate=2018-09-30T16:19:17, customerCategory=Premium, incomeLevel=Medium, creditScore=100, bankingService=Loans]
-BankCustomer[customerId=10011, customerName=Emily Smith, gender=Others, dob=1980-03-21, phone=7978209731, email=emilysmith600@gmail.com, address=Address[doorNo=202, streetName=Oak Ave, city=Phoenix, State=TX, pincode=9876], nationality=Australian, occupation=Manager, maritalStatus=Divorced, registrationDate=2014-05-16T06:04:25, customerCategory=Premium, incomeLevel=Medium, creditScore=125, bankingService=Loans]
-BankCustomer[customerId=10012, customerName=Emily Williams, gender=Others, dob=2017-10-06, phone=7793218713, email=emilywilliams37@gmail.com, address=Address[doorNo=505, streetName=Oak Ave, city=Houston, State=CA, pincode=67890], nationality=British, occupation=Artist, maritalStatus=Divorced, registrationDate=2012-07-09T00:24:53, customerCategory=Premium, incomeLevel=Medium, creditScore=282, bankingService=CreditCard]
-BankCustomer[customerId=10013, customerName=Olivia Taylor, gender=Male, dob=2014-04-18, phone=7895720868, email=oliviataylor625@gmail.com, address=Address[doorNo=404, streetName=Oak Ave, city=Los Angeles, State=TX, pincode=54321], nationality=British, occupation=Lawyer, maritalStatus=Married, registrationDate=2018-03-13T18:50, customerCategory=VIP, incomeLevel=High, creditScore=713, bankingService=CreditCard]
-BankCustomer[customerId=10014, customerName=Olivia Taylor, gender=Female, dob=1985-04-03, phone=7188087263, email=oliviataylor40@gmail.com, address=Address[doorNo=101, streetName=Elm St, city=Los Angeles, State=TX, pincode=67890], nationality=Australian, occupation=Artist, maritalStatus=Widowed, registrationDate=1977-11-24T23:04:32, customerCategory=Regular, incomeLevel=High, creditScore=271, bankingService=Loans]
-BankCustomer[customerId=10015, customerName=Michael Brown, gender=Others, dob=2009-01-18, phone=7157504813, email=michaelbrown85@gmail.com, address=Address[doorNo=101, streetName=Pine Blvd, city=Houston, State=IL, pincode=11223], nationality=American, occupation=Teacher, maritalStatus=Divorced, registrationDate=1997-09-30T21:46:04, customerCategory=VIP, incomeLevel=Low, creditScore=560, bankingService=Loans]
-BankCustomer[customerId=10016, customerName=Olivia Smith, gender=Male, dob=2001-01-22, phone=7353977697, email=oliviasmith217@gmail.com, address=Address[doorNo=101, streetName=Maple Ln, city=New York, State=AZ, pincode=12345], nationality=British, occupation=Manager, maritalStatus=Divorced, registrationDate=2001-08-18T04:04:41, customerCategory=Regular, incomeLevel=Medium, creditScore=545, bankingService=CreditCard]
-BankCustomer[customerId=10017, customerName=Olivia Taylor, gender=Others, dob=1997-02-25, phone=7984140927, email=oliviataylor495@gmail.com, address=Address[doorNo=404, streetName=Oak Ave, city=Los Angeles, State=AZ, pincode=54321], nationality=Indian, occupation=Engineer, maritalStatus=Widowed, registrationDate=1984-01-18T11:22:59, customerCategory=Regular, incomeLevel=Low, creditScore=463, bankingService=Loans]
-BankCustomer[customerId=10018, customerName=Michael Anderson, gender=Male, dob=2000-04-27, phone=7589307178, email=michaelanderson998@gmail.com, address=Address[doorNo=505, streetName=Maple Ln, city=Chicago, State=TX, pincode=12345], nationality=British, occupation=Lawyer, maritalStatus=Divorced, registrationDate=2011-12-21T12:09:57, customerCategory=Regular, incomeLevel=Medium, creditScore=810, bankingService=Savings]
-BankCustomer[customerId=10019, customerName=Daniel Smith, gender=Others, dob=1997-06-03, phone=7411302435, email=danielsmith340@gmail.com, address=Address[doorNo=404, streetName=Pine Blvd, city=New York, State=CA, pincode=67890], nationality=Australian, occupation=Artist, maritalStatus=Divorced, registrationDate=2006-09-16T04:05:18, customerCategory=Regular, incomeLevel=Medium, creditScore=719, bankingService=Loans]
-BankCustomer[customerId=10020, customerName=Sophia Brown, gender=Male, dob=1995-02-12, phone=7164200163, email=sophiabrown538@gmail.com, address=Address[doorNo=404, streetName=Oak Ave, city=Los Angeles, State=IL, pincode=12345], nationality=American, occupation=Manager, maritalStatus=Widowed, registrationDate=2008-04-30T18:43:53, customerCategory=VIP, incomeLevel=Medium, creditScore=413, bankingService=CreditCard]
-BankCustomer[customerId=10021, customerName=James Smith, gender=Female, dob=1983-10-05, phone=7849318040, email=jamessmith187@gmail.com, address=Address[doorNo=404, streetName=Elm St, city=Los Angeles, State=AZ, pincode=12345], nationality=American, occupation=Artist, maritalStatus=Married, registrationDate=2000-09-25T12:44:45, customerCategory=VIP, incomeLevel=Low, creditScore=564, bankingService=Loans]
-BankCustomer[customerId=10022, customerName=Sophia Williams, gender=Others, dob=2009-10-01, phone=7768452306, email=sophiawilliams921@gmail.com, address=Address[doorNo=303, streetName=Oak Ave, city=New York, State=NY, pincode=54321], nationality=Canadian, occupation=Lawyer, maritalStatus=Divorced, registrationDate=1994-06-28T10:21:54, customerCategory=Premium, incomeLevel=Medium, creditScore=538, bankingService=Savings]
-BankCustomer[customerId=10023, customerName=Sophia Smith, gender=Male, dob=1975-05-10, phone=7572803702, email=sophiasmith187@gmail.com, address=Address[doorNo=505, streetName=Oak Ave, city=Chicago, State=AZ, pincode=67890], nationality=American, occupation=Lawyer, maritalStatus=Single, registrationDate=2000-04-26T09:35:23, customerCategory=VIP, incomeLevel=Low, creditScore=173, bankingService=Savings]
-BankCustomer[customerId=10024, customerName=Olivia Brown, gender=Female, dob=2008-03-24, phone=7392188773, email=oliviabrown898@gmail.com, address=Address[doorNo=202, streetName=Elm St, city=Houston, State=NY, pincode=12345], nationality=Indian, occupation=Engineer, maritalStatus=Married, registrationDate=2013-10-05T06:51:49, customerCategory=Regular, incomeLevel=High, creditScore=312, bankingService=Savings]
-BankCustomer[customerId=10025, customerName=Michael Smith, gender=Female, dob=1999-10-10, phone=7235482158, email=michaelsmith635@gmail.com, address=Address[doorNo=303, streetName=Pine Blvd, city=Chicago, State=NY, pincode=12345], nationality=Canadian, occupation=Doctor, maritalStatus=Divorced, registrationDate=2002-02-25T00:08:48, customerCategory=Regular, incomeLevel=Low, creditScore=258, bankingService=Loans]
-BankCustomer[customerId=10026, customerName=Emily Smith, gender=Others, dob=2013-05-08, phone=7682835664, email=emilysmith319@gmail.com, address=Address[doorNo=404, streetName=Oak Ave, city=Los Angeles, State=TX, pincode=11223], nationality=Australian, occupation=Artist, maritalStatus=Married, registrationDate=2005-05-20T06:53:44, customerCategory=Regular, incomeLevel=Medium, creditScore=891, bankingService=Loans]
-BankCustomer[customerId=10027, customerName=Daniel Taylor, gender=Others, dob=1984-01-12, phone=7563544361, email=danieltaylor6@gmail.com, address=Address[doorNo=404, streetName=Birch Rd, city=Houston, State=IL, pincode=54321], nationality=Canadian, occupation=Doctor, maritalStatus=Single, registrationDate=1988-11-11T08:35:26, customerCategory=Regular, incomeLevel=Medium, creditScore=591, bankingService=CreditCard]
-BankCustomer[customerId=10028, customerName=Daniel Anderson, gender=Others, dob=2006-04-03, phone=7603578621, email=danielanderson701@gmail.com, address=Address[doorNo=101, streetName=Pine Blvd, city=New York, State=TX, pincode=67890], nationality=British, occupation=Artist, maritalStatus=Widowed, registrationDate=1996-06-12T07:50:03, customerCategory=Premium, incomeLevel=Medium, creditScore=475, bankingService=Loans]
-BankCustomer[customerId=10029, customerName=Michael Smith, gender=Female, dob=1992-07-21, phone=7875098495, email=michaelsmith88@gmail.com, address=Address[doorNo=202, streetName=Oak Ave, city=Los Angeles, State=NY, pincode=9876], nationality=Indian, occupation=Artist, maritalStatus=Single, registrationDate=2012-09-16T11:41:45, customerCategory=Regular, incomeLevel=High, creditScore=122, bankingService=Savings]
-BankCustomer[customerId=10030, customerName=Sophia Anderson, gender=Female, dob=2014-11-29, phone=7892178184, email=sophiaanderson838@gmail.com, address=Address[doorNo=505, streetName=Oak Ave, city=Chicago, State=AZ, pincode=54321], nationality=Indian, occupation=Manager, maritalStatus=Married, registrationDate=1987-09-05T02:32:20, customerCategory=VIP, incomeLevel=High, creditScore=624, bankingService=Loans]
-BankCustomer[customerId=10031, customerName=James Smith, gender=Male, dob=2010-04-27, phone=7772981394, email=jamessmith828@gmail.com, address=Address[doorNo=202, streetName=Birch Rd, city=Chicago, State=TX, pincode=67890], nationality=Indian, occupation=Artist, maritalStatus=Single, registrationDate=2009-01-16T02:02:29, customerCategory=VIP, incomeLevel=Medium, creditScore=661, bankingService=Savings]
-BankCustomer[customerId=10032, customerName=Olivia Williams, gender=Male, dob=1984-01-05, phone=7388999827, email=oliviawilliams761@gmail.com, address=Address[doorNo=404, streetName=Pine Blvd, city=Phoenix, State=AZ, pincode=67890], nationality=Indian, occupation=Doctor, maritalStatus=Single, registrationDate=1985-08-02T02:16:30, customerCategory=Premium, incomeLevel=High, creditScore=730, bankingService=CreditCard]
-BankCustomer[customerId=10033, customerName=Emily Johnson, gender=Male, dob=1988-04-14, phone=7002352940, email=emilyjohnson575@gmail.com, address=Address[doorNo=505, streetName=Pine Blvd, city=Los Angeles, State=AZ, pincode=12345], nationality=Australian, occupation=Artist, maritalStatus=Married, registrationDate=1978-07-27T16:05:12, customerCategory=VIP, incomeLevel=Low, creditScore=364, bankingService=CreditCard]
-BankCustomer[customerId=10034, customerName=Olivia Williams, gender=Female, dob=2016-07-07, phone=7404991708, email=oliviawilliams448@gmail.com, address=Address[doorNo=202, streetName=Elm St, city=Houston, State=TX, pincode=11223], nationality=British, occupation=Doctor, maritalStatus=Single, registrationDate=2016-06-15T16:06:03, customerCategory=VIP, incomeLevel=High, creditScore=759, bankingService=CreditCard]
-BankCustomer[customerId=10035, customerName=Olivia Anderson, gender=Female, dob=1994-07-09, phone=7883642216, email=oliviaanderson733@gmail.com, address=Address[doorNo=404, streetName=Maple Ln, city=Chicago, State=NY, pincode=12345], nationality=Australian, occupation=Teacher, maritalStatus=Divorced, registrationDate=1978-11-13T23:05:52, customerCategory=Regular, incomeLevel=High, creditScore=701, bankingService=Loans]
-BankCustomer[customerId=10036, customerName=Daniel Smith, gender=Male, dob=1986-09-26, phone=7131556513, email=danielsmith407@gmail.com, address=Address[doorNo=202, streetName=Birch Rd, city=Chicago, State=TX, pincode=9876], nationality=Australian, occupation=Doctor, maritalStatus=Single, registrationDate=1985-03-10T10:30:31, customerCategory=Regular, incomeLevel=Low, creditScore=103, bankingService=Loans]
-BankCustomer[customerId=10037, customerName=Michael Anderson, gender=Male, dob=2012-08-13, phone=7256395158, email=michaelanderson720@gmail.com, address=Address[doorNo=404, streetName=Birch Rd, city=Houston, State=AZ, pincode=12345], nationality=American, occupation=Lawyer, maritalStatus=Divorced, registrationDate=2014-03-07T08:35:34, customerCategory=Premium, incomeLevel=Medium, creditScore=304, bankingService=CreditCard]
-BankCustomer[customerId=10038, customerName=Daniel Williams, gender=Others, dob=2011-02-12, phone=7743007684, email=danielwilliams288@gmail.com, address=Address[doorNo=101, streetName=Oak Ave, city=Los Angeles, State=TX, pincode=54321], nationality=Canadian, occupation=Teacher, maritalStatus=Single, registrationDate=1989-12-25T00:43:15, customerCategory=Regular, incomeLevel=Low, creditScore=604, bankingService=Savings]
-BankCustomer[customerId=10039, customerName=Daniel Anderson, gender=Male, dob=2015-10-14, phone=7504694180, email=danielanderson154@gmail.com, address=Address[doorNo=202, streetName=Oak Ave, city=New York, State=IL, pincode=12345], nationality=British, occupation=Doctor, maritalStatus=Widowed, registrationDate=1993-12-19T18:28:49, customerCategory=Regular, incomeLevel=High, creditScore=657, bankingService=CreditCard]
-BankCustomer[customerId=10040, customerName=Emily Smith, gender=Others, dob=1995-01-31, phone=7854760569, email=emilysmith592@gmail.com, address=Address[doorNo=404, streetName=Birch Rd, city=Houston, State=AZ, pincode=67890], nationality=American, occupation=Doctor, maritalStatus=Divorced, registrationDate=1984-02-04T14:14:54, customerCategory=Premium, incomeLevel=Medium, creditScore=562, bankingService=CreditCard]
-BankCustomer[customerId=10041, customerName=Michael Brown, gender=Male, dob=1993-11-29, phone=7241962036, email=michaelbrown661@gmail.com, address=Address[doorNo=303, streetName=Elm St, city=Houston, State=IL, pincode=67890], nationality=Indian, occupation=Artist, maritalStatus=Divorced, registrationDate=2004-03-18T03:09:58, customerCategory=Premium, incomeLevel=Low, creditScore=727, bankingService=Savings]
-BankCustomer[customerId=10042, customerName=Olivia Williams, gender=Female, dob=2017-07-17, phone=7036800482, email=oliviawilliams920@gmail.com, address=Address[doorNo=303, streetName=Pine Blvd, city=Phoenix, State=AZ, pincode=12345], nationality=Indian, occupation=Lawyer, maritalStatus=Married, registrationDate=1991-11-07T09:31:30, customerCategory=Regular, incomeLevel=Medium, creditScore=483, bankingService=Savings]
-BankCustomer[customerId=10043, customerName=Daniel Johnson, gender=Female, dob=2019-07-29, phone=7997288052, email=danieljohnson888@gmail.com, address=Address[doorNo=101, streetName=Birch Rd, city=Chicago, State=CA, pincode=54321], nationality=Australian, occupation=Doctor, maritalStatus=Married, registrationDate=1993-02-01T12:06:17, customerCategory=VIP, incomeLevel=Low, creditScore=548, bankingService=CreditCard]
-BankCustomer[customerId=10044, customerName=Emily Williams, gender=Female, dob=2011-09-18, phone=7966046739, email=emilywilliams805@gmail.com, address=Address[doorNo=505, streetName=Pine Blvd, city=Los Angeles, State=CA, pincode=12345], nationality=Canadian, occupation=Artist, maritalStatus=Widowed, registrationDate=2004-01-28T20:56:32, customerCategory=VIP, incomeLevel=Low, creditScore=895, bankingService=CreditCard]
-BankCustomer[customerId=10045, customerName=Michael Johnson, gender=Male, dob=1990-03-21, phone=7984395900, email=michaeljohnson281@gmail.com, address=Address[doorNo=202, streetName=Maple Ln, city=Los Angeles, State=AZ, pincode=67890], nationality=American, occupation=Teacher, maritalStatus=Married, registrationDate=2006-09-19T12:48:35, customerCategory=VIP, incomeLevel=Medium, creditScore=660, bankingService=CreditCard]
-BankCustomer[customerId=10046, customerName=Michael Taylor, gender=Female, dob=1995-07-25, phone=7997854548, email=michaeltaylor118@gmail.com, address=Address[doorNo=404, streetName=Birch Rd, city=Los Angeles, State=AZ, pincode=12345], nationality=Australian, occupation=Lawyer, maritalStatus=Married, registrationDate=2015-05-01T00:36:16, customerCategory=Regular, incomeLevel=Medium, creditScore=637, bankingService=Loans]
-BankCustomer[customerId=10047, customerName=Olivia Williams, gender=Male, dob=2020-10-12, phone=7525166142, email=oliviawilliams427@gmail.com, address=Address[doorNo=303, streetName=Maple Ln, city=Phoenix, State=CA, pincode=54321], nationality=American, occupation=Teacher, maritalStatus=Widowed, registrationDate=2011-05-12T01:40:21, customerCategory=Premium, incomeLevel=Low, creditScore=630, bankingService=Savings]
-BankCustomer[customerId=10048, customerName=Daniel Smith, gender=Female, dob=2005-11-12, phone=7019877842, email=danielsmith287@gmail.com, address=Address[doorNo=101, streetName=Elm St, city=Phoenix, State=TX, pincode=54321], nationality=Australian, occupation=Teacher, maritalStatus=Single, registrationDate=1988-10-23T14:05:41, customerCategory=VIP, incomeLevel=Medium, creditScore=730, bankingService=Loans]
-BankCustomer[customerId=10049, customerName=Olivia Smith, gender=Male, dob=2015-06-30, phone=7931647448, email=oliviasmith462@gmail.com, address=Address[doorNo=303, streetName=Elm St, city=Houston, State=NY, pincode=11223], nationality=British, occupation=Lawyer, maritalStatus=Single, registrationDate=1975-01-26T15:37:05, customerCategory=Premium, incomeLevel=Low, creditScore=115, bankingService=Savings]
-BankCustomer[customerId=10050, customerName=Michael Brown, gender=Male, dob=2003-02-06, phone=7300160961, email=michaelbrown135@gmail.com, address=Address[doorNo=404, streetName=Elm St, city=Chicago, State=AZ, pincode=67890], nationality=Canadian, occupation=Lawyer, maritalStatus=Divorced, registrationDate=2015-03-26T06:39:46, customerCategory=Regular, incomeLevel=Low, creditScore=554, bankingService=CreditCard]
-BankCustomer[customerId=10051, customerName=Michael Anderson, gender=Male, dob=1987-07-27, phone=7359498018, email=michaelanderson973@gmail.com, address=Address[doorNo=303, streetName=Elm St, city=Chicago, State=AZ, pincode=11223], nationality=American, occupation=Manager, maritalStatus=Widowed, registrationDate=2006-10-26T17:55:47, customerCategory=Regular, incomeLevel=Low, creditScore=274, bankingService=Loans]
-BankCustomer[customerId=10052, customerName=Olivia Smith, gender=Female, dob=2006-03-08, phone=7549608626, email=oliviasmith453@gmail.com, address=Address[doorNo=505, streetName=Elm St, city=Chicago, State=IL, pincode=11223], nationality=Canadian, occupation=Lawyer, maritalStatus=Married, registrationDate=2002-09-06T09:21:47, customerCategory=VIP, incomeLevel=Low, creditScore=335, bankingService=Loans]
-BankCustomer[customerId=10053, customerName=Olivia Anderson, gender=Female, dob=2007-02-03, phone=7833715212, email=oliviaanderson211@gmail.com, address=Address[doorNo=101, streetName=Pine Blvd, city=New York, State=NY, pincode=54321], nationality=American, occupation=Teacher, maritalStatus=Divorced, registrationDate=1986-10-12T19:02:52, customerCategory=Premium, incomeLevel=High, creditScore=254, bankingService=CreditCard]
-BankCustomer[customerId=10054, customerName=Emily Anderson, gender=Male, dob=2000-12-27, phone=7166754199, email=emilyanderson420@gmail.com, address=Address[doorNo=303, streetName=Elm St, city=Phoenix, State=IL, pincode=12345], nationality=American, occupation=Engineer, maritalStatus=Widowed, registrationDate=1990-12-04T04:37:25, customerCategory=VIP, incomeLevel=Medium, creditScore=785, bankingService=Savings]
-BankCustomer[customerId=10055, customerName=Michael Johnson, gender=Male, dob=2008-05-30, phone=7793564570, email=michaeljohnson747@gmail.com, address=Address[doorNo=505, streetName=Oak Ave, city=Houston, State=NY, pincode=9876], nationality=Indian, occupation=Lawyer, maritalStatus=Divorced, registrationDate=1994-09-01T07:46:02, customerCategory=VIP, incomeLevel=Medium, creditScore=590, bankingService=Loans]
-BankCustomer[customerId=10056, customerName=Olivia Anderson, gender=Female, dob=1997-08-22, phone=7070849519, email=oliviaanderson325@gmail.com, address=Address[doorNo=505, streetName=Maple Ln, city=New York, State=AZ, pincode=9876], nationality=American, occupation=Lawyer, maritalStatus=Married, registrationDate=1979-12-17T10:50:46, customerCategory=Premium, incomeLevel=Low, creditScore=793, bankingService=Loans]
-BankCustomer[customerId=10057, customerName=Michael Taylor, gender=Female, dob=1983-01-17, phone=7130962431, email=michaeltaylor941@gmail.com, address=Address[doorNo=101, streetName=Elm St, city=Houston, State=CA, pincode=67890], nationality=Australian, occupation=Teacher, maritalStatus=Widowed, registrationDate=2020-07-31T06:40:11, customerCategory=VIP, incomeLevel=Medium, creditScore=796, bankingService=Savings]
-BankCustomer[customerId=10058, customerName=James Johnson, gender=Female, dob=2012-02-18, phone=7137260984, email=jamesjohnson445@gmail.com, address=Address[doorNo=202, streetName=Maple Ln, city=New York, State=CA, pincode=54321], nationality=Canadian, occupation=Manager, maritalStatus=Divorced, registrationDate=1979-03-13T17:17:33, customerCategory=Premium, incomeLevel=Medium, creditScore=703, bankingService=CreditCard]
-BankCustomer[customerId=10059, customerName=Michael Anderson, gender=Male, dob=1990-05-08, phone=7538471319, email=michaelanderson681@gmail.com, address=Address[doorNo=505, streetName=Birch Rd, city=Los Angeles, State=AZ, pincode=54321], nationality=British, occupation=Lawyer, maritalStatus=Widowed, registrationDate=2005-05-22T15:01:33, customerCategory=Premium, incomeLevel=Medium, creditScore=571, bankingService=Loans]
-BankCustomer[customerId=10060, customerName=Daniel Smith, gender=Others, dob=1993-08-12, phone=7814304742, email=danielsmith333@gmail.com, address=Address[doorNo=303, streetName=Maple Ln, city=Houston, State=AZ, pincode=12345], nationality=Australian, occupation=Engineer, maritalStatus=Widowed, registrationDate=1991-05-23T04:33:08, customerCategory=Regular, incomeLevel=Medium, creditScore=145, bankingService=Savings]
-BankCustomer[customerId=10061, customerName=James Williams, gender=Male, dob=2005-03-08, phone=7383169192, email=jameswilliams42@gmail.com, address=Address[doorNo=101, streetName=Pine Blvd, city=Phoenix, State=TX, pincode=12345], nationality=Indian, occupation=Artist, maritalStatus=Divorced, registrationDate=1992-04-26T07:46:08, customerCategory=Premium, incomeLevel=High, creditScore=564, bankingService=Loans]
-BankCustomer[customerId=10062, customerName=Daniel Taylor, gender=Female, dob=2020-12-20, phone=7419488191, email=danieltaylor612@gmail.com, address=Address[doorNo=202, streetName=Birch Rd, city=Phoenix, State=IL, pincode=12345], nationality=British, occupation=Lawyer, maritalStatus=Divorced, registrationDate=2020-10-29T19:13:31, customerCategory=VIP, incomeLevel=Low, creditScore=167, bankingService=Savings]
-BankCustomer[customerId=10063, customerName=Olivia Brown, gender=Female, dob=2000-12-07, phone=7453020108, email=oliviabrown943@gmail.com, address=Address[doorNo=202, streetName=Maple Ln, city=Los Angeles, State=TX, pincode=9876], nationality=Australian, occupation=Doctor, maritalStatus=Divorced, registrationDate=2006-03-27T15:35:15, customerCategory=Premium, incomeLevel=Medium, creditScore=610, bankingService=CreditCard]
-BankCustomer[customerId=10064, customerName=James Anderson, gender=Female, dob=1997-12-08, phone=7999123023, email=jamesanderson164@gmail.com, address=Address[doorNo=101, streetName=Pine Blvd, city=New York, State=TX, pincode=12345], nationality=Canadian, occupation=Artist, maritalStatus=Married, registrationDate=2007-03-05T11:36:55, customerCategory=Premium, incomeLevel=Medium, creditScore=698, bankingService=Savings]
-BankCustomer[customerId=10065, customerName=James Anderson, gender=Male, dob=2018-03-25, phone=7913298619, email=jamesanderson927@gmail.com, address=Address[doorNo=505, streetName=Birch Rd, city=Phoenix, State=TX, pincode=54321], nationality=Indian, occupation=Engineer, maritalStatus=Divorced, registrationDate=1994-05-07T23:50:44, customerCategory=VIP, incomeLevel=Low, creditScore=845, bankingService=CreditCard]
-BankCustomer[customerId=10066, customerName=Olivia Taylor, gender=Others, dob=2001-06-10, phone=7837830540, email=oliviataylor282@gmail.com, address=Address[doorNo=202, streetName=Maple Ln, city=Houston, State=CA, pincode=11223], nationality=Australian, occupation=Artist, maritalStatus=Divorced, registrationDate=2006-11-24T10:44:18, customerCategory=VIP, incomeLevel=Low, creditScore=176, bankingService=Savings]
-BankCustomer[customerId=10067, customerName=James Williams, gender=Female, dob=1989-08-22, phone=7359201097, email=jameswilliams33@gmail.com, address=Address[doorNo=101, streetName=Elm St, city=Chicago, State=AZ, pincode=9876], nationality=Australian, occupation=Teacher, maritalStatus=Widowed, registrationDate=1995-02-09T03:14:14, customerCategory=VIP, incomeLevel=Medium, creditScore=660, bankingService=CreditCard]
-BankCustomer[customerId=10068, customerName=Olivia Anderson, gender=Others, dob=1985-12-10, phone=7678874007, email=oliviaanderson482@gmail.com, address=Address[doorNo=404, streetName=Oak Ave, city=Chicago, State=IL, pincode=54321], nationality=Australian, occupation=Manager, maritalStatus=Single, registrationDate=1977-08-27T07:39:08, customerCategory=VIP, incomeLevel=Low, creditScore=246, bankingService=CreditCard]
-BankCustomer[customerId=10069, customerName=Emily Johnson, gender=Male, dob=1986-04-26, phone=7624612191, email=emilyjohnson294@gmail.com, address=Address[doorNo=505, streetName=Maple Ln, city=Chicago, State=NY, pincode=11223], nationality=Australian, occupation=Lawyer, maritalStatus=Divorced, registrationDate=2015-08-28T10:52:16, customerCategory=VIP, incomeLevel=Medium, creditScore=290, bankingService=CreditCard]
-BankCustomer[customerId=10070, customerName=Emily Anderson, gender=Others, dob=1975-10-16, phone=7897035899, email=emilyanderson215@gmail.com, address=Address[doorNo=303, streetName=Oak Ave, city=Los Angeles, State=CA, pincode=9876], nationality=Canadian, occupation=Lawyer, maritalStatus=Divorced, registrationDate=1979-02-04T16:15:08, customerCategory=Regular, incomeLevel=High, creditScore=241, bankingService=Loans]
-BankCustomer[customerId=10071, customerName=Daniel Smith, gender=Others, dob=1997-10-15, phone=7967182996, email=danielsmith473@gmail.com, address=Address[doorNo=303, streetName=Elm St, city=Chicago, State=AZ, pincode=67890], nationality=British, occupation=Lawyer, maritalStatus=Married, registrationDate=2016-03-13T02:34:42, customerCategory=Regular, incomeLevel=High, creditScore=541, bankingService=CreditCard]
-BankCustomer[customerId=10072, customerName=James Taylor, gender=Female, dob=1987-02-13, phone=7004671183, email=jamestaylor13@gmail.com, address=Address[doorNo=404, streetName=Birch Rd, city=Los Angeles, State=AZ, pincode=12345], nationality=British, occupation=Artist, maritalStatus=Single, registrationDate=1994-10-15T23:14:16, customerCategory=VIP, incomeLevel=High, creditScore=553, bankingService=Savings]
-BankCustomer[customerId=10073, customerName=Sophia Smith, gender=Others, dob=1977-03-14, phone=7426603683, email=sophiasmith99@gmail.com, address=Address[doorNo=303, streetName=Maple Ln, city=Los Angeles, State=IL, pincode=9876], nationality=British, occupation=Lawyer, maritalStatus=Married, registrationDate=2012-04-28T10:23:31, customerCategory=Premium, incomeLevel=Medium, creditScore=286, bankingService=CreditCard]
-BankCustomer[customerId=10074, customerName=James Smith, gender=Others, dob=1985-04-03, phone=7351220413, email=jamessmith763@gmail.com, address=Address[doorNo=505, streetName=Maple Ln, city=Phoenix, State=CA, pincode=9876], nationality=Indian, occupation=Lawyer, maritalStatus=Married, registrationDate=2002-12-21T03:50:17, customerCategory=Regular, incomeLevel=Low, creditScore=386, bankingService=Loans]
-BankCustomer[customerId=10075, customerName=Daniel Taylor, gender=Female, dob=1992-02-19, phone=7207213616, email=danieltaylor638@gmail.com, address=Address[doorNo=505, streetName=Birch Rd, city=New York, State=TX, pincode=12345], nationality=Indian, occupation=Manager, maritalStatus=Divorced, registrationDate=1976-03-25T03:20:12, customerCategory=Premium, incomeLevel=Low, creditScore=226, bankingService=CreditCard]
-BankCustomer[customerId=10076, customerName=Michael Brown, gender=Others, dob=1992-05-30, phone=7759336290, email=michaelbrown828@gmail.com, address=Address[doorNo=101, streetName=Elm St, city=Los Angeles, State=AZ, pincode=12345], nationality=British, occupation=Artist, maritalStatus=Married, registrationDate=2002-08-17T08:09:23, customerCategory=Regular, incomeLevel=Medium, creditScore=569, bankingService=Savings]
-BankCustomer[customerId=10077, customerName=Emily Williams, gender=Others, dob=1999-08-10, phone=7626090300, email=emilywilliams693@gmail.com, address=Address[doorNo=202, streetName=Oak Ave, city=Phoenix, State=NY, pincode=67890], nationality=Australian, occupation=Manager, maritalStatus=Married, registrationDate=2014-07-24T15:26:30, customerCategory=Premium, incomeLevel=High, creditScore=697, bankingService=Savings]
-BankCustomer[customerId=10078, customerName=James Williams, gender=Female, dob=1981-05-03, phone=7853339793, email=jameswilliams331@gmail.com, address=Address[doorNo=505, streetName=Maple Ln, city=Phoenix, State=AZ, pincode=9876], nationality=Indian, occupation=Lawyer, maritalStatus=Widowed, registrationDate=1989-12-29T21:49:10, customerCategory=Regular, incomeLevel=Medium, creditScore=342, bankingService=CreditCard]
-BankCustomer[customerId=10079, customerName=Daniel Brown, gender=Female, dob=1988-07-28, phone=7119984777, email=danielbrown794@gmail.com, address=Address[doorNo=202, streetName=Birch Rd, city=New York, State=AZ, pincode=12345], nationality=Australian, occupation=Lawyer, maritalStatus=Divorced, registrationDate=2018-11-05T12:17:11, customerCategory=Regular, incomeLevel=High, creditScore=273, bankingService=CreditCard]
-BankCustomer[customerId=10080, customerName=Daniel Brown, gender=Male, dob=2001-11-07, phone=7462679763, email=danielbrown811@gmail.com, address=Address[doorNo=505, streetName=Pine Blvd, city=Houston, State=CA, pincode=54321], nationality=British, occupation=Engineer, maritalStatus=Divorced, registrationDate=2006-12-25T12:57:33, customerCategory=VIP, incomeLevel=Medium, creditScore=749, bankingService=Savings]
-BankCustomer[customerId=10081, customerName=Daniel Anderson, gender=Others, dob=1978-12-21, phone=7435784531, email=danielanderson967@gmail.com, address=Address[doorNo=303, streetName=Pine Blvd, city=Phoenix, State=AZ, pincode=54321], nationality=Canadian, occupation=Engineer, maritalStatus=Single, registrationDate=2003-06-16T05:49:44, customerCategory=Premium, incomeLevel=Low, creditScore=362, bankingService=Loans]
-BankCustomer[customerId=10082, customerName=James Williams, gender=Male, dob=2020-09-16, phone=7984486671, email=jameswilliams152@gmail.com, address=Address[doorNo=303, streetName=Birch Rd, city=Chicago, State=TX, pincode=54321], nationality=Canadian, occupation=Doctor, maritalStatus=Widowed, registrationDate=2016-03-28T21:24:44, customerCategory=Premium, incomeLevel=Medium, creditScore=577, bankingService=Savings]
-BankCustomer[customerId=10083, customerName=Michael Smith, gender=Female, dob=2011-08-10, phone=7689693187, email=michaelsmith322@gmail.com, address=Address[doorNo=505, streetName=Birch Rd, city=Houston, State=AZ, pincode=11223], nationality=British, occupation=Engineer, maritalStatus=Married, registrationDate=1980-07-15T04:28:34, customerCategory=VIP, incomeLevel=Low, creditScore=640, bankingService=Loans]
-BankCustomer[customerId=10084, customerName=Emily Brown, gender=Female, dob=1991-01-26, phone=7060480011, email=emilybrown303@gmail.com, address=Address[doorNo=303, streetName=Elm St, city=Los Angeles, State=IL, pincode=54321], nationality=American, occupation=Teacher, maritalStatus=Widowed, registrationDate=1994-03-12T10:08:40, customerCategory=Premium, incomeLevel=Medium, creditScore=189, bankingService=CreditCard]
-BankCustomer[customerId=10085, customerName=Michael Anderson, gender=Others, dob=2008-05-29, phone=7107846748, email=michaelanderson625@gmail.com, address=Address[doorNo=101, streetName=Elm St, city=Chicago, State=NY, pincode=67890], nationality=Indian, occupation=Doctor, maritalStatus=Single, registrationDate=1983-07-02T04:58:56, customerCategory=Regular, incomeLevel=Medium, creditScore=419, bankingService=CreditCard]
-BankCustomer[customerId=10086, customerName=Michael Smith, gender=Others, dob=1992-08-26, phone=7978801155, email=michaelsmith636@gmail.com, address=Address[doorNo=505, streetName=Pine Blvd, city=New York, State=TX, pincode=54321], nationality=Canadian, occupation=Artist, maritalStatus=Single, registrationDate=2010-06-12T03:16:41, customerCategory=Regular, incomeLevel=Medium, creditScore=659, bankingService=CreditCard]
-BankCustomer[customerId=10087, customerName=Michael Smith, gender=Others, dob=2020-10-14, phone=7299253111, email=michaelsmith299@gmail.com, address=Address[doorNo=303, streetName=Pine Blvd, city=New York, State=CA, pincode=9876], nationality=Australian, occupation=Engineer, maritalStatus=Divorced, registrationDate=2018-09-01T01:46:20, customerCategory=Regular, incomeLevel=High, creditScore=779, bankingService=Loans]
-BankCustomer[customerId=10088, customerName=Emily Williams, gender=Others, dob=1997-08-11, phone=7878427580, email=emilywilliams115@gmail.com, address=Address[doorNo=505, streetName=Maple Ln, city=New York, State=AZ, pincode=11223], nationality=Australian, occupation=Manager, maritalStatus=Married, registrationDate=1981-05-20T21:09:04, customerCategory=Regular, incomeLevel=Medium, creditScore=707, bankingService=CreditCard]
-BankCustomer[customerId=10089, customerName=Olivia Williams, gender=Male, dob=1996-01-08, phone=7823854846, email=oliviawilliams440@gmail.com, address=Address[doorNo=404, streetName=Pine Blvd, city=Phoenix, State=NY, pincode=54321], nationality=American, occupation=Doctor, maritalStatus=Divorced, registrationDate=1997-02-16T00:03:58, customerCategory=VIP, incomeLevel=Medium, creditScore=260, bankingService=Loans]
-BankCustomer[customerId=10090, customerName=James Smith, gender=Female, dob=1995-09-05, phone=7553283121, email=jamessmith850@gmail.com, address=Address[doorNo=202, streetName=Oak Ave, city=Chicago, State=TX, pincode=11223], nationality=Canadian, occupation=Artist, maritalStatus=Widowed, registrationDate=1984-10-03T08:52:29, customerCategory=VIP, incomeLevel=Medium, creditScore=790, bankingService=CreditCard]
-BankCustomer[customerId=10091, customerName=Emily Williams, gender=Male, dob=2004-01-14, phone=7713613952, email=emilywilliams929@gmail.com, address=Address[doorNo=202, streetName=Maple Ln, city=New York, State=IL, pincode=12345], nationality=Canadian, occupation=Engineer, maritalStatus=Divorced, registrationDate=1996-11-15T04:41:33, customerCategory=Regular, incomeLevel=High, creditScore=456, bankingService=Savings]
-BankCustomer[customerId=10092, customerName=Daniel Smith, gender=Female, dob=1988-01-25, phone=7915832064, email=danielsmith658@gmail.com, address=Address[doorNo=505, streetName=Birch Rd, city=Phoenix, State=TX, pincode=9876], nationality=Indian, occupation=Manager, maritalStatus=Married, registrationDate=2017-11-05T21:11:44, customerCategory=Regular, incomeLevel=Medium, creditScore=534, bankingService=Savings]
-BankCustomer[customerId=10093, customerName=Sophia Anderson, gender=Female, dob=2013-02-05, phone=7242470665, email=sophiaanderson878@gmail.com, address=Address[doorNo=101, streetName=Elm St, city=New York, State=AZ, pincode=9876], nationality=American, occupation=Artist, maritalStatus=Single, registrationDate=2005-09-16T21:31:30, customerCategory=Premium, incomeLevel=Medium, creditScore=864, bankingService=Loans]
-BankCustomer[customerId=10094, customerName=Michael Johnson, gender=Male, dob=2020-08-24, phone=7685264156, email=michaeljohnson473@gmail.com, address=Address[doorNo=404, streetName=Birch Rd, city=Phoenix, State=CA, pincode=11223], nationality=Indian, occupation=Artist, maritalStatus=Single, registrationDate=1987-10-25T05:22:45, customerCategory=Premium, incomeLevel=Low, creditScore=692, bankingService=Loans]
-BankCustomer[customerId=10095, customerName=Olivia Taylor, gender=Female, dob=1996-12-25, phone=7680786046, email=oliviataylor931@gmail.com, address=Address[doorNo=101, streetName=Pine Blvd, city=Chicago, State=NY, pincode=11223], nationality=Indian, occupation=Artist, maritalStatus=Divorced, registrationDate=1977-10-14T17:40:44, customerCategory=Premium, incomeLevel=High, creditScore=378, bankingService=Loans]
-BankCustomer[customerId=10096, customerName=Michael Anderson, gender=Male, dob=1991-04-23, phone=7343071927, email=michaelanderson787@gmail.com, address=Address[doorNo=101, streetName=Pine Blvd, city=Phoenix, State=TX, pincode=11223], nationality=British, occupation=Lawyer, maritalStatus=Divorced, registrationDate=2020-10-09T10:02:33, customerCategory=Regular, incomeLevel=High, creditScore=882, bankingService=Savings]
-BankCustomer[customerId=10097, customerName=Olivia Brown, gender=Others, dob=1999-06-22, phone=7830403330, email=oliviabrown860@gmail.com, address=Address[doorNo=202, streetName=Maple Ln, city=Chicago, State=NY, pincode=12345], nationality=Canadian, occupation=Manager, maritalStatus=Single, registrationDate=2004-03-31T09:10:33, customerCategory=VIP, incomeLevel=Medium, creditScore=750, bankingService=Savings]
-BankCustomer[customerId=10098, customerName=James Williams, gender=Female, dob=2002-08-18, phone=7668795399, email=jameswilliams480@gmail.com, address=Address[doorNo=303, streetName=Oak Ave, city=Los Angeles, State=TX, pincode=9876], nationality=British, occupation=Doctor, maritalStatus=Widowed, registrationDate=1975-02-07T11:32:39, customerCategory=VIP, incomeLevel=High, creditScore=129, bankingService=CreditCard]
-BankCustomer[customerId=10099, customerName=Michael Taylor, gender=Others, dob=2019-10-14, phone=7279726681, email=michaeltaylor412@gmail.com, address=Address[doorNo=505, streetName=Pine Blvd, city=New York, State=NY, pincode=12345], nationality=Indian, occupation=Doctor, maritalStatus=Divorced, registrationDate=1996-12-06T17:09:45, customerCategory=VIP, incomeLevel=Low, creditScore=164, bankingService=Savings]
-Parsed 100 records:
+//This is my parser.java
+package parser;
+import annotations.FixedFieldAnnotations;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
+import java.math.BigDecimal;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.List;
+
+public class FixedWidthParser {
+
+    public static <T> T parseLine(String line, Class<T> clazz) throws Exception {
+        List<Object> fieldValues=new ArrayList<>();
+        int currentIndex = 0;
+        for (Field field : clazz.getDeclaredFields()) {
+            FixedFieldAnnotations annotation = field.getAnnotation(FixedFieldAnnotations.class);
+            if (annotation != null) {
+                int length = annotation.length();
+                if (currentIndex + length > line.length()) {
+                    throw new Exception("Line too short for field: " + field.getName());
+                }
+
+                String value = line.substring(currentIndex, currentIndex + length).trim();
+                currentIndex += length;
+
+                if (annotation.required() && value.isEmpty()) {
+                    throw new Exception("Missing required field: " + field.getName());
+                }
+
+                if (!annotation.allowedValues().isEmpty()) {
+                    String[] allowed = annotation.allowedValues().split(",");
+                    boolean match = false;
+                    for (String a : allowed) {
+                        if (a.equalsIgnoreCase(value)) {
+                            match = true;
+                            break;
+                        }
+                    }
+                    if (!match) {
+                        throw new Exception("Invalid value for field '" + field.getName() + "': " + value);
+                    }
+                }
+                if (!annotation.format().isEmpty() && !value.isEmpty()) {
+                    if (!value.matches(annotation.format())) {
+                        throw new Exception("Invalid format for field '" + field.getName() + "': " + value);
+                    }
+                }
+                Object convertedValue = convertValue(value,field.getType());
+                fieldValues.add(convertedValue);
+            }
+        }
+        Class<?>[] paramTypes = new Class[fieldValues.size()];
+        for(int i=0;i<fieldValues.size();i++){
+            paramTypes[i]=fieldValues.get(i).getClass();
+        }
+//        Class<?>[] paramTypes = Arrays.stream(field)
+//                .filter(f ->f.getAnnotation(FixedFieldAnnotations.class)!=null)
+//                .map(Field::getType)
+//                .toArray(Class<?>[]::new);
+
+        Constructor<T> constructor = clazz.getDeclaredConstructor(paramTypes);
+        return constructor.newInstance(fieldValues.toArray());
+    }
+
+    private static Object convertValue(String value, Class<?> targetType){
+        if(value==null || value.isEmpty())return null;
+
+        try{
+            if(targetType==String.class){
+                return value;
+            }else if(targetType==Integer.class||targetType==int.class){
+                return Integer.parseInt(value);
+            }else if(targetType==Long.class||targetType==long.class){
+                return Long.parseLong(value);
+            }else if(targetType==Double.class||targetType==double.class){
+                return Double.parseDouble(value);
+            }else if(targetType== BigDecimal.class){
+                return new BigDecimal(value);
+            }else if(targetType == LocalDate.class){
+                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+                return LocalDate.parse(value,formatter);
+            }else if(targetType== LocalDateTime.class) {
+                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
+                return LocalDateTime.parse(value,formatter);
+            }else if(targetType.isRecord()){
+                return parseLine(value,targetType);
+            }else if(targetType== LocalTime.class){
+                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
+                return LocalTime.parse(value,formatter);}
+        } catch (Exception e) {
+            throw new IllegalArgumentException("Failed to convert value '"+ value+"'to type "+ targetType.getSimpleName(),e);
+        }
+
+        return value;
+    }
+}
+
+//This is my records class
+package model;
+
+import annotations.FixedFieldAnnotations;
+
+import java.math.BigDecimal;
+import java.time.LocalDate;
+
+public record AccountRecords(
+        @FixedFieldAnnotations(length = 9,format = "\\d{9}")
+        Long customerId,
+        @FixedFieldAnnotations(length = 9,format = "\\d{9}")
+        Long accountNumber,
+        @FixedFieldAnnotations(length = 10,allowedValues = "Savings,Current,FD,NRE")
+        String accountType,
+        @FixedFieldAnnotations(length = 10, allowedValues = "Active,Closed,Inactive")
+        String accountStatus,
+        @FixedFieldAnnotations(length = 10, format = "\\d{2}-\\d{2}-\\d{4}")
+        LocalDate openingDate,
+        @FixedFieldAnnotations(length = 3, allowedValues = "USD,INR,EUR")
+        String currencyCode,
+        @FixedFieldAnnotations(length = 6, format = "\\d{6}")
+        String branchCode,
+        @FixedFieldAnnotations(length = 11,pattern = "^[A-Z0-9]+$")
+        String IFSC_CODE,
+        @FixedFieldAnnotations(length = 14,format = "\\d{11}\\.\\d{2}")
+        BigDecimal currentBalance,
+        @FixedFieldAnnotations(length = 14,format = "\\d{11}\\.\\d{2}")
+        BigDecimal availableBalance,
+        @FixedFieldAnnotations(length = 12,format = "\\d{9}\\.\\d{2}")
+        BigDecimal minimumBalance,
+        @FixedFieldAnnotations(length = 10,format = "\\d{2}-\\d{2}-\\d{4}")
+        LocalDate lastTxnDate,
+        @FixedFieldAnnotations(length = 2,format = "\\d{2}")
+        Integer interestRate,
+        @FixedFieldAnnotations(length = 10, allowedValues = "Yes,No")
+        String autoDebitFlag
+
+) {
+}
+
+in my parser.java in convertValue() method what value it's return..? primitive type or wrapper class..?
+if you give me the correct answer ,i'll ask another question
