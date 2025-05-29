@@ -1,73 +1,122 @@
-FileParser
+Here's a documentation section for “Processing”, based on your provided code. This section explains how the data processing flow works, highlighting important methods and lines of code that demonstrate the logic:
 
-- Reads and parses each line of the input file.
-FixedWidthParser.parseLine(line,modelClass);
-- Uses annotations to determine field lengths.
 
-- Creates structured Java record instances.
-MongoRecordMapper
-Purpose:
-Load all collections from MongoDB and map each document to its corresponding Java POJO class.
-Key Attributes:
-	Map<String, Class<?>> collectionRegistry – Maps collection names to POJO classes.
-	MongoDatabase db – MongoDB database instance.
-Key Methods:
-	Map<String, List<?>> loadAllCollections()
-o	Iterates through each collection in collectionRegistry.
-o	Uses the MongoDB Java Driver to fetch all documents.
-o	Converts each Document to the registered POJO class using object mapper or a custom mapper method.
-o	Returns a map with collection names as keys and lists of POJOs as values.
-	private <T> T mapDocumentToPojo(Document doc, Class<T> clazz)
-o	Converts a single MongoDB Document into an instance of clazz.
-o	Uses Java object mapper or a JSON mapping library like Jackson/Gson to bind fields.
-Processing
-Purpose:
-Implement business logic for grouping, filtering, and organizing transaction data.
-Key Methods:
-	List<Transaction> filterTransactionsByCustomer(List<Transaction> transactions, int customerId)
-o	Returns only the transactions where the payer or payee matches customerId.
-	Map<String, List<Transaction>> groupTransactionsByDate(List<Transaction> transactions)
-o	Groups transactions into a map keyed by transaction date (e.g., yyyy-MM-dd).
-o	Useful for daily reports.
-	Map<Integer, List<Transaction>> groupTransactionsByCustomer(List<Transaction> transactions)
-o	Groups transactions by customer ID (payer or payee).
-o	Returns a map keyed by customer ID.
-	List<Transaction> filterTransactionsByDateRange(List<Transaction> transactions, Date start, Date end)
-o	Filters transactions occurring within a specific date range.
-Write In Txt
-Purpose:
-Write lists of POJOs into fixed-width formatted text files for easy reading or archival.
-Key Methods:
-	void writeTransactionsGroupedByDate(Map<String, List<Transaction>> groupedTransactions, String outputDirectory)
-o	Iterates over the grouped transactions by date.
-o	For each date, writes a file named transactions_YYYY-MM-DD.txt.
-o	Each transaction is formatted into fixed-width columns.
-	void writeTransactionsByCustomer(List<Transaction> transactions, int customerId, String outputDirectory)
-o	Writes all transactions for a single customer into a dedicated text file.
-o	Filename format: transactions_customer_<customerId>.txt.
-	void writeGroupedTransactionsByCustomer(Map<Integer, List<Transaction>> groupedTransactions, String outputDirectory)
-o	Writes multiple files, one per customer ID, containing their respective transactions.
-	private String formatTransaction(Transaction txn)
-o	Formats a single Transaction object into a fixed-width string line.
-o	Uses spaces or padding to ensure columns align properly.
-	private void ensureDirectoryExists(String path)
-o	Checks if output directory exists; if not, creates it.
-o	Throws a FileWriteException if directory creation fails.
-Exceptions
-	MappingException:
-Thrown when a MongoDB document cannot be mapped to the target POJO due to missing fields or type mismatches.
-	CustomerNotFoundException:
-Raised when trying to process transactions or data for a non-existent customer ID.
-	FileWriteException:
-Raised for file I/O errors during writing, such as missing directory or insufficient permissions.
-Data Flow Example
-1.	Load Data
-MongoRecordMapper.loadAllCollections() fetches all documents, maps them to POJOs.
-2.	Process Data
-Processing.groupTransactionsByDate() groups transactions by date.
-Processing.filterTransactionsByCustomer() filters transactions for a specific customer.
-3.	Write Output
-WriteInTxt.writeTransactionsGroupedByDate() writes grouped transactions to date-based text files.
-WriteInTxt.writeTransactionsByCustomer() writes customer-specific transaction history.
+---
 
-generate your content like this...
+🔄 Processing
+
+The Processing phase in this application is responsible for handling input .txt files from a predefined directory (InputFolder), extracting metadata, parsing the data records based on annotated model classes, and inserting the structured documents into MongoDB collections.
+
+This process is orchestrated primarily within the Main.java class and is broken down into several logical steps:
+
+
+---
+
+📁 1. Grouping Files by Date
+
+String header = Files.lines(file.toPath()).findFirst().orElse(null);
+
+Each .txt file begins with a header line in the format HDR|dd-MM-yyyy|<ClassName>. The date field is extracted and used to group files.
+
+dateToFileMap.computeIfAbsent(dateStr, k -> new ArrayList<>()).add(file);
+
+Files are stored in a map with the header date as the key, enabling date-wise processing and storage.
+
+
+---
+
+📂 2. Creating Target Folders by Date
+
+LocalDate date = LocalDate.parse(dateStr, DateTimeFormatter.ofPattern("dd-MM-yyyy"));
+Path targetDir = Paths.get("Control", date.format(DateTimeFormatter.ofPattern("yyyy-MM-dd")));
+Files.createDirectories(targetDir);
+
+Each group of files is copied into a new subfolder under the Control directory, named by their respective dates. This helps in organizing processed data batches clearly.
+
+Files.copy(file.toPath(), targetFile, StandardCopyOption.REPLACE_EXISTING);
+
+
+---
+
+🧾 3. Parsing Each File Using the Model Class
+
+String fileName = lines.get(0).split("\\|")[2];
+String className = MODEL_PACKAGE + "." + fileName;
+Class<?> modelClass = Class.forName(className);
+
+The third value in the header line is interpreted as the model class name, which will be used for parsing the data lines.
+
+
+---
+
+🔍 4. Parsing Each Line into a POJO Using Annotations
+
+Object parsed = FixedWidthParser.parseLine(line, modelClass);
+
+The FixedWidthParser class dynamically extracts field values using @FixedFieldAnnotations to enforce constraints like:
+
+Field Length
+
+Required Fields
+
+Allowed Values
+
+Format Validation
+
+
+Relevant method:
+
+public static <T> T parseLine(String line, Class<T> clazz)
+
+
+---
+
+✅ 5. Validating and Converting Data Types
+
+Object convertedValue = convertValue(value, field.getType());
+
+Data is converted into Java types like String, Integer, LocalDate, BigDecimal, etc., based on the annotated model field’s type.
+
+
+---
+
+🗃️ 6. Inserting Records into MongoDB
+
+MongoDBHandler.insertRecords(fileName, details);
+
+Parsed and validated objects are converted to BSON documents using reflection and inserted into the MongoDB collection named after the model class.
+
+collection.insertMany(documents);
+
+
+---
+
+📊 7. Maintaining and Verifying Record Counts
+
+public static HashMap<String, Integer> methodcall()
+
+A recordsCount map is maintained to track how many records were inserted per collection. This is verified through unit testing:
+
+assertEquals(value, DbCount);
+
+In TestClass.java, JUnit is used to ensure data consistency by comparing the inserted record count with the actual MongoDB count.
+
+
+---
+
+✅ Summary
+
+The processing workflow is designed to:
+
+Dynamically route files to their relevant POJO model using metadata.
+
+Enforce data correctness using annotations.
+
+Structure and persist data into MongoDB collections efficiently.
+
+Maintain audit through date-based folder hierarchy and insert count validation.
+
+
+This flexible and scalable architecture supports adding new data types by simply introducing corresponding model classes, without changing the processing logic.
+
+Let me know if you'd like documentation for any other module like Parsing, Validation, or MongoDB Connectivity.
