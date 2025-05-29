@@ -1,249 +1,73 @@
-package com.example1;
-import java.io.*;
-import java.nio.file.*;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.util.*;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+FileParser
 
-import mongoconnect.MongoDBHandler;
-import parser.FixedWidthParser;
-public class Main {
-    private static final Logger logger= Logger.getLogger(Main.class.getName());
-    private static final String MODEL_PACKAGE="model";
-    public static void main(String[] args) throws IOException {
-        String DirPath = "InputFolder";
-        File Dir = new File(DirPath);
-        Map<String, List<File>> dateToFileMap = new TreeMap<>();
-        for (File file : Dir.listFiles((dir, name) -> name.endsWith(".txt"))) {
-            String header = Files.lines(file.toPath()).findFirst().orElse(null);
-            if (header != null && header.startsWith("HDR|")) {
-                String[] parts = header.split("\\|");
-                if (parts.length >= 3) {
-                    String dateStr = parts[1];
-                    dateToFileMap.computeIfAbsent(dateStr, k -> new ArrayList<>()).add(file);
-                }
-            }
-        }
-        for(Map.Entry<String,List<File>> entry : dateToFileMap.entrySet()){
-            String dateStr = entry.getKey();
-            List<File> files = entry.getValue();
-            LocalDate date = LocalDate.parse(dateStr,DateTimeFormatter.ofPattern("dd-MM-yyyy"));
-            String folderName=date.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
-            Path targetDir = Paths.get("Control", folderName);
-            Files.createDirectories(targetDir);
-            for(File file:files){
-                Path targetFile = targetDir.resolve(file.getName());
-                Files.copy(file.toPath(),targetFile,StandardCopyOption.REPLACE_EXISTING);
-            }
-            for(File file:files){
-                logger.info("Processing file: "+file.getName());
-                List<String> lines = Files.readAllLines(file.toPath());
-                List<String> dataLines = lines.subList(1,lines.size()-1);
-                String fileName = lines.get(0).split("\\|")[2];
-                String className = MODEL_PACKAGE+"."+fileName;
+- Reads and parses each line of the input file.
+FixedWidthParser.parseLine(line,modelClass);
+- Uses annotations to determine field lengths.
 
-                try {
-                    Class<?> modelClass = Class.forName(className);
-                    List<Object> details = new ArrayList<>();
-                    for(String line: dataLines){
-                        try{
-                            Object parsed = FixedWidthParser.parseLine(line,modelClass);
-                            details.add(parsed);
-                        } catch (Exception e) {
-                            logger.log(Level.SEVERE,"Error parsing line in file: "+file.getName(),e);
-                        }
-                    }
-                    logger.info("Parsed"+details.size()+"records.");
-                    MongoDBHandler.insertRecords(fileName,details);
-                } catch (ClassNotFoundException e) {
-                    logger.warning("No model class found for: "+ className);
-                }
-            }
-        }
-    }
-}
+- Creates structured Java record instances.
+MongoRecordMapper
+Purpose:
+Load all collections from MongoDB and map each document to its corresponding Java POJO class.
+Key Attributes:
+	Map<String, Class<?>> collectionRegistry – Maps collection names to POJO classes.
+	MongoDatabase db – MongoDB database instance.
+Key Methods:
+	Map<String, List<?>> loadAllCollections()
+o	Iterates through each collection in collectionRegistry.
+o	Uses the MongoDB Java Driver to fetch all documents.
+o	Converts each Document to the registered POJO class using object mapper or a custom mapper method.
+o	Returns a map with collection names as keys and lists of POJOs as values.
+	private <T> T mapDocumentToPojo(Document doc, Class<T> clazz)
+o	Converts a single MongoDB Document into an instance of clazz.
+o	Uses Java object mapper or a JSON mapping library like Jackson/Gson to bind fields.
+Processing
+Purpose:
+Implement business logic for grouping, filtering, and organizing transaction data.
+Key Methods:
+	List<Transaction> filterTransactionsByCustomer(List<Transaction> transactions, int customerId)
+o	Returns only the transactions where the payer or payee matches customerId.
+	Map<String, List<Transaction>> groupTransactionsByDate(List<Transaction> transactions)
+o	Groups transactions into a map keyed by transaction date (e.g., yyyy-MM-dd).
+o	Useful for daily reports.
+	Map<Integer, List<Transaction>> groupTransactionsByCustomer(List<Transaction> transactions)
+o	Groups transactions by customer ID (payer or payee).
+o	Returns a map keyed by customer ID.
+	List<Transaction> filterTransactionsByDateRange(List<Transaction> transactions, Date start, Date end)
+o	Filters transactions occurring within a specific date range.
+Write In Txt
+Purpose:
+Write lists of POJOs into fixed-width formatted text files for easy reading or archival.
+Key Methods:
+	void writeTransactionsGroupedByDate(Map<String, List<Transaction>> groupedTransactions, String outputDirectory)
+o	Iterates over the grouped transactions by date.
+o	For each date, writes a file named transactions_YYYY-MM-DD.txt.
+o	Each transaction is formatted into fixed-width columns.
+	void writeTransactionsByCustomer(List<Transaction> transactions, int customerId, String outputDirectory)
+o	Writes all transactions for a single customer into a dedicated text file.
+o	Filename format: transactions_customer_<customerId>.txt.
+	void writeGroupedTransactionsByCustomer(Map<Integer, List<Transaction>> groupedTransactions, String outputDirectory)
+o	Writes multiple files, one per customer ID, containing their respective transactions.
+	private String formatTransaction(Transaction txn)
+o	Formats a single Transaction object into a fixed-width string line.
+o	Uses spaces or padding to ensure columns align properly.
+	private void ensureDirectoryExists(String path)
+o	Checks if output directory exists; if not, creates it.
+o	Throws a FileWriteException if directory creation fails.
+Exceptions
+	MappingException:
+Thrown when a MongoDB document cannot be mapped to the target POJO due to missing fields or type mismatches.
+	CustomerNotFoundException:
+Raised when trying to process transactions or data for a non-existent customer ID.
+	FileWriteException:
+Raised for file I/O errors during writing, such as missing directory or insufficient permissions.
+Data Flow Example
+1.	Load Data
+MongoRecordMapper.loadAllCollections() fetches all documents, maps them to POJOs.
+2.	Process Data
+Processing.groupTransactionsByDate() groups transactions by date.
+Processing.filterTransactionsByCustomer() filters transactions for a specific customer.
+3.	Write Output
+WriteInTxt.writeTransactionsGroupedByDate() writes grouped transactions to date-based text files.
+WriteInTxt.writeTransactionsByCustomer() writes customer-specific transaction history.
 
-package parser;
-import annotations.FixedFieldAnnotations;
-import java.lang.reflect.Constructor;
-import java.lang.reflect.Field;
-import java.math.BigDecimal;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
-public class FixedWidthParser {
-    private static final Logger logger = Logger.getLogger(FixedWidthParser.class.getName());
-    public static <T> T parseLine(String line, Class<T> clazz) throws Exception {
-        List<Object> fieldValues=new ArrayList<>();
-        int currentIndex = 0;
-        for (Field field : clazz.getDeclaredFields()) {
-            FixedFieldAnnotations annotation = field.getAnnotation(FixedFieldAnnotations.class);
-            if (annotation != null) {
-                int length = annotation.length();
-                if (currentIndex + length > line.length()) {
-                    throw new Exception("Line too short for field: " + field.getName());
-                }
-
-                String value = line.substring(currentIndex, currentIndex + length).trim();
-                currentIndex += length;
-
-                if (annotation.required() && value.isEmpty()) {
-                    throw new Exception("Missing required field: " + field.getName());
-                }
-
-                if (!annotation.allowedValues().isEmpty()) {
-                    String[] allowed = annotation.allowedValues().split(",");
-                    boolean match = false;
-                    for (String a : allowed) {
-                        if (a.equalsIgnoreCase(value)) {
-                            match = true;
-                            break;
-                        }
-                    }
-                    if (!match) {
-                        throw new Exception("Invalid value for field '" + field.getName() + "': " + value);
-                    }
-                }
-                if (!annotation.format().isEmpty() && !value.isEmpty()) {
-                    if (!value.matches(annotation.format())) {
-                        throw new Exception("Invalid format for field '" + field.getName() + "': " + value);
-                    }
-                }
-                Object convertedValue = convertValue(value,field.getType());
-                fieldValues.add(convertedValue);
-            }
-        }
-        Class<?>[] paramTypes = new Class[fieldValues.size()];
-        for(int i=0;i<fieldValues.size();i++){
-            paramTypes[i]=fieldValues.get(i).getClass();
-        }
-
-        Constructor<T> constructor = clazz.getDeclaredConstructor(paramTypes);
-        return constructor.newInstance(fieldValues.toArray());
-    }
-
-    private static Object convertValue(String value, Class<?> targetType){
-        if(value==null || value.isEmpty())return null;
-
-        try{
-            if(targetType==String.class){
-                return value;
-            }else if(targetType==Integer.class||targetType==int.class){
-                return Integer.valueOf(value);
-            }else if(targetType==Long.class||targetType==long.class){
-                return Long.parseLong(value);
-            }else if(targetType==Double.class||targetType==double.class){
-                return Double.parseDouble(value);
-            }else if(targetType== BigDecimal.class){
-                return new BigDecimal(value);
-            }else if(targetType == LocalDate.class){
-                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
-                return LocalDate.parse(value,formatter);
-            }else if(targetType== LocalDateTime.class) {
-                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
-                return LocalDateTime.parse(value,formatter);
-            }else if(targetType.isRecord()){
-                return parseLine(value,targetType);
-            }else if(targetType== LocalTime.class){
-                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
-                return LocalTime.parse(value,formatter);}
-        } catch (Exception e) {
-            logger.log(Level.SEVERE, "Failed to convert value '" + value + "' to type " + targetType.getSimpleName(), e);
-            throw new IllegalArgumentException("Failed to convert value '"+ value+"'to type "+ targetType.getSimpleName(),e);
-        }
-
-        return value;
-    }
-}
-
-package mongoconnect;
-import com.mongodb.client.MongoClients;
-import com.mongodb.client.MongoCollection;
-import com.mongodb.client.MongoDatabase;
-import org.bson.Document;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import java.util.stream.Collectors;
-public class MongoDBHandler {
-    private static final Logger logger= Logger.getLogger(MongoDBHandler.class.getName());
-    public static HashMap<String,Integer> recordsCount =new HashMap<>();
-    private static final String DB_NAME = "FiservDB2";
-    public static MongoDatabase connect() {
-        return MongoClients.create("mongodb://localhost:27017").getDatabase(DB_NAME);
-    }
-    private static <T> Document convertRecordToDocument(T record) {
-        return Arrays.stream(record.getClass().getRecordComponents())
-                .collect(Document::new,
-                        (doc, component) -> {
-                            try {
-                                Object value = component.getAccessor().invoke(record);
-                                if (value != null && value.getClass().isRecord()) {
-                                    value = convertRecordToDocument(value);
-                                }
-                                doc.append(component.getName(), value);
-                            } catch (Exception e) {
-                                logger.log(Level.SEVERE,"Error converting field: "+component.getName(),e);
-                            }
-                        },
-                        Document::putAll);
-    }
-    public static <T> void insertRecords(String collectionName, List<T> records) {
-        recordsCount.put(collectionName, recordsCount.getOrDefault(collectionName,0)+ records.size());
-        MongoDatabase database = connect();
-        MongoCollection<Document> collection = database.getCollection(collectionName);
-        List<Document> documents = records.stream()
-                .map(MongoDBHandler::convertRecordToDocument)
-                .collect(Collectors.toList());
-        collection.insertMany(documents);
-        logger.info("Inserted"+ documents.size() +"records into "+collectionName);
-    }
-    private static MongoDatabase database;
-    public static MongoDatabase getDatabase() {
-        if (database == null) {
-            database = connect();
-        }
-        return database;
-    }
-    public static  HashMap<String,Integer> methodcall(){
-        return recordsCount;
-    }
-}
-import com.mongodb.client.MongoCollection;
-import com.mongodb.client.MongoDatabase;
-import mongoconnect.MongoDBHandler;
-import org.bson.Document;
-import org.junit.jupiter.api.Test;
-import java.util.HashMap;
-import java.util.Map;
-import static mongoconnect.MongoDBHandler.methodcall;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
-public class TestClass {
-      public static HashMap<String,Integer> recordsCount = methodcall();
-    MongoDatabase db = MongoDBHandler.getDatabase();
-      @Test
-    public void isLoaded(){
-          for(Map.Entry<String,Integer> map: recordsCount.entrySet()){
-              String key=map.getKey();
-              long value=map.getValue();
-              MongoCollection<Document> collection = db.getCollection(key);
-              long DbCount = collection.countDocuments();
-              assertEquals(value,DbCount);
-
-          }
-      }
-}
-
-i am doing documention work,give some conetent on the topic "Processing" based on the code that i given to you with important line of code(methods)
+generate your content like this...
