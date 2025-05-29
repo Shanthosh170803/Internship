@@ -1,23 +1,21 @@
-//This is my Main.java
 package com.example1;
 import java.io.*;
 import java.nio.file.*;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import mongoconnect.MongoDBHandler;
 import parser.FixedWidthParser;
-
 public class Main {
-
+    private static final Logger logger= Logger.getLogger(Main.class.getName());
     private static final String MODEL_PACKAGE="model";
     public static void main(String[] args) throws IOException {
-
         String DirPath = "InputFolder";
         File Dir = new File(DirPath);
         Map<String, List<File>> dateToFileMap = new TreeMap<>();
-
         for (File file : Dir.listFiles((dir, name) -> name.endsWith(".txt"))) {
             String header = Files.lines(file.toPath()).findFirst().orElse(null);
             if (header != null && header.startsWith("HDR|")) {
@@ -28,7 +26,6 @@ public class Main {
                 }
             }
         }
-
         for(Map.Entry<String,List<File>> entry : dateToFileMap.entrySet()){
             String dateStr = entry.getKey();
             List<File> files = entry.getValue();
@@ -36,45 +33,38 @@ public class Main {
             String folderName=date.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
             Path targetDir = Paths.get("Control", folderName);
             Files.createDirectories(targetDir);
-
             for(File file:files){
                 Path targetFile = targetDir.resolve(file.getName());
                 Files.copy(file.toPath(),targetFile,StandardCopyOption.REPLACE_EXISTING);
             }
-
             for(File file:files){
-                System.out.println("\nProcessing file: "+file.getName());
+                logger.info("Processing file: "+file.getName());
                 List<String> lines = Files.readAllLines(file.toPath());
                 List<String> dataLines = lines.subList(1,lines.size()-1);
                 String fileName = lines.get(0).split("\\|")[2];
-                //String baseName = fileName.replaceAll("\\d+$","");
                 String className = MODEL_PACKAGE+"."+fileName;
 
                 try {
                     Class<?> modelClass = Class.forName(className);
                     List<Object> details = new ArrayList<>();
-
                     for(String line: dataLines){
                         try{
                             Object parsed = FixedWidthParser.parseLine(line,modelClass);
                             details.add(parsed);
-
                         } catch (Exception e) {
-                            e.printStackTrace();
+                            logger.log(Level.SEVERE,"Error parsing line in file: "+file.getName(),e);
                         }
                     }
-                    System.out.println("Parsed "+ details.size()+" records:");
+                    logger.info("Parsed"+details.size()+"records.");
                     MongoDBHandler.insertRecords(fileName,details);
                 } catch (ClassNotFoundException e) {
-                    System.out.println("No model class found for: "+ className);
+                    logger.warning("No model class found for: "+ className);
                 }
             }
         }
-
     }
 }
 
-//This is my FixedWidthParser.java
 package parser;
 import annotations.FixedFieldAnnotations;
 import java.lang.reflect.Constructor;
@@ -86,9 +76,11 @@ import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class FixedWidthParser {
-
+    private static final Logger logger = Logger.getLogger(FixedWidthParser.class.getName());
     public static <T> T parseLine(String line, Class<T> clazz) throws Exception {
         List<Object> fieldValues=new ArrayList<>();
         int currentIndex = 0;
@@ -145,7 +137,7 @@ public class FixedWidthParser {
             if(targetType==String.class){
                 return value;
             }else if(targetType==Integer.class||targetType==int.class){
-                return Integer.parseInt(value);
+                return Integer.valueOf(value);
             }else if(targetType==Long.class||targetType==long.class){
                 return Long.parseLong(value);
             }else if(targetType==Double.class||targetType==double.class){
@@ -164,6 +156,7 @@ public class FixedWidthParser {
                 DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
                 return LocalTime.parse(value,formatter);}
         } catch (Exception e) {
+            logger.log(Level.SEVERE, "Failed to convert value '" + value + "' to type " + targetType.getSimpleName(), e);
             throw new IllegalArgumentException("Failed to convert value '"+ value+"'to type "+ targetType.getSimpleName(),e);
         }
 
@@ -171,52 +164,86 @@ public class FixedWidthParser {
     }
 }
 
-//This is MongoDBHandler.java
 package mongoconnect;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import org.bson.Document;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import java.util.stream.Collectors;
 public class MongoDBHandler {
-    private static final String DB_NAME = "FiservDB1";
-
+    private static final Logger logger= Logger.getLogger(MongoDBHandler.class.getName());
+    public static HashMap<String,Integer> recordsCount =new HashMap<>();
+    private static final String DB_NAME = "FiservDB2";
     public static MongoDatabase connect() {
         return MongoClients.create("mongodb://localhost:27017").getDatabase(DB_NAME);
     }
-
     private static <T> Document convertRecordToDocument(T record) {
         return Arrays.stream(record.getClass().getRecordComponents())
                 .collect(Document::new,
                         (doc, component) -> {
                             try {
                                 Object value = component.getAccessor().invoke(record);
-
                                 if (value != null && value.getClass().isRecord()) {
                                     value = convertRecordToDocument(value);
                                 }
-
                                 doc.append(component.getName(), value);
                             } catch (Exception e) {
-                                e.printStackTrace();
+                                logger.log(Level.SEVERE,"Error converting field: "+component.getName(),e);
                             }
                         },
                         Document::putAll);
     }
-    
     public static <T> void insertRecords(String collectionName, List<T> records) {
+        recordsCount.put(collectionName, recordsCount.getOrDefault(collectionName,0)+ records.size());
         MongoDatabase database = connect();
         MongoCollection<Document> collection = database.getCollection(collectionName);
-
         List<Document> documents = records.stream()
                 .map(MongoDBHandler::convertRecordToDocument)
                 .collect(Collectors.toList());
-
         collection.insertMany(documents);
-        System.out.println("Inserted " + documents.size() + " records into " + collectionName);
+        logger.info("Inserted"+ documents.size() +"records into "+collectionName);
+    }
+    private static MongoDatabase database;
+    public static MongoDatabase getDatabase() {
+        if (database == null) {
+            database = connect();
+        }
+        return database;
+    }
+    public static  HashMap<String,Integer> methodcall(){
+        return recordsCount;
     }
 }
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
+import mongoconnect.MongoDBHandler;
+import org.bson.Document;
+import org.junit.jupiter.api.Test;
+import java.util.HashMap;
+import java.util.Map;
+import static mongoconnect.MongoDBHandler.methodcall;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-i want to use logging instead of System.out.println(), give me the updated code
+public class TestClass {
+      public static HashMap<String,Integer> recordsCount = methodcall();
+    MongoDatabase db = MongoDBHandler.getDatabase();
+      @Test
+    public void isLoaded(){
+          for(Map.Entry<String,Integer> map: recordsCount.entrySet()){
+              String key=map.getKey();
+              long value=map.getValue();
+              MongoCollection<Document> collection = db.getCollection(key);
+              long DbCount = collection.countDocuments();
+              assertEquals(value,DbCount);
+
+          }
+      }
+}
+
+i am doing documention work,give some conetent on the topic "Processing" based on the code that i given to you with important line of code(methods)
