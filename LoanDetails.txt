@@ -26,6 +26,50 @@ HDR|LoanDetails|20250515|Start
 
 TRL|LoanDetails|23|End
 
+create database minione;
+use minione;
+create table Customer(
+	custId int primary key ,
+    custName varchar(255) not null,
+    custAddress varchar(255) not null,
+    custPhone varchar(20)not null,
+    custEmail varchar(255) unique
+);
+
+create table Meter(
+	meterId int primary key,
+    custId int ,
+    installDate date not null,
+    lastReadDate date not null,
+    foreign key(custId) References Customer(custId) on delete cascade
+);
+
+create table Electricity_Usage(
+	usageId int primary key,
+    meterId int,
+    readingDate date not null,
+    usageUnits numeric(10,2) check(usageUnits >=0),
+    foreign key(meterId) references Meter(meterId) on delete cascade
+);
+
+create table Bill(
+	billId int primary key,
+    meterId int,
+    billDate date not null,
+    amountDue numeric(10,2) check(amountDue>=0),
+    duedate date not null,
+    paid tinyint not null default 0 check (paid in(0,1)),
+    foreign key(meterId) references Meter(meterId) on delete cascade
+);
+
+create table Payment(
+	paymentId int primary key,
+    billId int,
+    paymentDate date not null,
+    amountPaid numeric(10,2) check(amountPaid>=0),
+    foreign key (billId) references Bill(billId) on delete cascade
+);
+
 Insert Into customer (custId,custName,custAddress,custPhone,custEmail) values(101,'Shanthosh S','59/14,V.Nagar-1,Rasipuram-637408','7449085045','shanthosh170803@gmail.com'),
 																			 (102,'Tharunkarthick S','45/A1,Rasipuram joint Rd,Attur-636108','8610107671','tharunkarthick0509@gmail.com'),
                                                                              (103,'Siranjeevi G','LIG-1,373 Gandhimanagar,Coimbatore-641004','9655271083','siranjeevi@gmail.com'),
@@ -55,3 +99,4 @@ Insert Into Payment(paymentId,billId,paymentDate,amountPaid) values(501,401,'202
                                                                    (503,403,'2023-12-19',950.25),
                                                                    (504,404,'2023-12-24',1700.75),
                                                                    (505,405,'2023-12-29',2200.50);
+																
